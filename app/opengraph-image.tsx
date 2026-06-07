@@ -75,7 +75,7 @@ export default function OgImage() {
             fontWeight: "500",
           }}
         >
-          一石二鳥、英語も知識も身につけよう！！
+          ちょっと楽しく、学習を習慣に！
         </div>
 
         {/* オレンジのアクセントライン */}
