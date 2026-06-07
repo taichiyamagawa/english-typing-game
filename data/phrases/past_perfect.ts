@@ -1,0 +1,30 @@
+import { Question } from "../index";
+
+// 過去完了形：過去のある時点より前に完了していた動作を表す文（仮定法過去完了を含む）
+export const pastPerfectQuestions: Question[] = [
+  { id: "ph_ptp_001", category: "phrase_past_perfect", en: "She had already left when I arrived at the station.",          ja: "私が駅に着いたとき、彼女はすでに去っていた。" },
+  { id: "ph_ptp_002", category: "phrase_past_perfect", en: "He had never seen snow before he moved up north.",              ja: "北に引っ越す前、彼は一度も雪を見たことがなかった。" },
+  { id: "ph_ptp_003", category: "phrase_past_perfect", en: "By the time we got there, the show had already ended.",         ja: "私たちが到着するころには、ショーはすでに終わっていた。" },
+  { id: "ph_ptp_004", category: "phrase_past_perfect", en: "I realized I had forgotten my passport at home.",               ja: "私はパスポートを家に忘れてきたことに気づいた。" },
+  { id: "ph_ptp_005", category: "phrase_past_perfect", en: "They had known each other for years before getting married.",   ja: "彼らは結婚する前、何年もお互いを知っていた。" },
+  { id: "ph_ptp_006", category: "phrase_past_perfect", en: "Had you ever lived abroad before coming to Japan?",             ja: "日本に来る前、外国に住んだことがありましたか？" },
+  { id: "ph_ptp_007", category: "phrase_past_perfect", en: "If I had studied harder, I would have passed the exam.",        ja: "もっと一生懸命勉強していたら、試験に合格していたのに。" },
+  { id: "ph_ptp_008", category: "phrase_past_perfect", en: "She had studied French for years before switching to Spanish.", ja: "スペイン語に切り替える前、彼女は何年もフランス語を勉強していた。" },
+  { id: "ph_ptp_009", category: "phrase_past_perfect", en: "I had just fallen asleep when the alarm went off.",             ja: "アラームが鳴ったとき、ちょうど眠りについたところだった。" },
+  { id: "ph_ptp_010", category: "phrase_past_perfect", en: "We had eaten so much that we could not move.",                       ja: "私たちはたくさん食べすぎて動けなかった。" },
+  { id: "ph_ptp_011", category: "phrase_past_perfect", en: "By the time the ambulance arrived, the situation had changed.",       ja: "救急車が到着する頃には、状況は変わっていた。" },
+  { id: "ph_ptp_012", category: "phrase_past_perfect", en: "She had never felt so proud of herself before that day.",            ja: "その日まで、彼女はあんなに自分を誇りに思ったことがなかった。" },
+  { id: "ph_ptp_013", category: "phrase_past_perfect", en: "He realized that he had left his keys in the office.",               ja: "彼はオフィスに鍵を置いてきたことに気づいた。" },
+  { id: "ph_ptp_014", category: "phrase_past_perfect", en: "We had not eaten anything since breakfast when dinner was served.",   ja: "夕食が出されたとき、私たちは朝食から何も食べていなかった。" },
+  { id: "ph_ptp_015", category: "phrase_past_perfect", en: "Had you met him before the conference last year?",                   ja: "昨年の会議の前に彼と会ったことがありましたか？" },
+  { id: "ph_ptp_016", category: "phrase_past_perfect", en: "If I had known about the meeting, I would have attended.",           ja: "会議のことを知っていれば、出席していたのに。" },
+  { id: "ph_ptp_017", category: "phrase_past_perfect", en: "She had saved enough money to buy a new laptop by December.",        ja: "12月までに彼女は新しいノートパソコンを買えるだけのお金を貯めていた。" },
+  { id: "ph_ptp_018", category: "phrase_past_perfect", en: "The concert had already started when we finally found our seats.",   ja: "私たちがようやく席を見つけたとき、コンサートはすでに始まっていた。" },
+  { id: "ph_ptp_019", category: "phrase_past_perfect", en: "He had worked at that company for a decade before it closed.",       ja: "その会社が閉鎖する前、彼は10年間そこで働いていた。" },
+  { id: "ph_ptp_020", category: "phrase_past_perfect", en: "We had discussed all the options before making our final decision.",  ja: "最終決定を下す前に、私たちはすべての選択肢について話し合っていた。" },
+  { id: "ph_ptp_021", category: "phrase_past_perfect", en: "She had already read the book twice before seeing the movie.",       ja: "映画を見る前に、彼女はすでにその本を2回読んでいた。" },
+  { id: "ph_ptp_022", category: "phrase_past_perfect", en: "I hadn't realized how tired I was until I finally sat down.",        ja: "座るまで、私はどれほど疲れているかに気づかなかった。" },
+  { id: "ph_ptp_023", category: "phrase_past_perfect", en: "By the time he finished speaking, most people had left.",            ja: "彼が話し終える頃には、ほとんどの人が去っていた。" },
+  { id: "ph_ptp_024", category: "phrase_past_perfect", en: "They had been friends for years before they became business partners.", ja: "彼らはビジネスパートナーになる前に、何年も友人だった。" },
+  { id: "ph_ptp_025", category: "phrase_past_perfect", en: "She hadn't expected to win, so she had no speech prepared.",         ja: "彼女は勝つとは思っていなかったので、スピーチを用意していなかった。" },
+];

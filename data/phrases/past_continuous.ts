@@ -1,0 +1,30 @@
+import { Question } from "../index";
+
+// 過去進行形：過去の特定の時点で進行中だった動作を表す文
+export const pastContinuousQuestions: Question[] = [
+  { id: "ph_ptc_001", category: "phrase_past_continuous", en: "I was reading a book when the phone rang.",              ja: "電話が鳴ったとき、本を読んでいた。" },
+  { id: "ph_ptc_002", category: "phrase_past_continuous", en: "She was cooking dinner when he came home.",              ja: "彼が帰宅したとき、彼女は夕食を作っていた。" },
+  { id: "ph_ptc_003", category: "phrase_past_continuous", en: "What were you doing at midnight last night?",            ja: "昨夜の真夜中、何をしていましたか？" },
+  { id: "ph_ptc_004", category: "phrase_past_continuous", en: "They were watching TV when the power went out.",         ja: "停電になったとき、彼らはテレビを見ていた。" },
+  { id: "ph_ptc_005", category: "phrase_past_continuous", en: "He was not listening carefully during the meeting.",     ja: "彼は会議中、注意深く聞いていなかった。" },
+  { id: "ph_ptc_006", category: "phrase_past_continuous", en: "The children were playing loudly while I was working.",  ja: "私が仕事をしている間、子どもたちは大声で遊んでいた。" },
+  { id: "ph_ptc_007", category: "phrase_past_continuous", en: "It was raining heavily when we left the restaurant.",    ja: "レストランを出たとき、激しい雨が降っていた。" },
+  { id: "ph_ptc_008", category: "phrase_past_continuous", en: "I was thinking about you when you texted me.",           ja: "あなたがメッセージを送ってきたとき、あなたのことを考えていた。" },
+  { id: "ph_ptc_009", category: "phrase_past_continuous", en: "They were having a great time at the party.",            ja: "彼らはパーティーでとても楽しんでいた。" },
+  { id: "ph_ptc_010", category: "phrase_past_continuous", en: "She was smiling while she read the letter.",                       ja: "彼女は手紙を読みながら微笑んでいた。" },
+  { id: "ph_ptc_011", category: "phrase_past_continuous", en: "She was studying in her room when her friends arrived.",            ja: "友達が来たとき、彼女は自分の部屋で勉強していた。" },
+  { id: "ph_ptc_012", category: "phrase_past_continuous", en: "We were driving along the highway when the tire went flat.",        ja: "高速道路を走っているときにタイヤがパンクした。" },
+  { id: "ph_ptc_013", category: "phrase_past_continuous", en: "What were you doing when I called you this morning?",               ja: "今朝電話したとき、何をしていましたか？" },
+  { id: "ph_ptc_014", category: "phrase_past_continuous", en: "He was reading quietly in the corner while everyone else was talking.", ja: "他のみんなが話している間、彼は隅で静かに本を読んでいた。" },
+  { id: "ph_ptc_015", category: "phrase_past_continuous", en: "The professor was explaining the theory when the fire alarm went off.", ja: "火災警報が鳴ったとき、教授は理論を説明していた。" },
+  { id: "ph_ptc_016", category: "phrase_past_continuous", en: "I was not expecting such a warm welcome when I arrived.",           ja: "到着したとき、そんなに温かい歓迎を期待していなかった。" },
+  { id: "ph_ptc_017", category: "phrase_past_continuous", en: "She was working overtime almost every night last month.",           ja: "先月、彼女はほぼ毎晩残業していた。" },
+  { id: "ph_ptc_018", category: "phrase_past_continuous", en: "They were waiting nervously for the results to be announced.",      ja: "彼らは結果が発表されるのをドキドキしながら待っていた。" },
+  { id: "ph_ptc_019", category: "phrase_past_continuous", en: "The rain was falling so heavily that we decided to stay inside.",   ja: "雨がとても激しく降っていたので、私たちは室内にいることにした。" },
+  { id: "ph_ptc_020", category: "phrase_past_continuous", en: "He was thinking about changing careers at the time.",               ja: "そのとき、彼はキャリアチェンジを考えていた。" },
+  { id: "ph_ptc_021", category: "phrase_past_continuous", en: "We were celebrating our anniversary when you called us.",           ja: "あなたが電話してきたとき、私たちは記念日を祝っていた。" },
+  { id: "ph_ptc_022", category: "phrase_past_continuous", en: "The baby was sleeping peacefully when the doorbell rang.",          ja: "ドアベルが鳴ったとき、赤ちゃんは静かに眠っていた。" },
+  { id: "ph_ptc_023", category: "phrase_past_continuous", en: "Were you listening when the teacher gave out the homework?",        ja: "先生が宿題を出したとき、あなたは聞いていましたか？" },
+  { id: "ph_ptc_024", category: "phrase_past_continuous", en: "She was jogging in the park when she ran into an old friend.",      ja: "彼女は公園でジョギングしているときに、昔の友人にばったり会った。" },
+  { id: "ph_ptc_025", category: "phrase_past_continuous", en: "I was feeling really nervous before the interview started.",        ja: "面接が始まる前、私はとても緊張していた。" },
+];

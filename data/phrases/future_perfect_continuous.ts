@@ -1,0 +1,30 @@
+import { Question } from "../index";
+
+// 未来完了進行形：未来の特定の時点まで継続している動作を表す文
+export const futurePerfectContinuousQuestions: Question[] = [
+  { id: "ph_fpc_001", category: "phrase_future_perfect_continuous", en: "By next month, I will have been working here for a year.",          ja: "来月で、ここで1年間働き続けていることになる。" },
+  { id: "ph_fpc_002", category: "phrase_future_perfect_continuous", en: "She will have been studying English for ten years by then.",         ja: "そのころまでに、彼女は10年間英語を勉強し続けていることになる。" },
+  { id: "ph_fpc_003", category: "phrase_future_perfect_continuous", en: "By the time he retires, he will have been teaching for thirty years.", ja: "定年になる頃、彼は30年間教え続けていることになる。" },
+  { id: "ph_fpc_004", category: "phrase_future_perfect_continuous", en: "I will have been waiting for three hours by the time you arrive.",    ja: "あなたが到着するころ、私は3時間待ち続けていることになる。" },
+  { id: "ph_fpc_005", category: "phrase_future_perfect_continuous", en: "They will have been living in Japan for five years next April.",      ja: "来年の4月で、彼らは日本に5年間住み続けていることになる。" },
+  { id: "ph_fpc_006", category: "phrase_future_perfect_continuous", en: "How long will you have been running by the finish line?",            ja: "ゴール地点までに、どのくらい走り続けていることになりますか？" },
+  { id: "ph_fpc_007", category: "phrase_future_perfect_continuous", en: "By midnight, she will have been driving for over twelve hours.",      ja: "深夜までに、彼女は12時間以上運転し続けていることになる。" },
+  { id: "ph_fpc_008", category: "phrase_future_perfect_continuous", en: "We will have been saving for this trip for two years soon.",          ja: "もうすぐ、この旅行のために2年間貯め続けていることになる。" },
+  { id: "ph_fpc_009", category: "phrase_future_perfect_continuous", en: "He will have been training every day for a month by Sunday.",         ja: "日曜日で、彼は1か月間毎日トレーニングし続けていることになる。" },
+  { id: "ph_fpc_010", category: "phrase_future_perfect_continuous", en: "By next summer, I will have been learning piano for three years.",      ja: "来年の夏で、私はピアノを3年間習い続けていることになる。" },
+  { id: "ph_fpc_011", category: "phrase_future_perfect_continuous", en: "By next month, she will have been studying abroad for a full year.",    ja: "来月で彼女は1年間留学し続けていることになる。" },
+  { id: "ph_fpc_012", category: "phrase_future_perfect_continuous", en: "He will have been waiting for over an hour by the time she arrives.",   ja: "彼女が到着する頃、彼は1時間以上待ち続けていることになる。" },
+  { id: "ph_fpc_013", category: "phrase_future_perfect_continuous", en: "By this time next year, they will have been running the business for a decade.", ja: "来年の今頃、彼らはその事業を10年間続けていることになる。" },
+  { id: "ph_fpc_014", category: "phrase_future_perfect_continuous", en: "I will have been living alone for three years by the end of this month.", ja: "今月末で、私は3年間一人暮らしをし続けていることになる。" },
+  { id: "ph_fpc_015", category: "phrase_future_perfect_continuous", en: "She will have been teaching music for twenty years when she retires.",   ja: "退職するとき、彼女は20年間音楽を教え続けていることになる。" },
+  { id: "ph_fpc_016", category: "phrase_future_perfect_continuous", en: "How long will you have been working here by the end of this year?",     ja: "今年末で、ここでどのくらい働き続けていることになりますか？" },
+  { id: "ph_fpc_017", category: "phrase_future_perfect_continuous", en: "By graduation day, he will have been studying medicine for six years.",  ja: "卒業の日までに、彼は6年間医学を学び続けていることになる。" },
+  { id: "ph_fpc_018", category: "phrase_future_perfect_continuous", en: "She will have been practicing for this performance for over a year.",    ja: "この公演のために彼女は1年以上練習し続けていることになる。" },
+  { id: "ph_fpc_019", category: "phrase_future_perfect_continuous", en: "By the end of the season, he will have been coaching the team for three years.", ja: "シーズン末で、彼はそのチームを3年間コーチし続けていることになる。" },
+  { id: "ph_fpc_020", category: "phrase_future_perfect_continuous", en: "We will have been saving for this trip for two years by next spring.",   ja: "来春で、この旅行のために2年間貯め続けていることになる。" },
+  { id: "ph_fpc_021", category: "phrase_future_perfect_continuous", en: "By the time we land, we will have been flying for over eleven hours.",   ja: "着陸するころ、私たちは11時間以上飛び続けていることになる。" },
+  { id: "ph_fpc_022", category: "phrase_future_perfect_continuous", en: "She will have been writing her novel for two years by the time it gets published.", ja: "出版されるころ、彼女は2年間小説を書き続けていることになる。" },
+  { id: "ph_fpc_023", category: "phrase_future_perfect_continuous", en: "How long will you have been waiting when the store finally opens?",      ja: "店がやっと開くとき、どのくらい待ち続けていることになりますか？" },
+  { id: "ph_fpc_024", category: "phrase_future_perfect_continuous", en: "He will have been playing guitar for fifteen years by the time he turns thirty.", ja: "30歳になるころ、彼は15年間ギターを弾き続けていることになる。" },
+  { id: "ph_fpc_025", category: "phrase_future_perfect_continuous", en: "By next week, they will have been renovating the kitchen for a full month.", ja: "来週で、彼らはキッチンのリノベーションを丸1か月続けていることになる。" },
+];

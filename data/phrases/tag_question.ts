@@ -1,0 +1,30 @@
+import { Question } from "../index";
+
+// 付加疑問文：文末に短い疑問を付けて確認・同意を求める文
+export const tagQuestionQuestions: Question[] = [
+  { id: "ph_tq_001", category: "phrase_tag", en: "You have been to Paris before, haven't you?",             ja: "パリに行ったことがありますよね？" },
+  { id: "ph_tq_002", category: "phrase_tag", en: "She doesn't know about the surprise party, does she?",    ja: "彼女はサプライズパーティーのことを知らないですよね？" },
+  { id: "ph_tq_003", category: "phrase_tag", en: "It's a beautiful day today, isn't it?",                   ja: "今日は良い天気ですね？" },
+  { id: "ph_tq_004", category: "phrase_tag", en: "You won't tell anyone about this, will you?",             ja: "このことは誰にも言いませんよね？" },
+  { id: "ph_tq_005", category: "phrase_tag", en: "They finished the report on time, didn't they?",          ja: "彼らは時間通りに報告書を仕上げましたよね？" },
+  { id: "ph_tq_006", category: "phrase_tag", en: "He can speak three languages, can't he?",                 ja: "彼は3か国語が話せますよね？" },
+  { id: "ph_tq_007", category: "phrase_tag", en: "You have never tried surfing before, have you?",          ja: "サーフィンをやったことはないですよね？" },
+  { id: "ph_tq_008", category: "phrase_tag", en: "The meeting starts at nine tomorrow, doesn't it?",        ja: "明日の会議は9時に始まりますよね？" },
+  { id: "ph_tq_009", category: "phrase_tag", en: "We should leave a little earlier, shouldn't we?",        ja: "少し早めに出発すべきですよね？" },
+  { id: "ph_tq_010", category: "phrase_tag", en: "She was the one who called this morning, wasn't she?",            ja: "今朝電話してきたのは彼女でしたよね？" },
+  { id: "ph_tq_011", category: "phrase_tag", en: "You've already finished your homework, haven't you?",             ja: "もう宿題を終わらせましたよね？" },
+  { id: "ph_tq_012", category: "phrase_tag", en: "They didn't tell you about the change in plans, did they?",       ja: "彼らは計画の変更についてあなたに話していませんでしたよね？" },
+  { id: "ph_tq_013", category: "phrase_tag", en: "It won't take too long to get there by train, will it?",          ja: "電車でそこに行くのはそんなに時間がかからないですよね？" },
+  { id: "ph_tq_014", category: "phrase_tag", en: "She has been working very hard lately, hasn't she?",              ja: "彼女は最近とても一生懸命働いていますよね？" },
+  { id: "ph_tq_015", category: "phrase_tag", en: "You'd rather stay home tonight than go out, wouldn't you?",       ja: "今夜は出かけるより家にいたいですよね？" },
+  { id: "ph_tq_016", category: "phrase_tag", en: "They aren't planning to move to a new city, are they?",           ja: "彼らは新しい都市に引っ越す計画はないですよね？" },
+  { id: "ph_tq_017", category: "phrase_tag", en: "He could have done better with a little more effort, couldn't he?", ja: "もう少し頑張れば、彼はもっとうまくできたはずですよね？" },
+  { id: "ph_tq_018", category: "phrase_tag", en: "Let's take a short break before we continue, shall we?",          ja: "続ける前に少し休憩しましょうか？" },
+  { id: "ph_tq_019", category: "phrase_tag", en: "You haven't heard this song before, have you?",                   ja: "この曲を前に聞いたことはありませんよね？" },
+  { id: "ph_tq_020", category: "phrase_tag", en: "Nobody told you about the surprise, did they?",                   ja: "誰もサプライズについてあなたに話しませんでしたよね？" },
+  { id: "ph_tq_021", category: "phrase_tag", en: "You were there when it happened, weren't you?",                   ja: "それが起きたとき、あなたはそこにいましたよね？" },
+  { id: "ph_tq_022", category: "phrase_tag", en: "We need to leave by seven to catch the train, don't we?",         ja: "電車に乗るために7時までには出発する必要がありますよね？" },
+  { id: "ph_tq_023", category: "phrase_tag", en: "You had met her before the party, hadn't you?",                   ja: "パーティーの前に彼女に会っていましたよね？" },
+  { id: "ph_tq_024", category: "phrase_tag", en: "There isn't enough time to finish everything today, is there?",   ja: "今日すべてを終わらせる時間はありませんよね？" },
+  { id: "ph_tq_025", category: "phrase_tag", en: "She can't have forgotten about the appointment, can she?",        ja: "彼女がアポを忘れることはないですよね？" },
+];

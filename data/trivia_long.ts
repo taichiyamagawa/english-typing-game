@@ -1,0 +1,155 @@
+import { Question } from "./index";
+
+// 雑学（長文）の問題データ：複数文の読み応えある雑学ネタ
+export const triviaLongQuestions: Question[] = [
+  {
+    id: "tl_001",
+    category: "trivia_long",
+    en: "Honey never expires. Archaeologists have found 3000-year-old honey in Egyptian tombs that was still perfectly edible.",
+    ja: "ハチミツは腐らない。エジプトの墓で発見された3000年前のハチミツが、今でも食べられる状態だった。",
+  },
+  {
+    id: "tl_002",
+    category: "trivia_long",
+    en: "Cleopatra lived closer in time to the Moon landing than to the construction of the Great Pyramid. The pyramid was built around 2560 BC, while Cleopatra lived around 30 BC.",
+    ja: "クレオパトラは、ピラミッド建設よりも月面着陸に時代的に近い。ピラミッドは紀元前2560年頃、クレオパトラは紀元前30年頃に生きていた。",
+  },
+  {
+    id: "tl_003",
+    category: "trivia_long",
+    en: "Sharks have been around for about 450 million years. This means they predate both trees and dinosaurs, making them one of the oldest surviving species on Earth.",
+    ja: "サメは約4億5000万年前から存在している。つまり木や恐竜よりも古く、地球上で最も古くから生き続けている生物の一つだ。",
+  },
+  {
+    id: "tl_004",
+    category: "trivia_long",
+    en: "The human brain generates about 20 watts of power while awake. That is enough electricity to power a dim light bulb.",
+    ja: "人間の脳は起きている間、約20ワットの電力を生み出す。それは薄暗い電球を灯すのに十分な電力だ。",
+  },
+  {
+    id: "tl_005",
+    category: "trivia_long",
+    en: "Octopuses are incredibly intelligent creatures. They can open jars, solve puzzles, and even recognize individual human faces.",
+    ja: "タコは非常に知能が高い生き物だ。瓶を開けたり、パズルを解いたり、人間の顔を個別に認識することさえできる。",
+  },
+  {
+    id: "tl_006",
+    category: "trivia_long",
+    en: "There are more stars in the observable universe than grains of sand on all of Earth's beaches combined. Astronomers estimate the number of stars is around one septillion, which is a one followed by 24 zeros.",
+    ja: "観測可能な宇宙の星の数は、地球上のすべての砂浜の砂粒の合計より多い。天文学者によると、星の数は約1秭（じょ）、つまり1の後に24個のゼロが続く数と推定されている。",
+  },
+  {
+    id: "tl_007",
+    category: "trivia_long",
+    en: "Water boils at around 70 degrees Celsius at the summit of Mount Everest due to lower air pressure. This means food that needs to be boiled takes much longer to cook there.",
+    ja: "気圧が低いため、エベレストの山頂では水は約70度で沸騰する。そのため、ゆで料理は通常より時間がはるかにかかる。",
+  },
+  {
+    id: "tl_008",
+    category: "trivia_long",
+    en: "Oxford University is older than the Aztec Empire. Teaching began at Oxford around 1096, while the Aztec Empire was not founded until 1428.",
+    ja: "オックスフォード大学はアステカ帝国より古い。オックスフォードでの教育は1096年頃に始まったが、アステカ帝国が建国されたのは1428年のことだ。",
+  },
+  {
+    id: "tl_009",
+    category: "trivia_long",
+    en: "Flamingos are not born pink. They hatch with white or gray feathers and gradually turn pink from the pigments found in the algae and shrimp they eat.",
+    ja: "フラミンゴは生まれた時はピンク色ではない。白や灰色の羽で孵化し、食べる藻類やエビに含まれる色素によって徐々にピンク色になる。",
+  },
+  {
+    id: "tl_010",
+    category: "trivia_long",
+    en: "A single honeybee produces only about one-twelfth of a teaspoon of honey in its entire lifetime. To fill just one jar, thousands of bees must work together.",
+    ja: "ミツバチ1匹が一生で作るハチミツはわずか小さじ12分の1程度だ。瓶1本分を満たすには、何千匹ものミツバチが力を合わせる必要がある。",
+  },
+  {
+    id: "tl_011",
+    category: "trivia_long",
+    en: "Olympus Mons on Mars is the tallest volcano in the solar system. It stands about 22 kilometers high, nearly three times the height of Mount Everest.",
+    ja: "火星のオリンポス山は太陽系最大の火山だ。高さは約22キロメートルで、エベレストのほぼ3倍に達する。",
+  },
+  {
+    id: "tl_012",
+    category: "trivia_long",
+    en: "Crows can recognize and remember individual human faces. They have been observed holding grudges against people who threatened them and warning other crows about those individuals.",
+    ja: "カラスは人間の顔を個別に認識し、記憶することができる。脅かした人物に対して恨みを持ち続け、ほかのカラスにもその情報を伝えることが観察されている。",
+  },
+  {
+    id: "tl_013",
+    category: "trivia_long",
+    en: "Human bone is stronger than steel when compared weight for weight. Bone can withstand about 170 megapascals of compressive force, while steel yields at around 250 megapascals but is roughly five times heavier.",
+    ja: "人間の骨は重量比で鋼鉄より強い。骨は約170メガパスカルの圧縮力に耐えられる。鋼鉄は約250メガパスカルと絶対値では上回るが、重さは骨の約5倍もある。",
+  },
+  {
+    id: "tl_014",
+    category: "trivia_long",
+    en: "Trees in a forest share nutrients and chemical signals through a network of underground fungi called mycorrhizae. Scientists have nicknamed this system the Wood Wide Web.",
+    ja: "森の木々は菌根菌と呼ばれる地下の菌類ネットワークを通じて栄養分や化学信号をやり取りする。科学者たちはこの仕組みを「ウッド・ワイド・ウェブ」と呼んでいる。",
+  },
+  {
+    id: "tl_015",
+    category: "trivia_long",
+    en: "Napoleon Bonaparte was not unusually short for his time. He stood about 1.68 meters tall, which was average for a French man of the late 18th century.",
+    ja: "ナポレオン・ボナパルトは当時の基準で特別に背が低かったわけではない。身長は約168センチで、18世紀末のフランス人男性としては平均的だった。",
+  },
+  {
+    id: "tl_016",
+    category: "trivia_long",
+    en: "Lightning strikes the surface of the Earth about 40 to 50 times every second. Over the course of a year, this adds up to more than one billion lightning strikes worldwide.",
+    ja: "雷は毎秒約40〜50回、地球上のどこかに落ちている。1年間に換算すると、世界全体で10億回以上の落雷が発生する計算になる。",
+  },
+  {
+    id: "tl_017",
+    category: "trivia_long",
+    en: "Male Gentoo penguins propose to their mates by presenting a carefully chosen pebble. If the female accepts the pebble, the two become partners and use the stones to build their nest.",
+    ja: "オスのジェンツーペンギンは、慎重に選んだ小石をメスに贈ることでプロポーズする。メスが小石を受け取ればパートナーとなり、その石を使って巣を作る。",
+  },
+  {
+    id: "tl_018",
+    category: "trivia_long",
+    en: "The Moon is slowly drifting away from Earth at a rate of about 3.8 centimeters per year. Scientists measured this using laser beams bounced off reflectors left on the Moon by Apollo astronauts.",
+    ja: "月は毎年約3.8センチずつ地球から遠ざかっている。アポロ宇宙飛行士が月面に設置した反射鏡にレーザーを当てることで、この速度が測定された。",
+  },
+  {
+    id: "tl_019",
+    category: "trivia_long",
+    en: "Butterflies have taste sensors located on the bottom of their feet. When they land on a plant, they can immediately detect whether it is suitable for feeding or laying eggs.",
+    ja: "チョウは足の裏に味覚センサーを持っている。植物に止まった瞬間、それが食事や産卵に適しているかどうかを即座に判断できる。",
+  },
+  {
+    id: "tl_020",
+    category: "trivia_long",
+    en: "The small dot above the letters i and j has a name. It is called a tittle. This term has been used since the Middle Ages and shares its Latin root with the word title.",
+    ja: "iとjの上にある小さな点には名前がある。「ティトル」と呼ばれ、この言葉は中世から使われており、「タイトル」と同じラテン語の語根を持つ。",
+  },
+  {
+    id: "tl_021",
+    category: "trivia_long",
+    en: "Old window glass is often thicker at the bottom, which led to a myth that glass flows slowly over time. In fact, glass is a solid, and the uneven thickness was caused by old manufacturing methods.",
+    ja: "古い窓ガラスは下部が厚いことがあり、ガラスがゆっくり流れるという誤解を生んだ。実際にはガラスは固体であり、厚みの差は昔の製造方法によるものだ。",
+  },
+  {
+    id: "tl_022",
+    category: "trivia_long",
+    en: "Space is completely silent because sound requires a medium to travel through. In the vacuum of space, there are no molecules to carry sound waves.",
+    ja: "宇宙は完全な無音だ。音が伝わるには媒質が必要だが、宇宙の真空には音波を運ぶ分子が存在しない。",
+  },
+  {
+    id: "tl_023",
+    category: "trivia_long",
+    en: "Every human cell with a nucleus contains about 2 meters of DNA tightly coiled inside it. If the DNA from all cells in your body were laid end to end, it would stretch for tens of billions of kilometers.",
+    ja: "核を持つ人間の細胞には約2メートルのDNAが密に折りたたまれている。全細胞のDNAをつなげると、数百億キロメートルにも及ぶ。",
+  },
+  {
+    id: "tl_024",
+    category: "trivia_long",
+    en: "Cleopatra was the first ruler of her dynasty to learn the Egyptian language. While previous Ptolemaic rulers spoke only Greek, she was said to have spoken as many as nine languages.",
+    ja: "クレオパトラは自身の王朝でエジプト語を学んだ最初の統治者だった。それ以前のプトレマイオス朝の統治者はギリシャ語しか話さなかったが、彼女は9つもの言語を話したとされる。",
+  },
+  {
+    id: "tl_025",
+    category: "trivia_long",
+    en: "Botanically speaking, bananas are classified as berries, while strawberries are not. A botanical berry is a fruit that develops from a single flower with one ovary, which bananas satisfy but strawberries do not.",
+    ja: "植物学的には、バナナは液果（ベリー）に分類されるが、イチゴはそうではない。液果とは1つの花の1つの子房から育った果実のことで、バナナは当てはまるがイチゴは当てはまらない。",
+  },
+];

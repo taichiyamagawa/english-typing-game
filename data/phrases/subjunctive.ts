@@ -1,0 +1,30 @@
+import { Question } from "../index";
+
+// 仮定法：現実とは異なる仮定・願望を表す文（仮定法過去・仮定法過去完了・wishなど）
+export const subjunctiveQuestions: Question[] = [
+  { id: "ph_sj_001", category: "phrase_subjunctive", en: "If I were you, I would apologize to her.",                              ja: "もし私があなたなら、彼女に謝るだろう。" },
+  { id: "ph_sj_002", category: "phrase_subjunctive", en: "If it rains tomorrow, we will cancel the picnic.",                      ja: "明日雨が降ったら、ピクニックをキャンセルします。" },
+  { id: "ph_sj_003", category: "phrase_subjunctive", en: "I wish I could speak French fluently.",                                  ja: "フランス語が流暢に話せたらいいのに。" },
+  { id: "ph_sj_004", category: "phrase_subjunctive", en: "If I had more time, I would travel the world.",                         ja: "もっと時間があれば、世界を旅するのに。" },
+  { id: "ph_sj_005", category: "phrase_subjunctive", en: "If she had left earlier, she would not have missed the train.",          ja: "もし彼女がもっと早く出ていたら、電車を逃さなかっただろう。" },
+  { id: "ph_sj_006", category: "phrase_subjunctive", en: "I wish I had studied harder when I was young.",                         ja: "若い頃にもっと一生懸命勉強していればよかった。" },
+  { id: "ph_sj_007", category: "phrase_subjunctive", en: "If he were here now, he would know what to do.",                        ja: "もし彼が今ここにいたら、何をすべきか知っているだろう。" },
+  { id: "ph_sj_008", category: "phrase_subjunctive", en: "Without your help, I could not have finished this project.",            ja: "あなたの助けなしでは、このプロジェクトを終わらせられなかっただろう。" },
+  { id: "ph_sj_009", category: "phrase_subjunctive", en: "If only I had taken that opportunity when I had the chance.",           ja: "チャンスがあったときにあの機会をつかんでいればよかった。" },
+  { id: "ph_sj_010", category: "phrase_subjunctive", en: "Even if I tried, I would never be as good as she is.",                    ja: "試みたとしても、彼女ほど上手くはなれないだろう。" },
+  { id: "ph_sj_011", category: "phrase_subjunctive", en: "If I lived closer to work, I would save so much time commuting.",        ja: "もし職場の近くに住んでいたら、通勤にとても多くの時間を節約できるのに。" },
+  { id: "ph_sj_012", category: "phrase_subjunctive", en: "I wish I had a better memory for names and faces.",                      ja: "名前と顔をもっとよく覚えられたらいいのに。" },
+  { id: "ph_sj_013", category: "phrase_subjunctive", en: "If the weather had been better, we would have gone hiking.",             ja: "天気がよければ、ハイキングに行けたのに。" },
+  { id: "ph_sj_014", category: "phrase_subjunctive", en: "He talks as if he knew everything about the topic.",                     ja: "彼はまるでそのトピックについて何でも知っているかのように話す。" },
+  { id: "ph_sj_015", category: "phrase_subjunctive", en: "If only I had listened to my parents' advice at the time.",             ja: "あの時、両親のアドバイスを聞いていればよかった。" },
+  { id: "ph_sj_016", category: "phrase_subjunctive", en: "She would have gotten the job if she had prepared better for the interview.", ja: "もっとよく面接の準備をしていたら、彼女はその仕事を得ていただろう。" },
+  { id: "ph_sj_017", category: "phrase_subjunctive", en: "I wish things could go back to the way they were before.",               ja: "以前の状態に戻れたらいいのに。" },
+  { id: "ph_sj_018", category: "phrase_subjunctive", en: "If you were in my position, what would you do differently?",             ja: "もしあなたが私の立場だったら、何を違うやり方でしますか？" },
+  { id: "ph_sj_019", category: "phrase_subjunctive", en: "Had they arrived five minutes earlier, they would have caught the train.", ja: "もし5分早く到着していたら、彼らは電車に乗れていただろう。" },
+  { id: "ph_sj_020", category: "phrase_subjunctive", en: "I wish the meeting had gone better than it did yesterday.",              ja: "昨日の会議がもっとうまくいけばよかった。" },
+  { id: "ph_sj_021", category: "phrase_subjunctive", en: "If money were no object, where in the world would you live?",            ja: "お金が問題でなければ、世界のどこに住みますか？" },
+  { id: "ph_sj_022", category: "phrase_subjunctive", en: "She wishes she had taken more risks when she was younger.",              ja: "若い頃にもっとリスクを取ればよかったと彼女は思っている。" },
+  { id: "ph_sj_023", category: "phrase_subjunctive", en: "If I had been there, I could have helped you solve the problem.",        ja: "もし私がそこにいたら、問題の解決を手伝えたのに。" },
+  { id: "ph_sj_024", category: "phrase_subjunctive", en: "He would travel more often if he had more vacation time.",               ja: "もっと休暇があれば、彼はもっと頻繁に旅行するのに。" },
+  { id: "ph_sj_025", category: "phrase_subjunctive", en: "I sometimes wish I had chosen a different career path.",                 ja: "違うキャリアパスを選んでいたらと時々思う。" },
+];

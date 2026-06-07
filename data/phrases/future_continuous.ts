@@ -1,0 +1,30 @@
+import { Question } from "../index";
+
+// 未来進行形：未来の特定の時点で進行中の動作を表す文
+export const futureContinuousQuestions: Question[] = [
+  { id: "ph_fc_001", category: "phrase_future_continuous", en: "I will be working late at the office tomorrow night.",       ja: "明日の夜は遅くまでオフィスで仕事をしているだろう。" },
+  { id: "ph_fc_002", category: "phrase_future_continuous", en: "She will be traveling in Europe throughout August.",         ja: "彼女は8月中ずっとヨーロッパを旅行しているだろう。" },
+  { id: "ph_fc_003", category: "phrase_future_continuous", en: "Will you be using the car this weekend?",                    ja: "今週末、車を使っていますか？" },
+  { id: "ph_fc_004", category: "phrase_future_continuous", en: "At this time next year, I will be living in Canada.",        ja: "来年の今ごろ、私はカナダに住んでいるだろう。" },
+  { id: "ph_fc_005", category: "phrase_future_continuous", en: "They will be having dinner when you arrive there.",          ja: "あなたが到着するころ、彼らは夕食を食べているだろう。" },
+  { id: "ph_fc_006", category: "phrase_future_continuous", en: "I will be thinking of you while you are away.",              ja: "あなたが離れている間も、ずっとあなたのことを考えています。" },
+  { id: "ph_fc_007", category: "phrase_future_continuous", en: "He will not be attending the event this time.",              ja: "彼は今回のイベントには出席しないだろう。" },
+  { id: "ph_fc_008", category: "phrase_future_continuous", en: "What will you be doing this time next week?",                ja: "来週の今ごろ、何をしていますか？" },
+  { id: "ph_fc_009", category: "phrase_future_continuous", en: "The team will be practicing every day until the competition.", ja: "チームは大会まで毎日練習しているだろう。" },
+  { id: "ph_fc_010", category: "phrase_future_continuous", en: "We will be staying at a small hotel near the beach.",              ja: "私たちはビーチの近くにある小さなホテルに滞在しているだろう。" },
+  { id: "ph_fc_011", category: "phrase_future_continuous", en: "She will be presenting her research at the conference next week.",  ja: "彼女は来週、会議で研究発表をしているだろう。" },
+  { id: "ph_fc_012", category: "phrase_future_continuous", en: "Will you be attending the company dinner on Friday evening?",       ja: "金曜日の夜の会社の夕食会に出席していますか？" },
+  { id: "ph_fc_013", category: "phrase_future_continuous", en: "He will be driving to the airport around three in the afternoon.",  ja: "彼は午後3時頃、空港へ車で向かっているだろう。" },
+  { id: "ph_fc_014", category: "phrase_future_continuous", en: "By this time next month, I will be living in a new city.",          ja: "来月の今頃、私は新しい都市で生活しているだろう。" },
+  { id: "ph_fc_015", category: "phrase_future_continuous", en: "They will be reviewing the proposals throughout the week.",         ja: "彼らは一週間を通して提案書を検討しているだろう。" },
+  { id: "ph_fc_016", category: "phrase_future_continuous", en: "I will be working from home for the rest of the month.",            ja: "私は今月の残りは在宅勤務をしているだろう。" },
+  { id: "ph_fc_017", category: "phrase_future_continuous", en: "She will be celebrating her retirement with friends next Saturday.", ja: "彼女は来週土曜日、友人たちと退職を祝っているだろう。" },
+  { id: "ph_fc_018", category: "phrase_future_continuous", en: "Will they be joining us for the tour, or have they made other plans?", ja: "彼らはツアーに参加していますか、それとも別の計画を立てましたか？" },
+  { id: "ph_fc_019", category: "phrase_future_continuous", en: "He will not be coming into the office this week due to illness.",    ja: "彼は病気のため、今週はオフィスに来ないだろう。" },
+  { id: "ph_fc_020", category: "phrase_future_continuous", en: "This time tomorrow, we will be flying over the Pacific Ocean.",     ja: "明日の今頃、私たちは太平洋の上を飛んでいるだろう。" },
+  { id: "ph_fc_021", category: "phrase_future_continuous", en: "I will be attending a conference in Tokyo next month.",                ja: "来月、私は東京でカンファレンスに参加しているだろう。" },
+  { id: "ph_fc_022", category: "phrase_future_continuous", en: "Will you be watching the game tomorrow night?",                        ja: "明日の夜、試合を観ていますか？" },
+  { id: "ph_fc_023", category: "phrase_future_continuous", en: "The children will be playing in the park all afternoon.",              ja: "子どもたちは午後ずっと公園で遊んでいるだろう。" },
+  { id: "ph_fc_024", category: "phrase_future_continuous", en: "She will be teaching the morning class while I handle the afternoon.", ja: "彼女が午前のクラスを教えている間、私は午後を担当しているだろう。" },
+  { id: "ph_fc_025", category: "phrase_future_continuous", en: "He will not be taking calls during the meeting.",                      ja: "会議中、彼は電話に出ていないだろう。" },
+];

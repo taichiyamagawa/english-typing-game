@@ -1,0 +1,30 @@
+import { Question } from "../index";
+
+// 現在完了進行形：過去から現在まで続いている動作を表す文
+export const presentPerfectContinuousQuestions: Question[] = [
+  { id: "ph_ppc_001", category: "phrase_present_perfect_continuous", en: "I have been waiting for your call all morning.",          ja: "朝からずっとあなたの電話を待っていました。" },
+  { id: "ph_ppc_002", category: "phrase_present_perfect_continuous", en: "She has been working at this company for five years.",     ja: "彼女はこの会社で5年間ずっと働いている。" },
+  { id: "ph_ppc_003", category: "phrase_present_perfect_continuous", en: "They have been arguing about the same issue all day.",     ja: "彼らは一日中同じ問題についてずっと言い争っている。" },
+  { id: "ph_ppc_004", category: "phrase_present_perfect_continuous", en: "He has been feeling tired lately due to overwork.",        ja: "彼は最近、残業で疲れを感じ続けている。" },
+  { id: "ph_ppc_005", category: "phrase_present_perfect_continuous", en: "How long have you been learning to play the guitar?",     ja: "どのくらいギターを習い続けていますか？" },
+  { id: "ph_ppc_006", category: "phrase_present_perfect_continuous", en: "It has been raining heavily since early this morning.",   ja: "今朝早くからずっと激しい雨が降り続けている。" },
+  { id: "ph_ppc_007", category: "phrase_present_perfect_continuous", en: "I have been thinking about changing my job recently.",    ja: "最近、転職することをずっと考えている。" },
+  { id: "ph_ppc_008", category: "phrase_present_perfect_continuous", en: "We have been saving money for a house for years.",        ja: "私たちは何年もずっと家のために貯金し続けている。" },
+  { id: "ph_ppc_009", category: "phrase_present_perfect_continuous", en: "They have been researching this problem for decades.",    ja: "彼らは何十年もこの問題を研究し続けている。" },
+  { id: "ph_ppc_010", category: "phrase_present_perfect_continuous", en: "She has been training hard to prepare for the marathon.",       ja: "彼女はマラソンに備えて一生懸命トレーニングを続けている。" },
+  { id: "ph_ppc_011", category: "phrase_present_perfect_continuous", en: "She has been teaching at this school for over fifteen years.", ja: "彼女はこの学校で15年以上教え続けている。" },
+  { id: "ph_ppc_012", category: "phrase_present_perfect_continuous", en: "Have you been waiting long? I am so sorry I am late.",         ja: "長く待っていましたか？遅れてとても申し訳ありません。" },
+  { id: "ph_ppc_013", category: "phrase_present_perfect_continuous", en: "He has been practicing the violin every evening this week.",   ja: "彼は今週毎晩バイオリンを練習し続けている。" },
+  { id: "ph_ppc_014", category: "phrase_present_perfect_continuous", en: "They have been trying to solve this problem for months.",      ja: "彼らは何か月もこの問題を解こうとし続けている。" },
+  { id: "ph_ppc_015", category: "phrase_present_perfect_continuous", en: "I have been feeling a bit under the weather lately.",          ja: "最近少し体調が優れない状態が続いている。" },
+  { id: "ph_ppc_016", category: "phrase_present_perfect_continuous", en: "She has been looking for a new apartment since last spring.",  ja: "彼女は昨年の春からずっと新しいアパートを探し続けている。" },
+  { id: "ph_ppc_017", category: "phrase_present_perfect_continuous", en: "We have been discussing the budget issue all morning.",        ja: "私たちは午前中ずっと予算の問題を議論し続けている。" },
+  { id: "ph_ppc_018", category: "phrase_present_perfect_continuous", en: "How long have you been studying Japanese?",                   ja: "どのくらい日本語を勉強し続けていますか？" },
+  { id: "ph_ppc_019", category: "phrase_present_perfect_continuous", en: "I have been commuting for two hours every day for three years.", ja: "私は3年間毎日2時間通勤し続けている。" },
+  { id: "ph_ppc_020", category: "phrase_present_perfect_continuous", en: "He has been trying to reach you all afternoon.",              ja: "彼は午後中ずっとあなたに連絡を取ろうとし続けている。" },
+  { id: "ph_ppc_021", category: "phrase_present_perfect_continuous", en: "It has been snowing heavily since early this morning.",       ja: "今朝早くからずっと大雪が降り続けている。" },
+  { id: "ph_ppc_022", category: "phrase_present_perfect_continuous", en: "They have been renovating their house for several months now.", ja: "彼らは数か月間ずっと家を改装し続けている。" },
+  { id: "ph_ppc_023", category: "phrase_present_perfect_continuous", en: "I have been meaning to apologize to you for a long time.",    ja: "ずっとあなたに謝ろうと思い続けていた。" },
+  { id: "ph_ppc_024", category: "phrase_present_perfect_continuous", en: "She has been taking online lessons to improve her English.",  ja: "彼女は英語を上達させるためにオンラインレッスンを受け続けている。" },
+  { id: "ph_ppc_025", category: "phrase_present_perfect_continuous", en: "He has been working on the same novel for over two years.",   ja: "彼は2年以上同じ小説を書き続けている。" },
+];

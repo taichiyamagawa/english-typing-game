@@ -1,0 +1,30 @@
+import { Question } from "../index";
+
+// 未来完了形：未来の特定の時点までに完了している動作を表す文
+export const futurePerfectQuestions: Question[] = [
+  { id: "ph_fp_001", category: "phrase_future_perfect", en: "I will have finished the project by next Friday.",              ja: "来週の金曜日までにプロジェクトを終わらせているだろう。" },
+  { id: "ph_fp_002", category: "phrase_future_perfect", en: "She will have graduated by the time summer arrives.",           ja: "夏が来るころには、彼女は卒業しているだろう。" },
+  { id: "ph_fp_003", category: "phrase_future_perfect", en: "Will you have saved enough money by then?",                    ja: "そのときまでに十分なお金を貯めているでしょうか？" },
+  { id: "ph_fp_004", category: "phrase_future_perfect", en: "By next year, they will have been married for ten years.",      ja: "来年までに、彼らは結婚して10年になるだろう。" },
+  { id: "ph_fp_005", category: "phrase_future_perfect", en: "I will not have finished reading the book by tomorrow.",        ja: "明日までにその本を読み終えていないだろう。" },
+  { id: "ph_fp_006", category: "phrase_future_perfect", en: "He will have visited over thirty countries by age forty.",      ja: "40歳までに30か国以上を訪問しているだろう。" },
+  { id: "ph_fp_007", category: "phrase_future_perfect", en: "By the time you wake up, I will have already left.",            ja: "あなたが目を覚ます頃には、私はすでに出発しているだろう。" },
+  { id: "ph_fp_008", category: "phrase_future_perfect", en: "They will have completed the construction by March.",           ja: "3月までに建設を完了しているだろう。" },
+  { id: "ph_fp_009", category: "phrase_future_perfect", en: "She will have worked here for twenty years next spring.",       ja: "来春で彼女はここで20年働いたことになる。" },
+  { id: "ph_fp_010", category: "phrase_future_perfect", en: "We will have spent all our savings if we buy that house.",          ja: "あの家を買ったら、貯金をすべて使い果たしているだろう。" },
+  { id: "ph_fp_011", category: "phrase_future_perfect", en: "She will have mastered the language by the end of the year.",       ja: "年末までに彼女はその言語をマスターしているだろう。" },
+  { id: "ph_fp_012", category: "phrase_future_perfect", en: "Will you have moved into your new house before winter arrives?",    ja: "冬が来る前に新しい家に引っ越しているでしょうか？" },
+  { id: "ph_fp_013", category: "phrase_future_perfect", en: "He will have accumulated enough experience by the time he applies.", ja: "応募するころには、彼は十分な経験を積んでいるだろう。" },
+  { id: "ph_fp_014", category: "phrase_future_perfect", en: "By tomorrow morning, the team will have reviewed all the documents.", ja: "明日の朝までに、チームはすべての書類を確認し終えているだろう。" },
+  { id: "ph_fp_015", category: "phrase_future_perfect", en: "By his thirtieth birthday, he will have run marathons in ten countries.", ja: "30歳の誕生日までに、彼は10か国でマラソンを走っているだろう。" },
+  { id: "ph_fp_016", category: "phrase_future_perfect", en: "I will have finished cooking dinner by the time you get home.",      ja: "あなたが帰宅するころには、夕食を作り終えているだろう。" },
+  { id: "ph_fp_017", category: "phrase_future_perfect", en: "They will have been together for twenty years next summer.",         ja: "来年の夏で、彼らは付き合って20年になるだろう。" },
+  { id: "ph_fp_018", category: "phrase_future_perfect", en: "Will she have recovered from her injury before the season starts?",  ja: "シーズンが始まる前に、彼女はケガから回復しているでしょうか？" },
+  { id: "ph_fp_019", category: "phrase_future_perfect", en: "By the end of the week, he will have read the entire novel.",        ja: "週末までに、彼は小説全体を読み終えているだろう。" },
+  { id: "ph_fp_020", category: "phrase_future_perfect", en: "She will not have finished her project before the presentation.",    ja: "発表の前に、彼女はプロジェクトを終わらせていないだろう。" },
+  { id: "ph_fp_021", category: "phrase_future_perfect", en: "By the time the guests arrive, I will have cleaned the whole house.",  ja: "客が到着するころ、私は家全体を掃除し終えているだろう。" },
+  { id: "ph_fp_022", category: "phrase_future_perfect", en: "She will have memorized all the lines by opening night.",              ja: "初日の夜までに、彼女はすべてのセリフを覚えているだろう。" },
+  { id: "ph_fp_023", category: "phrase_future_perfect", en: "Will you have eaten before the show starts?",                          ja: "ショーが始まる前に食事を済ませているでしょうか？" },
+  { id: "ph_fp_024", category: "phrase_future_perfect", en: "By next month, the company will have launched its new product.",       ja: "来月までに、会社は新製品を発売しているだろう。" },
+  { id: "ph_fp_025", category: "phrase_future_perfect", en: "He will not have received the letter by the time the deadline passes.", ja: "締め切りが過ぎるころには、彼はまだ手紙を受け取っていないだろう。" },
+];
