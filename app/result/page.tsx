@@ -24,11 +24,11 @@ function ResultContent() {
   const mistakes = Number(searchParams.get("mistakes") ?? 0);
   const typed    = Number(searchParams.get("typed") ?? 0);
 
-  // 正確率：全キー入力（正解＋ミス）のうち正解した割合
+  // 正確率：全キー入力（正解＋ミス）のうち正解した割合（入力がない場合はnullで「ー」表示）
   const totalKeystrokes = typed + mistakes;
   const accuracy = totalKeystrokes > 0
     ? Math.round((typed / totalKeystrokes) * 100)
-    : 100;
+    : null;
 
   const isCleared = result === "cleared";
   const isQuit    = result === "quit";
@@ -44,14 +44,14 @@ function ResultContent() {
   useEffect(() => {
     // タイムモードのみ履歴に保存・自己ベストを更新する
     if (mode === "time") {
-      saveRecord({ mode, category, result, time, mistakes, typed, accuracy });
+      saveRecord({ mode, category, result, time, mistakes, typed, accuracy: accuracy ?? 0 });
       const prev = getBestScore(category);
       const updated = updateBestScore(category, typed);
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setBestScore(updated ? typed : prev);
       setIsNewRecord(updated);
       // 全体自己ベストも更新する
-      updateOverallBest({ score: typed, category, accuracy, mistakes, date: new Date().toISOString() });
+      updateOverallBest({ score: typed, category, accuracy: accuracy ?? 0, mistakes, date: new Date().toISOString() });
     }
     try {
       const raw = localStorage.getItem("bitfun_played");
@@ -109,11 +109,15 @@ function ResultContent() {
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-5">
             <p className="text-xs text-gray-400 mb-1">正確率</p>
             <p className={`text-2xl font-bold tabular-nums ${
-              accuracy >= 90 ? "text-green-500" :
-              accuracy >= 70 ? "text-orange-400" :
-              "text-red-400"
+              accuracy === null  ? "text-gray-300" :
+              accuracy >= 90    ? "text-green-500" :
+              accuracy >= 70    ? "text-orange-400" :
+                                  "text-red-400"
             }`}>
-              {accuracy}<span className="text-base font-normal text-gray-400">%</span>
+              {accuracy === null
+                ? <span>ー</span>
+                : <>{accuracy}<span className="text-base font-normal text-gray-400">%</span></>
+              }
             </p>
           </div>
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-5">

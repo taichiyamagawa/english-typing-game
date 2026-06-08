@@ -501,9 +501,9 @@ function GameContent() {
         )}
       </div>
 
-      {/* 問題文カード＋やめるボタン（フリーモード）を横並び */}
-      <div className="w-full max-w-2xl flex items-stretch gap-3">
-      <div className="flex-1 bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden">
+      {/* 問題文カード（やめるボタンはカード右外側に絶対配置） */}
+      <div className="w-full max-w-2xl relative">
+      <div className="w-full bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden">
         <div className="h-1 bg-gradient-to-r from-orange-400 to-amber-400" />
         <div className="p-4 sm:p-8">
           {/* 文法ヒント：非表示でなければテキストを表示 */}
@@ -586,11 +586,11 @@ function GameContent() {
           </div>
         </div>
       </div>
-        {/* やめるボタン：フリーモードのみ・問題カードの右に配置 */}
+        {/* やめるボタン：フリーモードのみ・カードの右外側に絶対配置 */}
         {mode === "free" && !isCleared && (
           <button
             onClick={handleQuit}
-            className="shrink-0 self-center flex items-center justify-center w-16 h-16 rounded-2xl bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 hover:border-red-300 hover:text-red-400 shadow-sm transition-all text-sm font-medium"
+            className="absolute top-1/2 -translate-y-1/2 -right-[76px] flex items-center justify-center w-16 h-16 rounded-2xl bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 hover:border-red-300 hover:text-red-400 shadow-sm transition-all text-sm font-medium"
           >
             やめる
           </button>
