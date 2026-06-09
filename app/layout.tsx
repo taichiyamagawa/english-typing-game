@@ -4,7 +4,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import SoundToggle from "@/components/SoundToggle";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://english-typing-game-delta.vercel.app"),
+  metadataBase: new URL("https://bitfun.jp"),
   title: "English Typing Game | BitFun",
   description: "ちょっと楽しく、学習を習慣に！雑学・英文・英単語でタイピング練習",
   openGraph: {
