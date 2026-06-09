@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Script from "next/script";
 import ThemeToggle from "@/components/ThemeToggle";
 import SoundToggle from "@/components/SoundToggle";
+import BitFunLogo from "@/components/BitFunLogo";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bitfun.jp"),
@@ -28,15 +30,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" suppressHydrationWarning>
-      <head>
-        {/* ページ読み込み時にダークモードのちらつきを防ぐ */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){var t=localStorage.getItem('theme')||'light';document.documentElement.classList.toggle('dark',t==='dark');})();`,
-          }}
-        />
-      </head>
       <body className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+        {/* ページ読み込み時にダークモードのちらつきを防ぐ。beforeInteractiveで最初に実行される */}
+        <Script id="theme-init" strategy="beforeInteractive">{`(function(){var t=localStorage.getItem('theme')||'light';document.documentElement.classList.toggle('dark',t==='dark');})();`}</Script>
+        <BitFunLogo />
         {children}
         <SoundToggle />
         <ThemeToggle />

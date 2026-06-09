@@ -59,6 +59,15 @@ function GameContent() {
 
   // 問題リストを初期化する
   const [questions] = useState<Question[]>(() => {
+    // 出題問題一覧からの練習の場合はその問題だけを使う
+    if (source === "played") {
+      try {
+        const raw = localStorage.getItem("bitfun_played");
+        return raw ? JSON.parse(raw) : [];
+      } catch {
+        return [];
+      }
+    }
     // ブックマーク一覧からの場合はブックマーク済み問題だけを使う
     if (source === "bookmark") {
       const bm = getBookmarks();
@@ -308,6 +317,7 @@ function GameContent() {
         mistakes: String(mistakes),
         typed:    String(newTotalTyped),
         total:    String(newTotalTyped + mistakes),
+        ...(source ? { source } : {}),
       });
       router.push(`/result?${params.toString()}`);
     } else {
@@ -330,6 +340,7 @@ function GameContent() {
       mistakes: String(mistakes),
       typed:    String(finalTyped),
       total:    String(finalTyped + mistakes),
+      ...(source ? { source } : {}),
     });
     router.push(`/result?${params.toString()}`);
   };
@@ -414,13 +425,15 @@ function GameContent() {
       <div className="w-full max-w-2xl flex justify-between items-center">
         <button
           onClick={() => {
-            // 英文・単語カテゴリはそれぞれの選択画面へ、それ以外はトップへ戻る
-            if (category.startsWith("phrase_")) {
-              router.push(`/phrase-select?mode=${mode}`);
+            // replaceで遷移することでゲーム画面を履歴に残さない
+            if (source === "played") {
+              router.replace("/played");
+            } else if (category.startsWith("phrase_")) {
+              router.replace(`/phrase-select?mode=${mode}`);
             } else if (category.startsWith("word_")) {
-              router.push(`/word-select?mode=${mode}`);
+              router.replace(`/word-select?mode=${mode}`);
             } else {
-              router.push("/");
+              router.replace("/");
             }
           }}
           className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors flex items-center gap-1"
@@ -448,7 +461,7 @@ function GameContent() {
           </button>
           {/* 問題一覧ボタン：スマホでは非表示 */}
           <button
-            onClick={() => router.push("/questions")}
+            onClick={() => router.replace("/questions")}
             className="hidden sm:flex text-xs text-gray-500 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-400 font-medium transition-colors bg-white dark:bg-gray-800 px-2.5 py-1 rounded-full shadow-sm border border-gray-200 dark:border-gray-700"
           >
             🗂️ 問題一覧
@@ -586,8 +599,8 @@ function GameContent() {
           </div>
         </div>
       </div>
-        {/* やめるボタン：フリーモードのみ・カードの右外側に絶対配置 */}
-        {mode === "free" && !isCleared && (
+        {/* やめるボタン：フリーモードのみ・source=playedのときは非表示 */}
+        {mode === "free" && !isCleared && source !== "played" && (
           <button
             onClick={handleQuit}
             className="absolute top-1/2 -translate-y-1/2 -right-[76px] flex items-center justify-center w-16 h-16 rounded-2xl bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 hover:border-red-300 hover:text-red-400 shadow-sm transition-all text-sm font-medium"

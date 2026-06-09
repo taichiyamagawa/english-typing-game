@@ -88,4 +88,35 @@ export const propertyQuestions: Question[] = [
   { id: "word_property_073", category: "word_property", en: "resin",       ja: "樹脂" },
   { id: "word_property_074", category: "word_property", en: "nylon",       ja: "ナイロン" },
   { id: "word_property_075", category: "word_property", en: "polyester",   ja: "ポリエステル" },
+
+  // 色（追加）
+  { id: "word_property_076", category: "word_property", en: "vermillion",  ja: "朱色" },
+  { id: "word_property_077", category: "word_property", en: "cerulean",    ja: "空色" },
+  { id: "word_property_078", category: "word_property", en: "emerald",     ja: "エメラルド色" },
+  { id: "word_property_079", category: "word_property", en: "mauve",       ja: "薄紫色" },
+  { id: "word_property_080", category: "word_property", en: "saffron",     ja: "サフラン色" },
+  { id: "word_property_081", category: "word_property", en: "coral",       ja: "珊瑚色" },
+  { id: "word_property_082", category: "word_property", en: "jade",        ja: "翡翠色" },
+  { id: "word_property_083", category: "word_property", en: "lavender",    ja: "ラベンダー色" },
+
+  // 形状（追加）
+  { id: "word_property_084", category: "word_property", en: "parallelogram", ja: "平行四辺形" },
+  { id: "word_property_085", category: "word_property", en: "convex",      ja: "凸の" },
+  { id: "word_property_086", category: "word_property", en: "concave",     ja: "凹の" },
+  { id: "word_property_087", category: "word_property", en: "asymmetric",  ja: "非対称の" },
+  { id: "word_property_088", category: "word_property", en: "wedge",       ja: "くさび形" },
+
+  // 素材（追加）
+  { id: "word_property_089", category: "word_property", en: "obsidian",    ja: "黒曜石" },
+  { id: "word_property_090", category: "word_property", en: "ebony",       ja: "黒檀" },
+  { id: "word_property_091", category: "word_property", en: "graphite",    ja: "黒鉛" },
+  { id: "word_property_092", category: "word_property", en: "quartz",      ja: "石英" },
+  { id: "word_property_093", category: "word_property", en: "pewter",      ja: "ピューター合金" },
+  { id: "word_property_094", category: "word_property", en: "acrylic",     ja: "アクリル" },
+  { id: "word_property_095", category: "word_property", en: "latex",       ja: "ラテックス" },
+  { id: "word_property_096", category: "word_property", en: "hemp",        ja: "麻" },
+  { id: "word_property_097", category: "word_property", en: "suede",       ja: "スエード" },
+  { id: "word_property_098", category: "word_property", en: "slate",       ja: "スレート" },
+  { id: "word_property_099", category: "word_property", en: "terracotta",  ja: "テラコッタ" },
+  { id: "word_property_100", category: "word_property", en: "stainless",   ja: "ステンレス" },
 ];

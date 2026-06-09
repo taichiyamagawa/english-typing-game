@@ -27,4 +27,9 @@ export const tagQuestionQuestions: Question[] = [
   { id: "ph_tq_023", category: "phrase_tag", en: "You had met her before the party, hadn't you?",                   ja: "パーティーの前に彼女に会っていましたよね？" },
   { id: "ph_tq_024", category: "phrase_tag", en: "There isn't enough time to finish everything today, is there?",   ja: "今日すべてを終わらせる時間はありませんよね？" },
   { id: "ph_tq_025", category: "phrase_tag", en: "She can't have forgotten about the appointment, can she?",        ja: "彼女がアポを忘れることはないですよね？" },
+  { id: "ph_tq_026", category: "phrase_tag", en: "You have already booked the tickets, haven't you?",               ja: "もうチケットを予約していますよね？" },
+  { id: "ph_tq_027", category: "phrase_tag", en: "The new employee seems very capable, doesn't she?",               ja: "新しい従業員はとても優秀そうですよね？" },
+  { id: "ph_tq_028", category: "phrase_tag", en: "We haven't made any final decisions yet, have we?",               ja: "まだ最終決定はしていませんよね？" },
+  { id: "ph_tq_029", category: "phrase_tag", en: "He would have told us if he had known, wouldn't he?",             ja: "知っていたら彼は教えてくれていたはずですよね？" },
+  { id: "ph_tq_030", category: "phrase_tag", en: "They should be here by now, shouldn't they?",                    ja: "彼らはもうここに来ているはずですよね？" },
 ];

@@ -27,4 +27,9 @@ export const subjunctiveQuestions: Question[] = [
   { id: "ph_sj_023", category: "phrase_subjunctive", en: "If I had been there, I could have helped you solve the problem.",        ja: "もし私がそこにいたら、問題の解決を手伝えたのに。" },
   { id: "ph_sj_024", category: "phrase_subjunctive", en: "He would travel more often if he had more vacation time.",               ja: "もっと休暇があれば、彼はもっと頻繁に旅行するのに。" },
   { id: "ph_sj_025", category: "phrase_subjunctive", en: "I sometimes wish I had chosen a different career path.",                 ja: "違うキャリアパスを選んでいたらと時々思う。" },
+  { id: "ph_sj_026", category: "phrase_subjunctive", en: "If I knew her phone number, I would call her right away.",               ja: "彼女の電話番号を知っていれば、すぐに電話するのに。" },
+  { id: "ph_sj_027", category: "phrase_subjunctive", en: "I wish I could take a long vacation and forget about everything.",        ja: "長い休暇を取ってすべてを忘れられたらいいのに。" },
+  { id: "ph_sj_028", category: "phrase_subjunctive", en: "If he had not helped me that day, I would have given up.",                ja: "あの日彼が助けてくれなければ、私は諦めていただろう。" },
+  { id: "ph_sj_029", category: "phrase_subjunctive", en: "She acts as if nothing bad had ever happened to her.",                    ja: "彼女はまるで何も悪いことが起きなかったかのように振る舞う。" },
+  { id: "ph_sj_030", category: "phrase_subjunctive", en: "If only I had kept in touch with my old friends.",                       ja: "昔の友人たちと連絡を取り続けていればよかった。" },
 ];

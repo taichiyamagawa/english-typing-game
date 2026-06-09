@@ -27,4 +27,9 @@ export const pastContinuousQuestions: Question[] = [
   { id: "ph_ptc_023", category: "phrase_past_continuous", en: "Were you listening when the teacher gave out the homework?",        ja: "先生が宿題を出したとき、あなたは聞いていましたか？" },
   { id: "ph_ptc_024", category: "phrase_past_continuous", en: "She was jogging in the park when she ran into an old friend.",      ja: "彼女は公園でジョギングしているときに、昔の友人にばったり会った。" },
   { id: "ph_ptc_025", category: "phrase_past_continuous", en: "I was feeling really nervous before the interview started.",        ja: "面接が始まる前、私はとても緊張していた。" },
+  { id: "ph_ptc_026", category: "phrase_past_continuous", en: "I was listening to music when someone knocked on the door.",        ja: "誰かがドアをノックしたとき、私は音楽を聴いていた。" },
+  { id: "ph_ptc_027", category: "phrase_past_continuous", en: "They were discussing the project when the client called unexpectedly.", ja: "クライアントが突然電話してきたとき、彼らはプロジェクトについて話し合っていた。" },
+  { id: "ph_ptc_028", category: "phrase_past_continuous", en: "She was taking a nap when the earthquake hit the city.",            ja: "地震が街を襲ったとき、彼女は昼寝をしていた。" },
+  { id: "ph_ptc_029", category: "phrase_past_continuous", en: "We were having a picnic in the park when it suddenly started to rain.", ja: "急に雨が降り始めたとき、私たちは公園でピクニックをしていた。" },
+  { id: "ph_ptc_030", category: "phrase_past_continuous", en: "He was checking his phone when the announcement was made.",         ja: "アナウンスが流れたとき、彼はスマホを確認していた。" },
 ];

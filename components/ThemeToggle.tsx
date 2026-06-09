@@ -1,13 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function ThemeToggle() {
-  // 現在のテーマ状態（初期値はlocalStorageから読み込む）
-  const [isDark, setIsDark] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return localStorage.getItem("theme") === "dark";
-  });
+  // サーバーとクライアントで初期値を一致させるため false で初期化し、
+  // マウント後に localStorage から実際の値を読み込む（hydration エラー対策）
+  const [isDark, setIsDark] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setIsDark(localStorage.getItem("theme") === "dark");
+    setMounted(true);
+  }, []);
 
   // テーマを切り替える：classとlocalStorageを同時に更新する
   const toggle = () => {
@@ -16,6 +20,9 @@ export default function ThemeToggle() {
     document.documentElement.classList.toggle("dark", next);
     localStorage.setItem("theme", next ? "dark" : "light");
   };
+
+  // マウント前はサーバーと同じ状態（非表示）にしてhydrationエラーを防ぐ
+  if (!mounted) return null;
 
   return (
     <button

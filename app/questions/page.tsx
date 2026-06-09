@@ -116,11 +116,13 @@ export default function QuestionsPage() {
   };
 
   // 「練習する」ボタン：フリーモードでその問題から開始
+  // router.replace を使うことで、questions ページを履歴に残さず game に遷移する
+  // （push だと「戻る→questions→戻る→game」という二重遷移が起きるため）
   const handlePractice = (question: Question) => {
     if (activeCategory === "bookmark") {
-      router.push(`/game?mode=free&category=${question.category}&startId=${question.id}&source=bookmark`);
+      router.replace(`/game?mode=free&category=${question.category}&startId=${question.id}&source=bookmark`);
     } else {
-      router.push(`/game?mode=free&category=${question.category}&startId=${question.id}`);
+      router.replace(`/game?mode=free&category=${question.category}&startId=${question.id}`);
     }
   };
 

@@ -27,4 +27,9 @@ export const futurePerfectContinuousQuestions: Question[] = [
   { id: "ph_fpc_023", category: "phrase_future_perfect_continuous", en: "How long will you have been waiting when the store finally opens?",      ja: "店がやっと開くとき、どのくらい待ち続けていることになりますか？" },
   { id: "ph_fpc_024", category: "phrase_future_perfect_continuous", en: "He will have been playing guitar for fifteen years by the time he turns thirty.", ja: "30歳になるころ、彼は15年間ギターを弾き続けていることになる。" },
   { id: "ph_fpc_025", category: "phrase_future_perfect_continuous", en: "By next week, they will have been renovating the kitchen for a full month.", ja: "来週で、彼らはキッチンのリノベーションを丸1か月続けていることになる。" },
+  { id: "ph_fpc_026", category: "phrase_future_perfect_continuous", en: "By the time the project ends, we will have been collaborating for over a year.", ja: "プロジェクトが終わるころ、私たちは1年以上協力し続けていることになる。" },
+  { id: "ph_fpc_027", category: "phrase_future_perfect_continuous", en: "She will have been working on this report for three days by tomorrow afternoon.", ja: "明日の午後で、彼女はこのレポートに3日間取り組み続けていることになる。" },
+  { id: "ph_fpc_028", category: "phrase_future_perfect_continuous", en: "How long will you have been waiting by the time the doctor sees you?",     ja: "医者に診てもらうころ、どのくらい待ち続けていることになりますか？" },
+  { id: "ph_fpc_029", category: "phrase_future_perfect_continuous", en: "He will have been commuting to this office for five years by next spring.", ja: "来年の春で、彼はこのオフィスに5年間通い続けていることになる。" },
+  { id: "ph_fpc_030", category: "phrase_future_perfect_continuous", en: "By the time they publish the findings, they will have been researching for a decade.", ja: "研究結果が発表されるころ、彼らは10年間研究し続けていることになる。" },
 ];

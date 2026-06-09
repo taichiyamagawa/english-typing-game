@@ -27,4 +27,9 @@ export const pastPerfectContinuousQuestions: Question[] = [
   { id: "ph_ptpc_023", category: "phrase_past_perfect_continuous", en: "I had been trying to fix the issue for hours before I asked for help.",   ja: "助けを求める前、私は何時間もその問題を直し続けていた。" },
   { id: "ph_ptpc_024", category: "phrase_past_perfect_continuous", en: "The team had been losing confidence before their coach gave a powerful speech.", ja: "コーチが力強いスピーチをする前、チームは自信を失い続けていた。" },
   { id: "ph_ptpc_025", category: "phrase_past_perfect_continuous", en: "How long had you been studying Japanese before you moved to Tokyo?",       ja: "東京に引っ越す前、どのくらい日本語を勉強し続けていましたか？" },
+  { id: "ph_ptpc_026", category: "phrase_past_perfect_continuous", en: "She had been practicing every day for a year before she performed on stage.", ja: "舞台に立つ前、彼女は1年間毎日練習し続けていた。" },
+  { id: "ph_ptpc_027", category: "phrase_past_perfect_continuous", en: "He had been applying for jobs for months before he finally got an offer.",   ja: "ついにオファーをもらう前、彼は何か月も仕事に応募し続けていた。" },
+  { id: "ph_ptpc_028", category: "phrase_past_perfect_continuous", en: "We had been discussing the issue for hours before reaching a decision.",     ja: "決断を下すまで、私たちは何時間もその問題を話し合い続けていた。" },
+  { id: "ph_ptpc_029", category: "phrase_past_perfect_continuous", en: "The company had been losing money for years before it finally went bankrupt.", ja: "ついに倒産する前、その会社は何年も損失を出し続けていた。" },
+  { id: "ph_ptpc_030", category: "phrase_past_perfect_continuous", en: "I had been looking forward to the concert for months before it got cancelled.", ja: "コンサートがキャンセルされるまで、私は何か月もずっと楽しみにし続けていた。" },
 ];

@@ -27,4 +27,9 @@ export const futurePerfectQuestions: Question[] = [
   { id: "ph_fp_023", category: "phrase_future_perfect", en: "Will you have eaten before the show starts?",                          ja: "ショーが始まる前に食事を済ませているでしょうか？" },
   { id: "ph_fp_024", category: "phrase_future_perfect", en: "By next month, the company will have launched its new product.",       ja: "来月までに、会社は新製品を発売しているだろう。" },
   { id: "ph_fp_025", category: "phrase_future_perfect", en: "He will not have received the letter by the time the deadline passes.", ja: "締め切りが過ぎるころには、彼はまだ手紙を受け取っていないだろう。" },
+  { id: "ph_fp_026", category: "phrase_future_perfect", en: "By the time I turn thirty, I will have visited every continent.",         ja: "30歳になるころ、私はすべての大陸を訪れているだろう。" },
+  { id: "ph_fp_027", category: "phrase_future_perfect", en: "She will have completed her thesis before the spring break begins.",      ja: "春休みが始まる前に、彼女は論文を完成させているだろう。" },
+  { id: "ph_fp_028", category: "phrase_future_perfect", en: "Will you have prepared the report before the morning meeting?",          ja: "午前の会議の前にレポートを準備し終えているでしょうか？" },
+  { id: "ph_fp_029", category: "phrase_future_perfect", en: "He will not have informed everyone before he makes the announcement.",   ja: "発表する前に、彼は全員に伝えていないだろう。" },
+  { id: "ph_fp_030", category: "phrase_future_perfect", en: "They will have celebrated ten years in business by the end of this year.", ja: "今年末で、彼らは創業10周年を迎えているだろう。" },
 ];

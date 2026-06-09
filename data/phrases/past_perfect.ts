@@ -27,4 +27,9 @@ export const pastPerfectQuestions: Question[] = [
   { id: "ph_ptp_023", category: "phrase_past_perfect", en: "By the time he finished speaking, most people had left.",            ja: "彼が話し終える頃には、ほとんどの人が去っていた。" },
   { id: "ph_ptp_024", category: "phrase_past_perfect", en: "They had been friends for years before they became business partners.", ja: "彼らはビジネスパートナーになる前に、何年も友人だった。" },
   { id: "ph_ptp_025", category: "phrase_past_perfect", en: "She hadn't expected to win, so she had no speech prepared.",         ja: "彼女は勝つとは思っていなかったので、スピーチを用意していなかった。" },
+  { id: "ph_ptp_026", category: "phrase_past_perfect", en: "She had prepared everything before the guests started to arrive.",    ja: "ゲストが来始める前に、彼女はすべての準備を終えていた。" },
+  { id: "ph_ptp_027", category: "phrase_past_perfect", en: "I had never tasted such amazing food before visiting that restaurant.", ja: "あのレストランを訪れる前、そんなに美味しい料理を食べたことがなかった。" },
+  { id: "ph_ptp_028", category: "phrase_past_perfect", en: "He had already apologized before she even had a chance to bring it up.", ja: "彼女がそれを言い出す前に、彼はすでに謝っていた。" },
+  { id: "ph_ptp_029", category: "phrase_past_perfect", en: "Had you read the contract carefully before you signed it?",           ja: "署名する前に、契約書をよく読んでいましたか？" },
+  { id: "ph_ptp_030", category: "phrase_past_perfect", en: "By the time the rescue team arrived, the survivors had already been found.", ja: "救助隊が到着するころには、生存者はすでに発見されていた。" },
 ];

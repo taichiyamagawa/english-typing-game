@@ -2,7 +2,7 @@
 
 import { useSearchParams, useRouter } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
-import { saveRecord, getBestScore, updateBestScore, updateOverallBest, categoryLabel } from "@/lib/records";
+import { saveRecord, updateOverallBest, categoryLabel } from "@/lib/records";
 
 // 秒数を「M:SS」形式の文字列に変換する
 const formatTime = (seconds: number): string => {
@@ -20,6 +20,7 @@ function ResultContent() {
   const result   = searchParams.get("result") as "cleared" | "gameover" | "quit";
   const mode     = searchParams.get("mode") as "time" | "free";
   const category = searchParams.get("category") ?? "";
+  const source   = searchParams.get("source");
   const time     = Number(searchParams.get("time") ?? 0);
   const mistakes = Number(searchParams.get("mistakes") ?? 0);
   const typed    = Number(searchParams.get("typed") ?? 0);
@@ -30,40 +31,37 @@ function ResultContent() {
     ? Math.round((typed / totalKeystrokes) * 100)
     : null;
 
-  const isCleared = result === "cleared";
-  const isQuit    = result === "quit";
+  const isCleared  = result === "cleared";
+  const isQuit     = result === "quit";
+  const isGameOver = result === "gameover";
 
-  // ゲーム画面から渡された出題問題リスト
-  const [playedQuestions, setPlayedQuestions] = useState<{ en: string; ja: string }[]>([]);
-
-  // タイムモードの自己ベスト（文字数）と新記録かどうか
-  const [bestScore, setBestScore] = useState<number | null>(null);
-  const [isNewRecord, setIsNewRecord] = useState(false);
-
-  // 画面表示時に1回だけlocalStorageから出題リストを読み込み・記録を保存する
-  useEffect(() => {
-    // タイムモードのみ履歴に保存・自己ベストを更新する
-    if (mode === "time") {
-      saveRecord({ mode, category, result, time, mistakes, typed, accuracy: accuracy ?? 0 });
-      const prev = getBestScore(category);
-      const updated = updateBestScore(category, typed);
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setBestScore(updated ? typed : prev);
-      setIsNewRecord(updated);
-      // 全体自己ベストも更新する
-      updateOverallBest({ score: typed, category, accuracy: accuracy ?? 0, mistakes, date: new Date().toISOString() });
-    }
+  // ゲーム画面から渡された出題問題リスト（localStorageから直接読み込む）
+  const [playedQuestions] = useState<{ en: string; ja: string }[]>(() => {
     try {
       const raw = localStorage.getItem("bitfun_played");
-      if (raw) setPlayedQuestions(JSON.parse(raw));
+      return raw ? JSON.parse(raw) : [];
     } catch {
-      // パースエラーは無視する
+      return [];
+    }
+  });
+
+  // 画面表示時に1回だけ記録を保存する
+  useEffect(() => {
+    // タイムモードのみ履歴に保存・全体自己ベストを更新する
+    if (mode === "time") {
+      saveRecord({ mode, category, result, time, mistakes, typed, accuracy: accuracy ?? 0 });
+      updateOverallBest({ score: typed, category, accuracy: accuracy ?? 0, mistakes, date: new Date().toISOString() });
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleRetry = () => {
-    router.push(`/game?mode=${mode}&category=${category}`);
+    // 出題問題一覧からの練習の場合はsource=playedで再スタート
+    if (source === "played") {
+      router.push(`/game?mode=${mode}&source=played`);
+    } else {
+      router.push(`/game?mode=${mode}&category=${category}`);
+    }
   };
 
   return (
@@ -89,20 +87,20 @@ function ResultContent() {
       {/* スコアカード */}
       <div className="w-full max-w-sm flex flex-col gap-3">
 
-        {/* タイム */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-5 flex items-center justify-between">
-          <div>
-            <p className="text-xs text-gray-400 mb-1">
-              {mode === "time"
-                ? isCleared ? "残り時間" : "打ち切れた時間"
-                : "かかった時間"}
-            </p>
-            <p className="text-2xl font-bold text-gray-700 dark:text-gray-100 tabular-nums">
-              {formatTime(time)}
-            </p>
+        {/* タイム：タイムアップ時は不要なので非表示 */}
+        {!isGameOver && (
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-5 flex items-center justify-between">
+            <div>
+              <p className="text-xs text-gray-400 mb-1">
+                {mode === "time" ? "残り時間" : "かかった時間"}
+              </p>
+              <p className="text-2xl font-bold text-gray-700 dark:text-gray-100 tabular-nums">
+                {formatTime(time)}
+              </p>
+            </div>
+            <span className="text-3xl">⏱</span>
           </div>
-          <span className="text-3xl">⏱</span>
-        </div>
+        )}
 
         {/* 正確率・ミス数を横並び */}
         <div className="grid grid-cols-2 gap-3">
@@ -128,41 +126,21 @@ function ResultContent() {
           </div>
         </div>
 
-        {/* 正解した文字数・総入力数を横並び */}
+        {/* 正打数・総入力数を横並び */}
         <div className="grid grid-cols-2 gap-3">
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-5">
-            <p className="text-xs text-gray-400 mb-1">正解した文字数</p>
+            <p className="text-xs text-gray-400 mb-1">正打数</p>
             <p className="text-2xl font-bold text-gray-700 dark:text-gray-100 tabular-nums">
               {typed}<span className="text-base font-normal text-gray-400"> 文字</span>
             </p>
           </div>
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-5">
-            <p className="text-xs text-gray-400 mb-1">総入力数</p>
+            <p className="text-xs text-gray-400 mb-1">総打鍵数</p>
             <p className="text-2xl font-bold text-gray-700 dark:text-gray-100 tabular-nums">
               {totalKeystrokes}<span className="text-base font-normal text-gray-400"> 回</span>
             </p>
           </div>
         </div>
-
-        {/* 自己ベスト：タイムモードのみ表示 */}
-        {mode === "time" && bestScore !== null && (
-          <div className={`rounded-2xl shadow-sm p-5 flex items-center justify-between ${
-            isNewRecord
-              ? "bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-700"
-              : "bg-white dark:bg-gray-800"
-          }`}>
-            <div>
-              <p className="text-xs text-gray-400 mb-1">自己ベスト</p>
-              <p className={`text-2xl font-bold tabular-nums ${isNewRecord ? "text-orange-500" : "text-gray-700 dark:text-gray-100"}`}>
-                {bestScore}<span className="text-base font-normal text-gray-400"> 文字</span>
-              </p>
-            </div>
-            {isNewRecord
-              ? <span className="text-2xl animate-celebrate">🎉</span>
-              : <span className="text-2xl">🏆</span>
-            }
-          </div>
-        )}
       </div>
 
       {/* アクションボタン */}
@@ -171,7 +149,7 @@ function ResultContent() {
           onClick={handleRetry}
           className="px-8 py-3 bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white font-bold rounded-2xl shadow-md shadow-orange-200 dark:shadow-orange-900/30 transition-all hover:scale-[1.02] active:scale-[0.98]"
         >
-          もう一度
+          {source === "played" ? "同じ問題で練習" : "もう一度"}
         </button>
         <button
           onClick={() => router.push("/history")}

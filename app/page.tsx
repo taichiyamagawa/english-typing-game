@@ -57,15 +57,7 @@ export default function TopPage() {
         </button>
       </div>
 
-      {/* 左上のロゴ */}
-      <div className="absolute top-6 left-4 sm:left-6 flex items-center gap-2">
-        <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-orange-400 to-orange-500 shadow-md shadow-orange-200 dark:shadow-orange-900/30">
-          <span className="text-lg">⌨️</span>
-        </div>
-        <span className="text-xl font-bold tracking-tight">
-          <span className="text-gray-800 dark:text-gray-100">Bit</span><span className="text-orange-500">Fun</span>
-        </span>
-      </div>
+
 
       {/* タイトルエリア */}
       <div className="text-center mb-8">

@@ -87,4 +87,28 @@ export const societyQuestions: Question[] = [
   { id: "word_society_078", category: "word_society", en: "treason",        ja: "反逆罪" },
   { id: "word_society_079", category: "word_society", en: "espionage",      ja: "スパイ活動" },
   { id: "word_society_080", category: "word_society", en: "colonialism",    ja: "植民地主義" },
+
+  // 政治思想・体制（追加）
+  { id: "word_society_081", category: "word_society", en: "autocracy",      ja: "専制政治" },
+  { id: "word_society_082", category: "word_society", en: "totalitarianism", ja: "全体主義" },
+  { id: "word_society_083", category: "word_society", en: "populism",       ja: "ポピュリズム" },
+  { id: "word_society_084", category: "word_society", en: "anarchism",      ja: "無政府主義" },
+  { id: "word_society_085", category: "word_society", en: "liberalism",     ja: "自由主義" },
+  { id: "word_society_086", category: "word_society", en: "conservatism",   ja: "保守主義" },
+  { id: "word_society_087", category: "word_society", en: "fascism",        ja: "ファシズム" },
+  { id: "word_society_088", category: "word_society", en: "communism",      ja: "共産主義" },
+  { id: "word_society_089", category: "word_society", en: "oligarchy",      ja: "寡頭政治" },
+  { id: "word_society_090", category: "word_society", en: "privatization",  ja: "民営化" },
+
+  // 経済・国際関係（追加）
+  { id: "word_society_091", category: "word_society", en: "nationalization", ja: "国有化" },
+  { id: "word_society_092", category: "word_society", en: "deregulation",   ja: "規制緩和" },
+  { id: "word_society_093", category: "word_society", en: "hyperinflation", ja: "ハイパーインフレ" },
+  { id: "word_society_094", category: "word_society", en: "protectionism",  ja: "保護主義" },
+  { id: "word_society_095", category: "word_society", en: "multilateral",   ja: "多国間の" },
+  { id: "word_society_096", category: "word_society", en: "bilateral",      ja: "二国間の" },
+  { id: "word_society_097", category: "word_society", en: "ratification",   ja: "批准" },
+  { id: "word_society_098", category: "word_society", en: "deterrence",     ja: "抑止力" },
+  { id: "word_society_099", category: "word_society", en: "humanitarian",   ja: "人道的な" },
+  { id: "word_society_100", category: "word_society", en: "partition",      ja: "分割・分断" },
 ];

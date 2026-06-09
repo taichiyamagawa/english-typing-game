@@ -41,18 +41,6 @@ export const saveRecord = (record: Omit<GameRecord, "id" | "date">): void => {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
 };
 
-// タイムモードのスコアを計算する（正解文字数が多いほど高得点）
-export const calcTimeScore = (record: GameRecord): number => record.typed;
-
-// フリーモードのスコアを計算する（正確率が高く、タイムが短いほど高得点）
-export const calcFreeScore = (record: GameRecord): number => {
-  if (record.time === 0) return 0;
-  return Math.round((record.accuracy * 100) / record.time);
-};
-
-// カテゴリ別自己ベストの localStorage キー名
-const BEST_SCORE_KEY = "bitfun_best_scores";
-
 // 全体自己ベスト記録の型（詳細情報を含む）
 export type OverallBest = {
   score: number;      // 正解文字数
@@ -83,47 +71,6 @@ export const updateOverallBest = (record: OverallBest): boolean => {
     const prev = getOverallBest();
     if (prev === null || record.score > prev.score) {
       localStorage.setItem(OVERALL_BEST_KEY, JSON.stringify(record));
-      return true;
-    }
-    return false;
-  } catch {
-    return false;
-  }
-};
-
-// 全カテゴリの自己ベストをまとめて取得する
-export const getAllBestScores = (): Record<string, number> => {
-  if (typeof window === "undefined") return {};
-  try {
-    const raw = localStorage.getItem(BEST_SCORE_KEY);
-    return raw ? JSON.parse(raw) : {};
-  } catch {
-    return {};
-  }
-};
-
-// カテゴリの自己ベスト（正解文字数）を取得する。記録がなければ null を返す
-export const getBestScore = (category: string): number | null => {
-  if (typeof window === "undefined") return null;
-  try {
-    const raw = localStorage.getItem(BEST_SCORE_KEY);
-    const data = raw ? JSON.parse(raw) : {};
-    return data[category] ?? null;
-  } catch {
-    return null;
-  }
-};
-
-// カテゴリの自己ベストを更新する。新記録なら true・更新なしなら false を返す
-export const updateBestScore = (category: string, typed: number): boolean => {
-  if (typeof window === "undefined") return false;
-  try {
-    const raw = localStorage.getItem(BEST_SCORE_KEY);
-    const data = raw ? JSON.parse(raw) : {};
-    const prev: number | undefined = data[category];
-    if (prev === undefined || typed > prev) {
-      data[category] = typed;
-      localStorage.setItem(BEST_SCORE_KEY, JSON.stringify(data));
       return true;
     }
     return false;

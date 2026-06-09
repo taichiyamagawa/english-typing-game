@@ -27,4 +27,9 @@ export const futureContinuousQuestions: Question[] = [
   { id: "ph_fc_023", category: "phrase_future_continuous", en: "The children will be playing in the park all afternoon.",              ja: "子どもたちは午後ずっと公園で遊んでいるだろう。" },
   { id: "ph_fc_024", category: "phrase_future_continuous", en: "She will be teaching the morning class while I handle the afternoon.", ja: "彼女が午前のクラスを教えている間、私は午後を担当しているだろう。" },
   { id: "ph_fc_025", category: "phrase_future_continuous", en: "He will not be taking calls during the meeting.",                      ja: "会議中、彼は電話に出ていないだろう。" },
+  { id: "ph_fc_026", category: "phrase_future_continuous", en: "The band will be performing at the festival all weekend.",                ja: "バンドは週末ずっとフェスティバルで演奏しているだろう。" },
+  { id: "ph_fc_027", category: "phrase_future_continuous", en: "Will you be joining us for the team lunch on Thursday?",                  ja: "木曜日のチームランチに参加していますか？" },
+  { id: "ph_fc_028", category: "phrase_future_continuous", en: "I will be looking after my sister's children while she is in the hospital.", ja: "姉が入院している間、私は姉の子どもたちの面倒を見ているだろう。" },
+  { id: "ph_fc_029", category: "phrase_future_continuous", en: "She will not be living here by this time next year.",                     ja: "来年の今頃、彼女はここに住んでいないだろう。" },
+  { id: "ph_fc_030", category: "phrase_future_continuous", en: "They will be building the new station for the next two years.",           ja: "彼らは今後2年間新しい駅を建設しているだろう。" },
 ];

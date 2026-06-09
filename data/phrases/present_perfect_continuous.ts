@@ -27,4 +27,9 @@ export const presentPerfectContinuousQuestions: Question[] = [
   { id: "ph_ppc_023", category: "phrase_present_perfect_continuous", en: "I have been meaning to apologize to you for a long time.",    ja: "ずっとあなたに謝ろうと思い続けていた。" },
   { id: "ph_ppc_024", category: "phrase_present_perfect_continuous", en: "She has been taking online lessons to improve her English.",  ja: "彼女は英語を上達させるためにオンラインレッスンを受け続けている。" },
   { id: "ph_ppc_025", category: "phrase_present_perfect_continuous", en: "He has been working on the same novel for over two years.",   ja: "彼は2年以上同じ小説を書き続けている。" },
+  { id: "ph_ppc_026", category: "phrase_present_perfect_continuous", en: "She has been volunteering at the local shelter every weekend this year.", ja: "彼女は今年、毎週末地元のシェルターでボランティアを続けている。" },
+  { id: "ph_ppc_027", category: "phrase_present_perfect_continuous", en: "How long have you been living in this neighborhood?",              ja: "この近所にどのくらい住み続けていますか？" },
+  { id: "ph_ppc_028", category: "phrase_present_perfect_continuous", en: "They have been conducting research into renewable energy for years.", ja: "彼らは何年もの間、再生可能エネルギーの研究を続けている。" },
+  { id: "ph_ppc_029", category: "phrase_present_perfect_continuous", en: "I have been feeling more confident since I started taking classes.", ja: "授業を受け始めてから、私はより自信を持てるようになっている。" },
+  { id: "ph_ppc_030", category: "phrase_present_perfect_continuous", en: "He has been working on improving his presentation skills lately.",   ja: "最近、彼はプレゼンテーションスキルの向上に取り組み続けている。" },
 ];

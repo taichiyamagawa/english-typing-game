@@ -87,4 +87,28 @@ export const educationQuestions: Question[] = [
   { id: "word_education_078", category: "word_education", en: "epistemology",   ja: "認識論" },
   { id: "word_education_079", category: "word_education", en: "semantics",      ja: "意味論" },
   { id: "word_education_080", category: "word_education", en: "etymology",      ja: "語源学" },
+
+  // 理系・学術用語（追加）
+  { id: "word_education_081", category: "word_education", en: "trigonometry",  ja: "三角法" },
+  { id: "word_education_082", category: "word_education", en: "pedagogy",      ja: "教育学" },
+  { id: "word_education_083", category: "word_education", en: "cognitive",     ja: "認知の" },
+  { id: "word_education_084", category: "word_education", en: "syntax",        ja: "構文" },
+  { id: "word_education_085", category: "word_education", en: "quantum",       ja: "量子" },
+  { id: "word_education_086", category: "word_education", en: "proton",        ja: "陽子" },
+  { id: "word_education_087", category: "word_education", en: "neutron",       ja: "中性子" },
+  { id: "word_education_088", category: "word_education", en: "acoustics",     ja: "音響学" },
+  { id: "word_education_089", category: "word_education", en: "optics",        ja: "光学" },
+  { id: "word_education_090", category: "word_education", en: "botany",        ja: "植物学" },
+
+  // 学問分野（追加）
+  { id: "word_education_091", category: "word_education", en: "zoology",       ja: "動物学" },
+  { id: "word_education_092", category: "word_education", en: "cartography",   ja: "地図学" },
+  { id: "word_education_093", category: "word_education", en: "demography",    ja: "人口統計学" },
+  { id: "word_education_094", category: "word_education", en: "phonetics",     ja: "音声学" },
+  { id: "word_education_095", category: "word_education", en: "taxonomy",      ja: "分類学" },
+  { id: "word_education_096", category: "word_education", en: "paleontology",  ja: "古生物学" },
+  { id: "word_education_097", category: "word_education", en: "heuristic",     ja: "発見的手法" },
+  { id: "word_education_098", category: "word_education", en: "relativity",    ja: "相対性理論" },
+  { id: "word_education_099", category: "word_education", en: "metabolism",    ja: "代謝" },
+  { id: "word_education_100", category: "word_education", en: "anatomy",       ja: "解剖学" },
 ];
