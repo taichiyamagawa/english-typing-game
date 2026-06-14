@@ -1,0 +1,271 @@
+// 日本語・英語のUIテキストを一元管理する
+export const translations = {
+  ja: {
+    // ナビゲーション
+    back:             "← 戻る",
+    articleList:      "← 記事一覧",
+    toTop:            "トップへ",
+
+    // トップページ
+    catchphrase:      "英語で学ぶ世界の雑学",
+    tagline:          "ちょっと楽しく ちょっと賢く",
+    learnWithGame:    "ゲームで学ぶ",
+    gameDescription:  "雑学・英文・英単語でタイピング練習",
+    latestArticles:   "雑学記事",
+    viewAllArticles:  "記事一覧を見る →",
+
+    // タイピングゲーム選択ページ
+    questions:        "問題一覧",
+    scores:           "スコア記録",
+    modeLabel:        "Mode",
+    categoryLabel:    "Category",
+    mode_time_label:  "タイムモード",
+    mode_time_desc:   "120秒からスタート。連続ノーミスで時間を稼ごう！",
+    mode_free_label:  "フリーモード",
+    mode_free_desc:   "時間制限なし。じっくり正確に打って英語を覚えよう。",
+    cat_trivia_short_label: "雑学（短文）",
+    cat_trivia_short_desc:  "1文の面白い雑学ネタ",
+    cat_trivia_long_label:  "雑学（長文）",
+    cat_trivia_long_desc:   "読み応えのある雑学ネタ",
+    cat_phrase_label:       "英文",
+    cat_phrase_desc:        "日常フレーズから文法まで幅広く",
+    cat_word_label:         "単語",
+    cat_word_desc:          "テーマ別の英単語スペル練習",
+
+    // 英文サブカテゴリ
+    phrase_all:                        "全カテゴリ",
+    phrase_daily:                      "日常\nフレーズ",
+    phrase_present_simple:             "現在形",
+    phrase_present_continuous:         "現在進行形",
+    phrase_present_perfect:            "現在完了形",
+    phrase_present_perfect_continuous: "現在完了\n進行形",
+    phrase_past_simple:                "過去形",
+    phrase_past_continuous:            "過去進行形",
+    phrase_past_perfect:               "過去完了形",
+    phrase_past_perfect_continuous:    "過去完了\n進行形",
+    phrase_future_simple:              "未来形",
+    phrase_future_continuous:          "未来進行形",
+    phrase_future_perfect:             "未来完了形",
+    phrase_future_perfect_continuous:  "未来完了\n進行形",
+    phrase_tag:                        "付加疑問文",
+    phrase_passive:                    "受動態",
+    phrase_subjunctive:                "仮定法",
+    phrase_imperative:                 "命令文",
+    phrase_infinitive:                 "不定詞",
+    phrase_gerund:                     "動名詞",
+
+    // 単語サブカテゴリ
+    word_all:           "全カテゴリ",
+    word_biology:       "生物",
+    word_nature:        "自然",
+    word_weather_space: "天気・宇宙",
+    word_food:          "食べ物",
+    word_lifestyle:     "暮らし・生活",
+    word_health:        "体・健康",
+    word_emotion:       "感情・性格",
+    word_work:          "仕事・職業",
+    word_technology:    "テクノロジー",
+    word_travel:        "旅行・交通\n地理",
+    word_culture:       "趣味・文化",
+    word_education:     "学校・学習",
+    word_society:       "社会・政治",
+    word_property:      "色・形・素材",
+    word_other:         "その他",
+
+    // ゲーム画面
+    backInGame:     "← 戻る",
+    questionIndex:  (n: number) => `${n} 問目`,
+    timerRemaining: "残り",
+    timerElapsed:   "経過",
+    bookmarkSave:   "保存",
+    bookmarkSaved:  "済",
+    showHint:       "説明表示",
+    hideHint:       "説明非表示",
+    showWord:       "表示",
+    hideWord:       "非表示",
+
+    // リザルト
+    resultClear:    "クリア！",
+    resultQuit:     "お疲れさま！",
+    resultTimeup:   "タイムアップ！",
+    timeRemaining:  "残り時間",
+    timeElapsed:    "かかった時間",
+    accuracy:       "正確率",
+    mistakes:       "ミス数",
+    correctChars:   "正打数",
+    totalChars:     "総打鍵数",
+    bestScore:      "自己ベスト",
+    charUnit:       "文字",
+    timesUnit:      "回",
+    playAgain:      "もう一度",
+    practiceSame:   "同じ問題で練習",
+
+    // スコア記録
+    overallBest:      "タイムモード 最高正打数",
+    noRecords:        "まだ記録がありません。\nゲームをプレイしてみましょう！",
+    scoreHistory:     "スコア記録",
+    personalBest:     "自己ベスト",
+    recentRecords:    "直近の記録",
+    recentRecordsDesc:"タイムモードのプレイが自動で記録されます。最新10件を表示。",
+
+    // 出題問題一覧
+    playedTitle:      (n: number) => `出題された問題一覧（${n}問）`,
+    practiceThese:    "この問題で練習する →",
+    noData:           "データがありません",
+
+    // 記事一覧
+    searchPlaceholder: "記事を検索...",
+    noArticles:        "このカテゴリの記事はまだありません。",
+    noSearchResults:   (q: string) => `「${q}」に一致する記事はありません。`,
+
+    // カテゴリ（記事一覧フィルター）
+    cat_all:      "すべて",
+    cat_science:  "科学",
+    cat_biology:  "生物",
+    cat_history:  "歴史",
+    cat_space:    "宇宙",
+    cat_language: "言語",
+    cat_nature:   "自然",
+    cat_food:     "食べ物",
+
+    // 記事詳細
+    readAloud:    "読み上げ",
+    stop:         "停止",
+    jaToggle:     "日本語訳",
+  },
+  en: {
+    // ナビゲーション
+    back:             "← Back",
+    articleList:      "← Articles",
+    toTop:            "Top",
+
+    // トップページ
+    catchphrase:      "World Trivia in English",
+    tagline:          "A bit of fun. A bit of wisdom.",
+    learnWithGame:    "Learn with a Game",
+    gameDescription:  "Practice typing with trivia, phrases & vocabulary",
+    latestArticles:   "Latest Articles",
+    viewAllArticles:  "View all articles →",
+
+    // タイピングゲーム選択ページ
+    questions:        "Questions",
+    scores:           "Scores",
+    modeLabel:        "Mode",
+    categoryLabel:    "Category",
+    mode_time_label:  "Time Mode",
+    mode_time_desc:   "Start with 120 seconds. Chain no-miss streaks to earn more time!",
+    mode_free_label:  "Free Mode",
+    mode_free_desc:   "No time limit. Type carefully and learn at your own pace.",
+    cat_trivia_short_label: "Short Trivia",
+    cat_trivia_short_desc:  "Fun one-line trivia facts",
+    cat_trivia_long_label:  "Long Trivia",
+    cat_trivia_long_desc:   "In-depth trivia passages",
+    cat_phrase_label:       "Phrases",
+    cat_phrase_desc:        "From daily phrases to grammar",
+    cat_word_label:         "Words",
+    cat_word_desc:          "Themed vocabulary spelling practice",
+
+    // 英文サブカテゴリ
+    phrase_all:                        "All",
+    phrase_daily:                      "Daily\nPhrases",
+    phrase_present_simple:             "Present\nSimple",
+    phrase_present_continuous:         "Present\nContinuous",
+    phrase_present_perfect:            "Present\nPerfect",
+    phrase_present_perfect_continuous: "Present Perfect\nContinuous",
+    phrase_past_simple:                "Past\nSimple",
+    phrase_past_continuous:            "Past\nContinuous",
+    phrase_past_perfect:               "Past\nPerfect",
+    phrase_past_perfect_continuous:    "Past Perfect\nContinuous",
+    phrase_future_simple:              "Future\nSimple",
+    phrase_future_continuous:          "Future\nContinuous",
+    phrase_future_perfect:             "Future\nPerfect",
+    phrase_future_perfect_continuous:  "Future Perfect\nContinuous",
+    phrase_tag:                        "Tag\nQuestions",
+    phrase_passive:                    "Passive\nVoice",
+    phrase_subjunctive:                "Subjunctive",
+    phrase_imperative:                 "Imperatives",
+    phrase_infinitive:                 "Infinitives",
+    phrase_gerund:                     "Gerunds",
+
+    // 単語サブカテゴリ
+    word_all:           "All",
+    word_biology:       "Biology",
+    word_nature:        "Nature",
+    word_weather_space: "Weather &\nSpace",
+    word_food:          "Food",
+    word_lifestyle:     "Lifestyle",
+    word_health:        "Health",
+    word_emotion:       "Emotions",
+    word_work:          "Work",
+    word_technology:    "Technology",
+    word_travel:        "Travel &\nGeography",
+    word_culture:       "Culture",
+    word_education:     "Education",
+    word_society:       "Society",
+    word_property:      "Colors &\nMaterials",
+    word_other:         "Other",
+
+    // ゲーム画面
+    backInGame:     "← Back",
+    questionIndex:  (n: number) => `Q${n}`,
+    timerRemaining: "Left",
+    timerElapsed:   "Elapsed",
+    bookmarkSave:   "Save",
+    bookmarkSaved:  "Saved",
+    showHint:       "Show hint",
+    hideHint:       "Hide hint",
+    showWord:       "Show",
+    hideWord:       "Hide",
+
+    // リザルト
+    resultClear:    "Complete!",
+    resultQuit:     "Good work!",
+    resultTimeup:   "Time's up!",
+    timeRemaining:  "Time left",
+    timeElapsed:    "Time taken",
+    accuracy:       "Accuracy",
+    mistakes:       "Misses",
+    correctChars:   "Keystrokes",
+    totalChars:     "Total keys",
+    bestScore:      "Best score",
+    charUnit:       "",
+    timesUnit:      "",
+    playAgain:      "Play again",
+    practiceSame:   "Practice same",
+
+    // スコア記録
+    overallBest:      "Time Mode Best Score",
+    noRecords:        "No records yet.\nPlay a game to get started!",
+    scoreHistory:     "Score History",
+    personalBest:     "Personal Best",
+    recentRecords:    "Recent Records",
+    recentRecordsDesc:"Time Mode games are recorded automatically. Showing the latest 10.",
+
+    // 出題問題一覧
+    playedTitle:      (n: number) => `Questions Played (${n})`,
+    practiceThese:    "Practice these questions →",
+    noData:           "No data",
+
+    // 記事一覧
+    searchPlaceholder: "Search articles...",
+    noArticles:        "No articles found in this category.",
+    noSearchResults:   (q: string) => `No articles found for "${q}".`,
+
+    // カテゴリ（記事一覧フィルター）
+    cat_all:      "All",
+    cat_science:  "Science",
+    cat_biology:  "Biology",
+    cat_history:  "History",
+    cat_space:    "Space",
+    cat_language: "Language",
+    cat_nature:   "Nature",
+    cat_food:     "Food",
+
+    // 記事詳細
+    readAloud:    "Read aloud",
+    stop:         "Stop",
+    jaToggle:     "Japanese",
+  },
+};
+
+export type Translations = typeof translations.ja | typeof translations.en;

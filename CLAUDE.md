@@ -1,7 +1,7 @@
 # プロジェクト概要
 英語学習者向けの、雑学ネタ・英文・英単語を題材にしたタイピング練習Webアプリ
 - サイトタイトル：English Typing Game
-- キャッチコピー：「ちょっと楽しく、学習を習慣に！」
+- キャッチコピー：「ちょっと楽しく、ちょっと賢く。」
 
 ## 使っている技術
 - Next.js（App Router）
@@ -162,6 +162,21 @@
 - ゲーム画面：問題文カードの日本語訳の右に🔊ボタン（問題が変わると自動停止）
 - 問題一覧画面：各問題の右側に🔊ボタン（再クリックで停止、別問題クリックで切り替え）
 
+### 4. 言語切替機能（JP / EN モード）
+- 全ページ右上に `🇬🇧 English | 🇯🇵 日本語` ボタンを固定表示
+- デフォルトは日本語モード。設定は localStorage に保存（`bitfun_language`）
+- **実装ファイル：**
+  - `lib/languagePreference.ts` — 言語設定のget/set
+  - `lib/translations.ts` — 全UIテキストの日本語・英語定義
+  - `lib/records.ts` — `categoryLabelEn`（英語版カテゴリラベル）
+  - `components/LanguageContext.tsx` — Reactコンテキスト（`useLanguage`フック）
+  - `components/LanguageToggle.tsx` — 切替ボタン（layout.tsxで全ページに適用）
+- **英語モードで変わること：**
+  - 全ページのUIテキストが英語に切り替わる
+  - ゲーム・問題一覧・記事ページで日本語訳・日本語ヒントが非表示になる
+  - カテゴリ名・モード名・ボタンラベルなどすべて英語化
+- 翻訳テキストを追加するときは `lib/translations.ts` の `ja` と `en` 両方に追記する
+
 ### 3. スコア記録・自己ベスト
 - **タイムモードのみ**記録を保存（フリーモードは保存しない）
 - localStorage に最新10件を保存（`bitfun_typing_records`）
@@ -170,8 +185,61 @@
 - スコア記録画面（/history）：自己ベスト＋直近10件のリスト
   - 各記録：カテゴリ・正打数・総打鍵数・正確率・ミス数・日時を表示
 
+## 雑学記事（Articles）
+
+### 概要
+- BitFunポータルの「読んで学ぶ」コンテンツとして、雑学を英語で解説する記事を公開
+- 英語と日本語を切り替えながら読める（日本語訳トグル）
+- 記事内の単語をクリックすると意味がポップアップ表示される（WordTooltip）
+- 記事全文を Web Speech API で読み上げ可能
+
+### データ構造
+- 記事データ：`content/articles/` 配下に各記事1ファイル（slug名.ts）
+- 記事一覧エクスポート：`content/articles/index.ts`
+- 単語帳データ：`data/vocabulary.ts`（全記事共通・`{ 単語/熟語: 日本語訳 }` の形式）
+- 型定義：`types/article.ts`
+
+### Article型のフィールド
+| フィールド | 型 | 説明 |
+|---|---|---|
+| id | string | 管理用連番（例: article_001） |
+| slug | string | URLに使うID（例: tittle） |
+| title | string | 英語タイトル |
+| titleJa | string | 日本語タイトル |
+| description | string | 英語概要（SEO用） |
+| descriptionJa | string | 日本語概要 |
+| date | string | 公開日（YYYY-MM-DD） |
+| category | string | カテゴリID（例: language / science / space） |
+| categoryJa | string | カテゴリ表示名 |
+| emoji | string | カテゴリアイコン |
+| bgPattern? | "space" | 背景テーマ（省略時はデフォルトのオレンジグラデーション） |
+| sections | ArticleSection[] | 記事本文 |
+
+### セクション種別（type）
+| type | 用途 |
+|---|---|
+| paragraph | 本文段落 |
+| heading | 見出し（h2） |
+| quote | 引用（左ボーダー付き） |
+
+### 現在の記事一覧
+| ID | slug | タイトル | カテゴリ |
+|---|---|---|---|
+| article_001 | tittle | The Tiny Dot You Never Noticed Has a Name | language |
+| article_002 | olympus-mons | The Largest Volcano in the Solar System Is on Mars | space（bgPattern: "space"） |
+| article_003 | honey | Honey Never Expires | science |
+| article_004 | octopus-hearts | Octopuses Have Three Hearts — And Blue Blood | biology |
+| article_005 | cleopatra-pyramid | Cleopatra Lived Closer in Time to the Moon Landing Than to the Pyramids | history |
+| article_006 | banana-berry | Bananas Are Berries. Strawberries Are Not. | food |
+
+### WordTooltip
+- コンポーネント：`components/WordTooltip.tsx`
+- `data/vocabulary.ts` の単語と照合し、該当単語をクリック可能にする
+- クリックで日本語の意味をポップアップ表示（外側クリックで閉じる）
+
 ## 画面構成
-- トップ画面（/）：モード選択・カテゴリ選択（2列グリッド）・スタートボタン
+- ポータルページ（/）：BitFunトップ。「ゲームで学ぶ」と「雑学記事」の2セクション構成
+- タイピングゲーム選択画面（/typing-game）：モード選択・カテゴリ選択・スタートボタン
 - 英文カテゴリ選択画面（/phrase-select）：英文選択時に遷移。20サブカテゴリを5×4グリッドで表示
 - 単語テーマ選択画面（/word-select）：単語選択時に遷移。16アイテムを4×4グリッドで表示
 - ゲーム画面（/game）：問題文（英文＋日本語訳）・タイマー・ミス数・正打数・ボーナスゲージ
@@ -179,12 +247,17 @@
 - スコア記録画面（/history）：自己ベスト＋タイムモードの直近10件
 - 問題一覧画面（/questions）：カテゴリ別・検索・ブックマーク・練習ボタン・読み上げ
 - 出題問題一覧画面（/played）：直前のゲームで出題された問題の一覧。ブックマーク・読み上げ・「この問題で練習する」ボタンあり
+- 記事一覧画面（/articles）：カテゴリフィルター付き記事リスト
+- 記事詳細画面（/articles/[slug]）：本文・日本語訳トグル・読み上げ・WordTooltip
 
 ## 実装状況
 - タイムモード・フリーモード：✅ 完成
 - 全カテゴリ（雑学・英文・単語）：✅ 実装済み・データ充実
 - スコア記録・自己ベスト：✅ 完成
 - 英文読み上げ・効果音・ブックマーク：✅ 完成
+- 雑学記事（6本）・WordTooltip・vocabulary：✅ 完成
+- BitFunポータルページ（/）：✅ 完成
+- 言語切替機能（JP/ENモード）：✅ 完成
 
 ## 技術的な実装方針
 - キー入力処理：onKeyDown を使う

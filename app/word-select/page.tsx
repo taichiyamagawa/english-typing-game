@@ -2,33 +2,36 @@
 
 import { useState, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-
-// 単語サブカテゴリの定義（全カテゴリ＋15テーマ＝16アイテム・4×4グリッド）
-const WORD_SUB_CATEGORIES = [
-  { value: "word_all",           label: "全カテゴリ",      icon: "🌍" },
-  { value: "word_biology",       label: "生物",            icon: "🦋" },
-  { value: "word_nature",        label: "自然",            icon: "🌿" },
-  { value: "word_weather_space", label: "天気・宇宙",       icon: "🌌" },
-  { value: "word_food",          label: "食べ物",           icon: "🍎" },
-  { value: "word_lifestyle",     label: "暮らし・生活",     icon: "🏡" },
-  { value: "word_health",        label: "体・健康",         icon: "💪" },
-  { value: "word_emotion",       label: "感情・性格",       icon: "😊" },
-  { value: "word_work",          label: "仕事・職業",       icon: "💼" },
-  { value: "word_technology",    label: "テクノロジー",     icon: "📱" },
-  { value: "word_travel",        label: "旅行・交通\n地理",  icon: "✈️" },
-  { value: "word_culture",       label: "趣味・文化",       icon: "🎨" },
-  { value: "word_education",     label: "学校・学習",       icon: "🏫" },
-  { value: "word_society",       label: "社会・政治",       icon: "🌐" },
-  { value: "word_property",      label: "色・形・素材",        icon: "🔷" },
-  { value: "word_other",         label: "その他",           icon: "📦" },
-];
+import SoundToggle from "@/components/SoundToggle";
+import { useLanguage } from "@/components/LanguageContext";
 
 function WordSelectContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
+  const { t } = useLanguage();
 
   const mode = searchParams.get("mode") ?? "time";
-  const modeLabel = mode === "time" ? "⏱ タイムモード" : "📖 フリーモード";
+  const modeLabel = mode === "time" ? `⏱ ${t.mode_time_label}` : `📖 ${t.mode_free_label}`;
+
+  // 言語に応じた単語サブカテゴリ選択肢を生成する
+  const WORD_SUB_CATEGORIES = [
+    { value: "word_all",           label: t.word_all,           icon: "🌍" },
+    { value: "word_biology",       label: t.word_biology,       icon: "🦋" },
+    { value: "word_nature",        label: t.word_nature,        icon: "🌿" },
+    { value: "word_weather_space", label: t.word_weather_space, icon: "🌌" },
+    { value: "word_food",          label: t.word_food,          icon: "🍎" },
+    { value: "word_lifestyle",     label: t.word_lifestyle,     icon: "🏡" },
+    { value: "word_health",        label: t.word_health,        icon: "💪" },
+    { value: "word_emotion",       label: t.word_emotion,       icon: "😊" },
+    { value: "word_work",          label: t.word_work,          icon: "💼" },
+    { value: "word_technology",    label: t.word_technology,    icon: "📱" },
+    { value: "word_travel",        label: t.word_travel,        icon: "✈️" },
+    { value: "word_culture",       label: t.word_culture,       icon: "🎨" },
+    { value: "word_education",     label: t.word_education,     icon: "🏫" },
+    { value: "word_society",       label: t.word_society,       icon: "🌐" },
+    { value: "word_property",      label: t.word_property,      icon: "🔷" },
+    { value: "word_other",         label: t.word_other,         icon: "📦" },
+  ];
 
   // 選択中のテーマ（初期値：全カテゴリ）
   const [selectedSub, setSelectedSub] = useState("word_all");
@@ -39,15 +42,16 @@ function WordSelectContent() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50 dark:from-gray-950 dark:to-gray-900 px-4 py-8 sm:p-8 pb-24">
+      <SoundToggle />
       <div className="max-w-lg mx-auto flex flex-col gap-6">
 
         {/* ヘッダー */}
         <div className="flex items-center justify-between">
           <button
-            onClick={() => router.push("/")}
+            onClick={() => router.push("/typing-game")}
             className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors flex items-center gap-1"
           >
-            ← 戻る
+            {t.back}
           </button>
           <span className="text-xs text-gray-400 bg-white dark:bg-gray-800 px-3 py-1 rounded-full shadow-sm">
             {modeLabel}
@@ -57,10 +61,10 @@ function WordSelectContent() {
         {/* タイトル */}
         <div>
           <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-1">
-            ✏️ 単語
+            ✏️ {t.cat_word_label}
           </h1>
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            テーマを選んでください
+            {t.categoryLabel}
           </p>
         </div>
 

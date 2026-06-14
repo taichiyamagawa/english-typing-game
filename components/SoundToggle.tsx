@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { getSoundEnabled, setSoundEnabled } from "@/lib/soundPreference";
+import { useLanguage } from "@/components/LanguageContext";
 
 export default function SoundToggle() {
+  const { lang } = useLanguage();
   // サーバーとクライアントで初期値を一致させるため定数で初期化し、
   // マウント後に localStorage から実際の値を読み込む（hydration エラー対策）
   const [isEnabled, setIsEnabled] = useState(true);
@@ -33,10 +35,10 @@ export default function SoundToggle() {
           ? "bg-white text-gray-700 border border-gray-200"
           : "bg-gray-900 text-gray-100 border border-gray-700"
       } ${!isEnabled ? "opacity-60" : ""}`}
-      title={isEnabled ? "サウンドをオフにする" : "サウンドをオンにする"}
+      title={lang === "en" ? (isEnabled ? "Mute" : "Unmute") : (isEnabled ? "サウンドをオフにする" : "サウンドをオンにする")}
     >
       <span className="text-sm">{isEnabled ? "🔊" : "🔇"}</span>
-      <span>{isEnabled ? "音あり" : "音なし"}</span>
+      <span>{lang === "en" ? (isEnabled ? "Sound" : "Muted") : (isEnabled ? "音あり" : "音なし")}</span>
     </button>
   );
 }

@@ -75,7 +75,7 @@ export default function OgImage() {
             fontWeight: "500",
           }}
         >
-          ちょっと楽しく、学習を習慣に！
+          ちょっと楽しく、ちょっと賢く。
         </div>
 
         {/* オレンジのアクセントライン */}

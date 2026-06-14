@@ -2,13 +2,16 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import SoundToggle from "@/components/SoundToggle";
 import { Question } from "@/data/index";
 import { getBookmarks, toggleBookmark } from "@/lib/bookmarks";
 import { speak, stopSpeaking } from "@/lib/speech";
 import { getSoundEnabled } from "@/lib/soundPreference";
+import { useLanguage } from "@/components/LanguageContext";
 
 export default function PlayedPage() {
   const router = useRouter();
+  const { t, lang } = useLanguage();
 
   // localStorageから出題リストを読み込む（id・categoryも含む完全なデータ）
   const [questions] = useState<Question[]>(() => {
@@ -37,6 +40,7 @@ export default function PlayedPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50 dark:from-gray-950 dark:to-gray-900 px-4 py-8 sm:p-8 pb-24">
+      <SoundToggle />
       <div className="max-w-lg mx-auto">
 
         {/* ヘッダー */}
@@ -45,10 +49,10 @@ export default function PlayedPage() {
             onClick={() => router.back()}
             className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors flex items-center gap-1"
           >
-            ← 戻る
+            {t.back}
           </button>
           <h1 className="text-xl font-bold text-gray-800 dark:text-gray-100">
-            📋 出題された問題一覧（{questions.length}問）
+            📋 {t.playedTitle(questions.length)}
           </h1>
           <div className="w-12" />
         </div>
@@ -59,7 +63,7 @@ export default function PlayedPage() {
             onClick={handlePractice}
             className="w-full py-3 mb-4 bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white font-bold rounded-2xl shadow-md transition-all hover:scale-[1.01] active:scale-[0.99]"
           >
-            この問題で練習する →
+            {t.practiceThese}
           </button>
         )}
 
@@ -67,7 +71,7 @@ export default function PlayedPage() {
         {questions.length === 0 ? (
           <div className="text-center py-16 text-gray-400">
             <p className="text-4xl mb-3">📭</p>
-            <p>データがありません</p>
+            <p>{t.noData}</p>
           </div>
         ) : (
           <div className="flex flex-col gap-2">
@@ -86,9 +90,12 @@ export default function PlayedPage() {
                     <p className="font-mono text-sm text-gray-700 dark:text-gray-200 leading-relaxed mb-1">
                       {q.en}
                     </p>
-                    <p className="text-xs text-gray-400 dark:text-gray-500">
-                      {q.ja}
-                    </p>
+                    {/* 英語モードでは日本語訳を非表示 */}
+                    {lang === "ja" && (
+                      <p className="text-xs text-gray-400 dark:text-gray-500">
+                        {q.ja}
+                      </p>
+                    )}
                   </div>
                   {/* ボタン群 */}
                   <div className="flex items-center gap-2 shrink-0">
@@ -110,7 +117,7 @@ export default function PlayedPage() {
                           ? "text-orange-400"
                           : "text-gray-300 hover:text-orange-400"
                       }`}
-                      title="英文を読み上げる"
+                      title={t.readAloud}
                     >
                       🔊
                     </button>

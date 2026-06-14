@@ -1,8 +1,10 @@
 "use client";
 
 import { useSearchParams, useRouter } from "next/navigation";
+import SoundToggle from "@/components/SoundToggle";
+import { useLanguage } from "@/components/LanguageContext";
 import { Suspense, useEffect, useState } from "react";
-import { saveRecord, updateOverallBest, categoryLabel } from "@/lib/records";
+import { saveRecord, updateOverallBest, categoryLabel, categoryLabelEn } from "@/lib/records";
 
 // 秒数を「M:SS」形式の文字列に変換する
 const formatTime = (seconds: number): string => {
@@ -15,6 +17,7 @@ const formatTime = (seconds: number): string => {
 function ResultContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
+  const { t, lang } = useLanguage();
 
   // URLパラメータからゲーム結果を受け取る
   const result   = searchParams.get("result") as "cleared" | "gameover" | "quit";
@@ -66,6 +69,7 @@ function ResultContent() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-6 sm:gap-8 bg-gradient-to-br from-orange-50 to-amber-50 dark:from-gray-950 dark:to-gray-900 p-4 sm:p-8 pb-24">
+      <SoundToggle />
 
       {/* 結果タイトル */}
       <div className="text-center animate-celebrate">
@@ -77,10 +81,10 @@ function ResultContent() {
           isQuit    ? "text-blue-400 dark:text-blue-300" :
                       "text-gray-600 dark:text-gray-300"
         }`}>
-          {isCleared ? "クリア！" : isQuit ? "お疲れさま！" : "タイムアップ！"}
+          {isCleared ? t.resultClear : isQuit ? t.resultQuit : t.resultTimeup}
         </h1>
         <p className="text-sm text-gray-400">
-          {categoryLabel[category] ?? category} ／ {mode === "time" ? "タイムモード" : "フリーモード"}
+          {(lang === "en" ? categoryLabelEn : categoryLabel)[category] ?? category} ／ {mode === "time" ? t.mode_time_label : t.mode_free_label}
         </p>
       </div>
 
@@ -92,7 +96,7 @@ function ResultContent() {
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-5 flex items-center justify-between">
             <div>
               <p className="text-xs text-gray-400 mb-1">
-                {mode === "time" ? "残り時間" : "かかった時間"}
+                {mode === "time" ? t.timeRemaining : t.timeElapsed}
               </p>
               <p className="text-2xl font-bold text-gray-700 dark:text-gray-100 tabular-nums">
                 {formatTime(time)}
@@ -105,7 +109,7 @@ function ResultContent() {
         {/* 正確率・ミス数を横並び */}
         <div className="grid grid-cols-2 gap-3">
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-5">
-            <p className="text-xs text-gray-400 mb-1">正確率</p>
+            <p className="text-xs text-gray-400 mb-1">{t.accuracy}</p>
             <p className={`text-2xl font-bold tabular-nums ${
               accuracy === null  ? "text-gray-300" :
               accuracy >= 90    ? "text-green-500" :
@@ -119,9 +123,9 @@ function ResultContent() {
             </p>
           </div>
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-5">
-            <p className="text-xs text-gray-400 mb-1">ミス数</p>
+            <p className="text-xs text-gray-400 mb-1">{t.mistakes}</p>
             <p className={`text-2xl font-bold tabular-nums ${mistakes > 0 ? "text-red-400" : "text-gray-300"}`}>
-              {mistakes}<span className="text-base font-normal text-gray-400"> 回</span>
+              {mistakes}<span className="text-base font-normal text-gray-400"> {t.timesUnit}</span>
             </p>
           </div>
         </div>
@@ -129,15 +133,15 @@ function ResultContent() {
         {/* 正打数・総入力数を横並び */}
         <div className="grid grid-cols-2 gap-3">
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-5">
-            <p className="text-xs text-gray-400 mb-1">正打数</p>
+            <p className="text-xs text-gray-400 mb-1">{t.correctChars}</p>
             <p className="text-2xl font-bold text-gray-700 dark:text-gray-100 tabular-nums">
-              {typed}<span className="text-base font-normal text-gray-400"> 文字</span>
+              {typed}<span className="text-base font-normal text-gray-400"> {t.charUnit}</span>
             </p>
           </div>
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-5">
-            <p className="text-xs text-gray-400 mb-1">総打鍵数</p>
+            <p className="text-xs text-gray-400 mb-1">{t.totalChars}</p>
             <p className="text-2xl font-bold text-gray-700 dark:text-gray-100 tabular-nums">
-              {totalKeystrokes}<span className="text-base font-normal text-gray-400"> 回</span>
+              {totalKeystrokes}<span className="text-base font-normal text-gray-400"> {t.timesUnit}</span>
             </p>
           </div>
         </div>
@@ -149,19 +153,19 @@ function ResultContent() {
           onClick={handleRetry}
           className="px-8 py-3 bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white font-bold rounded-2xl shadow-md shadow-orange-200 dark:shadow-orange-900/30 transition-all hover:scale-[1.02] active:scale-[0.98]"
         >
-          {source === "played" ? "同じ問題で練習" : "もう一度"}
+          {source === "played" ? t.practiceSame : t.playAgain}
         </button>
         <button
           onClick={() => router.push("/history")}
           className="px-8 py-3 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 font-bold rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] active:scale-[0.98]"
         >
-          🏆 スコア記録
+          🏆 {t.scores}
         </button>
         <button
           onClick={() => router.push("/")}
           className="px-8 py-3 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 font-bold rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] active:scale-[0.98]"
         >
-          トップへ
+          {t.toTop}
         </button>
       </div>
 

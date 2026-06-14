@@ -6,6 +6,8 @@ import { getQuestions, shuffleQuestions, Question, isWordCategory } from "@/data
 import { getBookmarks, toggleBookmark } from "@/lib/bookmarks";
 import { speak, stopSpeaking } from "@/lib/speech";
 import { getSoundEnabled } from "@/lib/soundPreference";
+import SoundToggle from "@/components/SoundToggle";
+import { useLanguage } from "@/components/LanguageContext";
 
 // タイムモードの初期時間（秒）
 const INITIAL_TIME = 120;
@@ -50,6 +52,7 @@ const formatTime = (seconds: number): string => {
 function GameContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
+  const { t, lang } = useLanguage();
 
   // URLパラメータからモード・カテゴリ・開始問題ID・ソースを取得
   const mode     = searchParams.get("mode") as "time" | "free";
@@ -421,6 +424,7 @@ function GameContent() {
       onKeyDown={handleKeyDown}
       className="outline-none min-h-screen flex flex-col items-center justify-center gap-4 sm:gap-6 bg-gradient-to-br from-orange-50 to-amber-50 dark:from-gray-950 dark:to-gray-900 p-4 sm:p-8 pb-24"
     >
+      <SoundToggle />
       {/* ヘッダー：戻るボタン・カテゴリ・モード・ブックマーク */}
       <div className="w-full max-w-2xl flex justify-between items-center">
         <button
@@ -433,12 +437,12 @@ function GameContent() {
             } else if (category.startsWith("word_")) {
               router.replace(`/word-select?mode=${mode}`);
             } else {
-              router.replace("/");
+              router.replace("/typing-game");
             }
           }}
           className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors flex items-center gap-1"
         >
-          ← 戻る
+          {t.backInGame}
         </button>
         <div className="flex items-center gap-1.5 sm:gap-2">
           {/* ブックマークボタン：現在の問題をブックマーク登録・解除する */}
@@ -456,7 +460,7 @@ function GameContent() {
             <span>{bookmarks.has(currentQuestion.id) ? "★" : "☆"}</span>
             {/* テキストはスマホでは非表示 */}
             <span className="hidden sm:inline">
-              {bookmarks.has(currentQuestion.id) ? "済" : "保存"}
+              {bookmarks.has(currentQuestion.id) ? t.bookmarkSaved : t.bookmarkSave}
             </span>
           </button>
           {/* 問題一覧ボタン：スマホでは非表示 */}
@@ -464,7 +468,7 @@ function GameContent() {
             onClick={() => router.replace("/questions")}
             className="hidden sm:flex text-xs text-gray-500 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-400 font-medium transition-colors bg-white dark:bg-gray-800 px-2.5 py-1 rounded-full shadow-sm border border-gray-200 dark:border-gray-700"
           >
-            🗂️ 問題一覧
+            🗂️ {t.questions}
           </button>
         </div>
       </div>
@@ -472,7 +476,7 @@ function GameContent() {
       {/* タイマー（中央）＋コンボゲージ（右に離して配置） */}
       <div className="w-full max-w-2xl relative flex items-center justify-center">
         <div className="flex items-center gap-2 bg-white dark:bg-gray-800 px-5 py-2.5 rounded-full shadow-sm">
-          <span className="text-sm text-gray-400">{mode === "time" ? "残り" : "経過"}</span>
+          <span className="text-sm text-gray-400">{mode === "time" ? t.timerRemaining : t.timerElapsed}</span>
           <p className={`text-2xl font-bold tabular-nums tracking-tight transition-colors ${timerColor}`}>
             {formatTime(time)}
           </p>
@@ -542,10 +546,12 @@ function GameContent() {
           </p>
           {/* 日本語訳とボタン群：訳文を上・ボタンを下の2段構成 */}
           <div className="border-t border-gray-100 dark:border-gray-700 pt-4">
-            {/* 日本語訳：長文でも自由に折り返せる */}
-            <p className="text-sm text-gray-400 dark:text-gray-500 mb-2">
-              {currentQuestion.ja}
-            </p>
+            {/* 英語モードでは日本語訳を非表示にする */}
+            {lang === "ja" && (
+              <p className="text-sm text-gray-400 dark:text-gray-500 mb-2">
+                {currentQuestion.ja}
+              </p>
+            )}
             {/* ボタン群：右揃えで1行に収める */}
             <div className="flex justify-end gap-2">
               {/* 非表示ボタン：単語カテゴリのみ */}
@@ -560,7 +566,7 @@ function GameContent() {
                   title={isHidden ? "答えを表示する" : "答えを隠す"}
                 >
                   <span>{isHidden ? "👀" : "🙈"}</span>
-                  <span className="hidden sm:inline">{isHidden ? "回答表示" : "回答非表示"}</span>
+                  <span className="hidden sm:inline">{isHidden ? t.showWord : t.hideWord}</span>
                 </button>
               )}
               {/* 説明トグルボタン：英文文法カテゴリのみ */}
@@ -575,12 +581,17 @@ function GameContent() {
                   title={isHintHidden ? "文法説明を表示" : "文法説明を隠す"}
                 >
                   <span>💡</span>
-                  <span className="hidden sm:inline">{isHintHidden ? "説明表示" : "説明非表示"}</span>
+                  <span className="hidden sm:inline">{isHintHidden ? t.showHint : t.hideHint}</span>
                 </button>
               )}
-              {/* 🔊 読み上げボタン */}
+              {/* 🔊 読み上げ・停止ボタン */}
               <button
                 onClick={() => {
+                  if (isSpeaking) {
+                    stopSpeaking();
+                    setIsSpeaking(false);
+                    return;
+                  }
                   if (!getSoundEnabled()) return;
                   setIsSpeaking(true);
                   speak(currentQuestion.en, () => setIsSpeaking(false));
@@ -590,10 +601,10 @@ function GameContent() {
                     ? "bg-orange-100 dark:bg-orange-900/30 text-orange-500"
                     : "bg-gray-100 dark:bg-gray-700 text-gray-400 hover:text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-900/20"
                 }`}
-                title="英文を読み上げる"
+                title={isSpeaking ? t.stop : t.readAloud}
               >
-                <span>🔊</span>
-                <span className="hidden sm:inline">{isSpeaking ? "読み上げ中…" : "読み上げ"}</span>
+                <span>{isSpeaking ? "⏹" : "🔊"}</span>
+                <span className="hidden sm:inline">{isSpeaking ? t.stop : t.readAloud}</span>
               </button>
             </div>
           </div>
@@ -616,14 +627,14 @@ function GameContent() {
         <div className="flex items-center gap-2 bg-white dark:bg-gray-800 px-4 py-2.5 rounded-xl shadow-sm">
           <span className="text-lg">📝</span>
           <p className="font-bold text-lg leading-none text-gray-700 dark:text-gray-200">
-            {questionIndex + 1}<span className="text-sm font-normal text-gray-400"> 問目</span>
+            {t.questionIndex(questionIndex + 1)}
           </p>
         </div>
         {/* ミス数 */}
         <div className="flex items-center gap-2 bg-white dark:bg-gray-800 px-4 py-2.5 rounded-xl shadow-sm">
           <span className="text-lg">❌</span>
           <div>
-            <p className="text-xs text-gray-400 leading-none mb-0.5">ミス</p>
+            <p className="text-xs text-gray-400 leading-none mb-0.5">{t.mistakes}</p>
             <p className={`font-bold text-lg leading-none ${mistakes > 0 ? "text-red-400" : "text-gray-300"}`}>
               {mistakes}
             </p>
@@ -633,9 +644,9 @@ function GameContent() {
         <div className="flex items-center gap-2 bg-white dark:bg-gray-800 px-4 py-2.5 rounded-xl shadow-sm">
           <span className="text-lg">⌨️</span>
           <div>
-            <p className="text-xs text-gray-400 leading-none mb-0.5">正打数</p>
+            <p className="text-xs text-gray-400 leading-none mb-0.5">{t.correctChars}</p>
             <p className="font-bold text-lg leading-none text-orange-400">
-              {totalTyped + currentIndex}<span className="text-sm font-normal text-gray-400"> 文字</span>
+              {totalTyped + currentIndex}<span className="text-sm font-normal text-gray-400"> {t.charUnit}</span>
             </p>
           </div>
         </div>

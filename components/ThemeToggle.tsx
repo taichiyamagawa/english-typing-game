@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/components/LanguageContext";
 
 export default function ThemeToggle() {
+  const { lang } = useLanguage();
   // サーバーとクライアントで初期値を一致させるため false で初期化し、
   // マウント後に localStorage から実際の値を読み込む（hydration エラー対策）
   const [isDark, setIsDark] = useState(false);
@@ -32,10 +34,10 @@ export default function ThemeToggle() {
           ? "bg-white text-gray-700 border border-gray-200"
           : "bg-gray-900 text-gray-100 border border-gray-700"
       }`}
-      title={isDark ? "ライトモードに切り替え" : "ダークモードに切り替え"}
+      title={lang === "en" ? (isDark ? "Light mode" : "Dark mode") : (isDark ? "ライトモードに切り替え" : "ダークモードに切り替え")}
     >
       <span className="text-sm">{isDark ? "☀️" : "🌙"}</span>
-      <span>{isDark ? "ライト" : "ダーク"}</span>
+      <span>{lang === "en" ? (isDark ? "Light" : "Dark") : (isDark ? "ライト" : "ダーク")}</span>
     </button>
   );
 }
