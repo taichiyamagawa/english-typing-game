@@ -231,6 +231,8 @@
 | article_004 | octopus-hearts | Octopuses Have Three Hearts — And Blue Blood | biology |
 | article_005 | cleopatra-pyramid | Cleopatra Lived Closer in Time to the Moon Landing Than to the Pyramids | history |
 | article_006 | banana-berry | Bananas Are Berries. Strawberries Are Not. | food |
+| article_007 | sharks-older-than-trees | Sharks Are Older Than Trees | biology |
+| article_008 | oxford-older-than-aztec | Oxford University Is Older Than the Aztec Empire | history |
 
 ### WordTooltip
 - コンポーネント：`components/WordTooltip.tsx`

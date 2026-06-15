@@ -20,10 +20,15 @@ export default function ArticleDetailPage() {
   const slug = typeof params.slug === "string" ? params.slug : "";
   const article = getArticleBySlug(slug);
 
-  // 英語モードのときは日本語訳を非表示にする（ユーザーが手動で切り替えることも可能）
+  // 日本語訳の表示状態（hydrationエラー対策でfalse固定スタート、useEffectで確定させる）
   const [showJa, setShowJa] = useState(false);
   // 読み上げ中かどうかを管理する
   const [isSpeaking, setIsSpeaking] = useState(false);
+
+  // langが確定したタイミングで、日本語モードなら翻訳を表示する
+  useEffect(() => {
+    setShowJa(lang === "ja");
+  }, [lang]);
 
   // ページを離れるときに読み上げを停止する
   useEffect(() => {

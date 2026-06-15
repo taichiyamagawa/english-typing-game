@@ -5,9 +5,13 @@ import { honeyArticle } from "./honey";
 import { octopusHeartsArticle } from "./octopus-hearts";
 import { cleopatraPyramidArticle } from "./cleopatra-pyramid";
 import { bananaBerryArticle } from "./banana-berry";
+import { sharksOlderThanTreesArticle } from "./sharks-older-than-trees";
+import { oxfordOlderThanAztecArticle } from "./oxford-older-than-aztec";
 
 // 全記事のリスト。新しい記事を追加したらここに追記する（新しい順）
 export const allArticles: Article[] = [
+  oxfordOlderThanAztecArticle,
+  sharksOlderThanTreesArticle,
   bananaBerryArticle,
   cleopatraPyramidArticle,
   octopusHeartsArticle,
