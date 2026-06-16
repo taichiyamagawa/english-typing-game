@@ -4,7 +4,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import SoundToggle from "@/components/SoundToggle";
 import { useLanguage } from "@/components/LanguageContext";
 import { Suspense, useEffect, useState } from "react";
-import { saveRecord, updateOverallBest, categoryLabel, categoryLabelEn } from "@/lib/records";
+import { saveRecord, updateBestForDuration, categoryLabel, categoryLabelEn } from "@/lib/records";
 
 // 秒数を「M:SS」形式の文字列に変換する
 const formatTime = (seconds: number): string => {
@@ -18,6 +18,7 @@ function ResultContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const { t, lang } = useLanguage();
+  const durLabel: Record<number, string> = { 30: t.dur30, 60: t.dur60, 120: t.dur120 };
 
   // URLパラメータからゲーム結果を受け取る
   const result   = searchParams.get("result") as "cleared" | "gameover" | "quit";
@@ -27,6 +28,7 @@ function ResultContent() {
   const time     = Number(searchParams.get("time") ?? 0);
   const mistakes = Number(searchParams.get("mistakes") ?? 0);
   const typed    = Number(searchParams.get("typed") ?? 0);
+  const duration = Number(searchParams.get("duration") ?? 120);
 
   // 正確率：全キー入力（正解＋ミス）のうち正解した割合（入力がない場合はnullで「ー」表示）
   const totalKeystrokes = typed + mistakes;
@@ -52,8 +54,8 @@ function ResultContent() {
   useEffect(() => {
     // タイムモードのみ履歴に保存・全体自己ベストを更新する
     if (mode === "time") {
-      saveRecord({ mode, category, result, time, mistakes, typed, accuracy: accuracy ?? 0 });
-      updateOverallBest({ score: typed, category, accuracy: accuracy ?? 0, mistakes, date: new Date().toISOString() });
+      saveRecord({ mode, category, result, time, mistakes, typed, accuracy: accuracy ?? 0, duration });
+      updateBestForDuration(duration, { score: typed, category, accuracy: accuracy ?? 0, mistakes, date: new Date().toISOString() });
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -63,7 +65,8 @@ function ResultContent() {
     if (source === "played") {
       router.push(`/game?mode=${mode}&source=played`);
     } else {
-      router.push(`/game?mode=${mode}&category=${category}`);
+      const durationParam = mode === "time" ? `&duration=${duration}` : "";
+      router.push(`/game?mode=${mode}&category=${category}${durationParam}`);
     }
   };
 
@@ -84,7 +87,7 @@ function ResultContent() {
           {isCleared ? t.resultClear : isQuit ? t.resultQuit : t.resultTimeup}
         </h1>
         <p className="text-sm text-gray-400">
-          {(lang === "en" ? categoryLabelEn : categoryLabel)[category] ?? category} ／ {mode === "time" ? t.mode_time_label : t.mode_free_label}
+          {(lang === "en" ? categoryLabelEn : categoryLabel)[category] ?? category} ／ {mode === "time" ? `${durLabel[duration] ?? ""} ${t.mode_time_label}` : t.mode_free_label}
         </p>
       </div>
 

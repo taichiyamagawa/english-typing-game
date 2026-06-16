@@ -9,8 +9,6 @@ import { getSoundEnabled } from "@/lib/soundPreference";
 import SoundToggle from "@/components/SoundToggle";
 import { useLanguage } from "@/components/LanguageContext";
 
-// タイムモードの初期時間（秒）
-const INITIAL_TIME = 120;
 
 // 各段階ごとのボーナス定義：段階が上がるごとに0からカウントし直す
 const BONUS_STAGES = [
@@ -59,6 +57,8 @@ function GameContent() {
   const category = searchParams.get("category") ?? "";
   const startId  = searchParams.get("startId");
   const source   = searchParams.get("source");
+  // タイムモードの制限時間（秒）。未指定時は120（後方互換）
+  const duration = Number(searchParams.get("duration") ?? 120);
 
   // 問題リストを初期化する
   const [questions] = useState<Question[]>(() => {
@@ -123,7 +123,7 @@ function GameContent() {
   const [totalTyped, setTotalTyped] = useState(0);
 
   // タイムモード：残り時間（秒）／フリーモード：経過時間（秒）
-  const [time, setTime] = useState(mode === "time" ? INITIAL_TIME : 0);
+  const [time, setTime] = useState(mode === "time" ? duration : 0);
   // タイムモードで時間切れになったか
   const [isGameOver, setIsGameOver] = useState(false);
 
@@ -162,7 +162,7 @@ function GameContent() {
     if (isCleared || isGameOver) return;
 
     const interval = setInterval(() => {
-      setTime((prev) => {
+      setTime((prev: number) => {
         if (mode === "time") {
           if (prev <= 1) {
             clearInterval(interval);
@@ -193,6 +193,7 @@ function GameContent() {
       mistakes: String(mistakes),
       typed:    String(finalTyped),
       total:    String(finalTyped + mistakes),
+      duration: String(duration),
     });
     router.push(`/result?${params.toString()}`);
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -374,7 +375,7 @@ function GameContent() {
         const currentStage = BONUS_STAGES[gaugeStage];
         if (currentStage && newCombo >= currentStage.target) {
           // 目標文字数に到達：ボーナス付与・コンボリセット・次の段階へ
-          setTime((t) => t + currentStage.seconds);
+          setTime((t: number) => t + currentStage.seconds);
           playSound("bonus");
           showBonusMessage(`+${currentStage.seconds}秒`);
           setComboCount(0);
@@ -447,6 +448,7 @@ function GameContent() {
         <div className="flex items-center gap-1.5 sm:gap-2">
           {/* ブックマークボタン：現在の問題をブックマーク登録・解除する */}
           <button
+            onMouseDown={(e) => e.preventDefault()}
             onClick={() => {
               const next = toggleBookmark(currentQuestion.id);
               setBookmarks(new Set(next));
@@ -557,6 +559,7 @@ function GameContent() {
               {/* 非表示ボタン：単語カテゴリのみ */}
               {isWordCategory(category) && (
                 <button
+                  onMouseDown={(e) => e.preventDefault()}
                   onClick={() => setIsHidden((h) => !h)}
                   className={`flex items-center gap-1 text-xs px-2.5 py-1.5 rounded-full transition-all ${
                     isHidden
@@ -572,6 +575,7 @@ function GameContent() {
               {/* 説明トグルボタン：英文文法カテゴリのみ */}
               {GRAMMAR_HINTS[category] && (
                 <button
+                  onMouseDown={(e) => e.preventDefault()}
                   onClick={() => setIsHintHidden((h) => !h)}
                   className={`flex items-center gap-1 text-xs px-2.5 py-1.5 rounded-full transition-all ${
                     isHintHidden
@@ -586,6 +590,7 @@ function GameContent() {
               )}
               {/* 🔊 読み上げ・停止ボタン */}
               <button
+                onMouseDown={(e) => e.preventDefault()}
                 onClick={() => {
                   if (isSpeaking) {
                     stopSpeaking();

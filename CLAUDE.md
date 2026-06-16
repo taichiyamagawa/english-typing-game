@@ -23,7 +23,7 @@
 ## ゲームモード
 
 ### タイムモード
-- 初期時間：120秒
+- 時間選択：30秒・1分・2分（デフォルト：1分）。ゲーム選択画面でモード選択後に3択ボタンで選ぶ
 - 時間が0になるとゲームオーバー
 - ミスしても時間のペナルティなし
 
@@ -180,10 +180,12 @@
 ### 3. スコア記録・自己ベスト
 - **タイムモードのみ**記録を保存（フリーモードは保存しない）
 - localStorage に最新10件を保存（`bitfun_typing_records`）
-- 自己ベスト（全カテゴリ通じた最高正打数）を別途保存（`bitfun_overall_best`）
+- 自己ベストは時間別（30秒・1分・2分）に分けて保存（`bitfun_best_by_duration`）
+  - 旧データ（`bitfun_overall_best`）は初回表示時に2分枠へ自動マイグレーション
 - リザルト画面：カテゴリ別自己ベストカードは廃止。スコア記録画面（/history）で確認する
-- スコア記録画面（/history）：自己ベスト＋直近10件のリスト
-  - 各記録：カテゴリ・正打数・総打鍵数・正確率・ミス数・日時を表示
+- スコア記録画面（/history）：時間別自己ベスト3枠＋直近10件のリスト
+  - 自己ベストカード：時間ラベル・スコア・カテゴリ・総打鍵数・ミス数・正確率・日時
+  - 各記録：カテゴリ・時間ラベル・正打数・総打鍵数・正確率・ミス数・日時を表示
 
 ## 雑学記事（Articles）
 
@@ -233,6 +235,8 @@
 | article_006 | banana-berry | Bananas Are Berries. Strawberries Are Not. | food |
 | article_007 | sharks-older-than-trees | Sharks Are Older Than Trees | biology |
 | article_008 | oxford-older-than-aztec | Oxford University Is Older Than the Aztec Empire | history |
+| article_009 | venus-day-longer-than-year | A Day on Venus Is Longer Than a Year | science |
+| article_010 | crows-remember-faces | Crows Never Forget a Face | nature |
 
 ### WordTooltip
 - コンポーネント：`components/WordTooltip.tsx`
@@ -253,16 +257,16 @@
 - 記事詳細画面（/articles/[slug]）：本文・日本語訳トグル・読み上げ・WordTooltip
 
 ## 実装状況
-- タイムモード・フリーモード：✅ 完成
+- タイムモード（30秒/1分/2分選択）・フリーモード：✅ 完成
 - 全カテゴリ（雑学・英文・単語）：✅ 実装済み・データ充実
-- スコア記録・自己ベスト：✅ 完成
+- スコア記録・時間別自己ベスト：✅ 完成
 - 英文読み上げ・効果音・ブックマーク：✅ 完成
-- 雑学記事（6本）・WordTooltip・vocabulary：✅ 完成
+- 雑学記事（10本）・WordTooltip・vocabulary（約610語）：✅ 完成
 - BitFunポータルページ（/）：✅ 完成
-- 言語切替機能（JP/ENモード）：✅ 完成
+- 言語切替機能（JP/ENモード）：✅ 完成（カテゴリ名・時間ラベルの英語化含む）
 
 ## 技術的な実装方針
-- キー入力処理：onKeyDown を使う
+- キー入力処理：onKeyDown を使う（ゲーム内ボタンには `onMouseDown={(e) => e.preventDefault()}` を付けてフォーカスを奪わせない）
 - 状態管理：useState・useEffect を使う
 - タイマー処理：setInterval を使う
 - API Routes：将来的なスコア保存用に用意だけしておく

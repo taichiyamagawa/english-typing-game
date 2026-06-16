@@ -15,9 +15,16 @@ type MainCategory = "trivia_short" | "trivia_long" | "phrase" | "word";
 
 export default function TypingGamePage() {
   const [selectedMode, setSelectedMode] = useState<Mode>("time");
+  const [selectedDuration, setSelectedDuration] = useState<30 | 60 | 120>(60);
   const [selectedMain, setSelectedMain] = useState<MainCategory>("trivia_short");
   const router = useRouter();
   const { t } = useLanguage();
+
+  const DURATIONS: { value: 30 | 60 | 120; label: string }[] = [
+    { value: 30,  label: t.dur30 },
+    { value: 60,  label: t.dur60 },
+    { value: 120, label: t.dur120 },
+  ];
 
   // 言語に応じたモード・カテゴリ選択肢を生成する
   const MODES = [
@@ -32,7 +39,8 @@ export default function TypingGamePage() {
   ];
 
   const handleStart = () => {
-    router.push(`/game?mode=${selectedMode}&category=${selectedMain}`);
+    const durationParam = selectedMode === "time" ? `&duration=${selectedDuration}` : "";
+    router.push(`/game?mode=${selectedMode}&category=${selectedMain}${durationParam}`);
   };
 
   return (
@@ -108,6 +116,44 @@ export default function TypingGamePage() {
             })}
           </div>
         </section>
+
+        {/* 時間選択：タイムモード選択時のみ表示 */}
+        {selectedMode === "time" && (
+          <section>
+            <h2 className="text-base font-bold text-gray-700 dark:text-gray-200 mb-3 pl-1 flex items-center gap-2">
+              <span className="w-1.5 h-5 bg-orange-400 rounded-full inline-block" />
+              {t.durationLabel}
+            </h2>
+            <div className="grid grid-cols-3 gap-3">
+              {DURATIONS.map((d) => {
+                const isSelected = selectedDuration === d.value;
+                return (
+                  <button
+                    key={d.value}
+                    onClick={() => setSelectedDuration(d.value)}
+                    className={`relative p-4 rounded-2xl border-2 text-center transition-all duration-200 overflow-hidden ${
+                      isSelected
+                        ? "border-orange-400 bg-white dark:bg-gray-800 shadow-md shadow-orange-100 dark:shadow-orange-900/20 scale-[1.02]"
+                        : "border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-orange-200 hover:shadow-sm"
+                    }`}
+                  >
+                    {isSelected && (
+                      <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-amber-400 opacity-5 dark:opacity-10" />
+                    )}
+                    <p className={`font-bold text-base ${isSelected ? "text-orange-500 dark:text-orange-400" : "text-gray-700 dark:text-gray-200"}`}>
+                      {d.label}
+                    </p>
+                    {isSelected && (
+                      <span className="absolute top-2 right-2 w-4 h-4 bg-orange-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-[10px]">✓</span>
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+          </section>
+        )}
 
         {/* カテゴリ選択：2列グリッド */}
         <section>

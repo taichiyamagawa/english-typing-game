@@ -9,7 +9,9 @@ export type GameRecord = {
   mistakes: number;
   typed: number;                   // 正解した文字数
   accuracy: number;                // 正確率（0〜100）
+  duration?: number;               // タイムモードの制限時間（秒）。未設定の場合は120扱い
 };
+
 
 // localStorageのキー名
 const STORAGE_KEY = "bitfun_typing_records";
@@ -50,10 +52,12 @@ export type OverallBest = {
   date: string;       // ISO形式の日時文字列
 };
 
-// 全体自己ベストの localStorage キー名
+// 全体自己ベストの localStorage キー名（後方互換のため残す）
 const OVERALL_BEST_KEY = "bitfun_overall_best";
+// 時間別自己ベストの localStorage キー名
+const BEST_BY_DURATION_KEY = "bitfun_best_by_duration";
 
-// 全体自己ベストを取得する。記録がなければ null を返す
+// 全体自己ベストを取得する（後方互換：history画面でのマイグレーション用）
 export const getOverallBest = (): OverallBest | null => {
   if (typeof window === "undefined") return null;
   try {
@@ -64,13 +68,28 @@ export const getOverallBest = (): OverallBest | null => {
   }
 };
 
-// 全体自己ベストを更新する。新記録なら保存して true を返す
-export const updateOverallBest = (record: OverallBest): boolean => {
+// 指定した制限時間の自己ベストを取得する。記録がなければ null を返す
+export const getBestForDuration = (duration: number): OverallBest | null => {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = localStorage.getItem(BEST_BY_DURATION_KEY);
+    const map: Record<string, OverallBest> = raw ? JSON.parse(raw) : {};
+    return map[String(duration)] ?? null;
+  } catch {
+    return null;
+  }
+};
+
+// 指定した制限時間の自己ベストを更新する。新記録なら保存して true を返す
+export const updateBestForDuration = (duration: number, record: OverallBest): boolean => {
   if (typeof window === "undefined") return false;
   try {
-    const prev = getOverallBest();
-    if (prev === null || record.score > prev.score) {
-      localStorage.setItem(OVERALL_BEST_KEY, JSON.stringify(record));
+    const raw = localStorage.getItem(BEST_BY_DURATION_KEY);
+    const map: Record<string, OverallBest> = raw ? JSON.parse(raw) : {};
+    const prev = map[String(duration)];
+    if (!prev || record.score > prev.score) {
+      map[String(duration)] = record;
+      localStorage.setItem(BEST_BY_DURATION_KEY, JSON.stringify(map));
       return true;
     }
     return false;
