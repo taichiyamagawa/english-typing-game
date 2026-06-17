@@ -749,6 +749,17 @@ export const vocabulary: Record<string, string> = {
   "almost certainly":"ほぼ確実に",
 
   // --- article_011: brain-never-stops ---
+  // 熟語・句
+  "sleep deprivation":   "睡眠不足・睡眠剥奪",
+  "memory consolidation":"記憶の定着・記憶の統合",
+  "long-term memory":    "長期記憶",
+  "short-term storage":  "短期記憶・一時保存",
+  "long-term":           "長期の",
+  "short-term":          "短期の",
+  "heart disease":       "心臓病",
+  "cognitive function":  "認知機能",
+  "takes a break":       "休憩する・休む",
+  "run through":         "〜をざっと経る・試す",
   // 動詞・動詞句
   "shuts down":      "シャットダウンする・停止する",
   "absorbs":         "吸収する",
@@ -801,6 +812,15 @@ export const vocabulary: Record<string, string> = {
   "essential":       "不可欠な・必須の",
 
   // --- article_012: wood-wide-web ---
+  // 熟語・句
+  "forest floor":    "森の地表・林床",
+  "mother tree":     "マザーツリー（森の中心となる大木）",
+  "mother trees":    "マザーツリー（複数）",
+  "in exchange":     "代わりに・見返りとして",
+  "under attack":    "攻撃を受けている",
+  "Wood Wide Web":   "ウッド・ワイド・ウェブ（森の地下ネットワークの愛称）",
+  "forest ecologist":"森林生態学者",
+  "in some cases":   "場合によっては",
   // 動詞・動詞句
   "intertwine":      "絡み合う・絡みつく",
   "boost":           "高める・後押しする",

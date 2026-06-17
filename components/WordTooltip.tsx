@@ -13,8 +13,9 @@ function parseSegments(text: string): Segment[] {
   const words = Object.keys(vocabulary);
   if (words.length === 0) return [{ type: "text", content: text }];
 
-  // 単語帳の全単語にマッチする正規表現を作る（大文字小文字を区別しない）
-  const escaped = words.map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  // 長い熟語が短い単語より先にマッチするよう降順ソートしてから正規表現を作る
+  const sorted = [...words].sort((a, b) => b.length - a.length);
+  const escaped = sorted.map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
   const pattern = new RegExp(`\\b(${escaped.join("|")})\\b`, "gi");
 
   const segments: Segment[] = [];
