@@ -9,9 +9,13 @@ import { sharksOlderThanTreesArticle } from "./sharks-older-than-trees";
 import { oxfordOlderThanAztecArticle } from "./oxford-older-than-aztec";
 import { venusDayLongerThanYearArticle } from "./venus-day-longer-than-year";
 import { crowsRememberFacesArticle } from "./crows-remember-faces";
+import { brainNeverStopsArticle } from "./brain-never-stops";
+import { woodWideWebArticle } from "./wood-wide-web";
 
 // 全記事のリスト。新しい記事を追加したらここに追記する（新しい順）
 export const allArticles: Article[] = [
+  woodWideWebArticle,
+  brainNeverStopsArticle,
   crowsRememberFacesArticle,
   venusDayLongerThanYearArticle,
   oxfordOlderThanAztecArticle,
