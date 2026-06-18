@@ -811,6 +811,61 @@ export const vocabulary: Record<string, string> = {
   "chronic":         "慢性的な",
   "essential":       "不可欠な・必須の",
 
+  // --- article_013: antarctica-largest-desert ---
+  // 熟語・句
+  "qualifies as":    "〜として該当する・当てはまる",
+  "ice sheet":       "氷床",
+  "fresh water":     "淡水",
+  "square kilometres":"平方キロメートル",
+  "land masses":     "陸塊・陸地",
+  "layer by layer":  "一層ずつ・積み重なって",
+  "in terms of":     "〜という点では・〜の意味では",
+  "comes in second": "2位になる",
+  "along its coasts":"海岸沿いで",
+  // 動詞
+  "accumulated":     "積み重なった・蓄積した",
+  "exceed":          "超える",
+  "flourish":        "繁栄する・元気よく育つ",
+  // 名詞
+  "precipitation":   "降水量・降水",
+  "seals":           "アザラシ（複数）",
+  "seabirds":        "海鳥（複数）",
+  "analogs":         "類似物・モデル（複数）",
+  // 形容詞・副詞
+  "microscopic":     "顕微鏡でしか見えない・極めて小さな",
+  "barren":          "不毛の・荒涼とした",
+  "hardiest":        "最も過酷な条件に耐える",
+  "vast":            "広大な・広範囲の",
+
+  // --- article_014: eiffel-tower-grows ---
+  // 熟語・句
+  "thermal expansion":"熱膨張",
+  "expansion joints": "伸縮継手・エキスパンションジョイント",
+  "wrought iron":    "錬鉄",
+  "heat source":     "熱源",
+  "World's Fair":    "万博・世界博覧会",
+  "fond of":         "〜が好きな・親しみを感じる",
+  // 動詞
+  "expand":          "膨張する・広がる",
+  "contract":        "収縮する・縮む",
+  "dismantled":      "解体された",
+  "accommodate":     "受け入れる・対応する",
+  "flex":            "たわむ・動く",
+  "lean":            "傾く",
+  "reverses":        "逆になる・元に戻る",
+  "collapsing":      "崩壊している",
+  // 名詞
+  "molecules":       "分子（複数）",
+  "joints":          "継ぎ目・接合部（複数）",
+  "stresses":        "応力・内部の力（複数）",
+  // 形容詞・副詞
+  "recognisable":    "見て分かる・一目でわかる",
+  "responsive":      "反応しやすい",
+  "rigidly":         "硬く・固定されて",
+  "permanent":       "永続的な・恒久的な",
+  "primarily":       "主に・第一に",
+  "cited":           "引用される・よく言及される",
+
   // --- article_012: wood-wide-web ---
   // 熟語・句
   "forest floor":    "森の地表・林床",

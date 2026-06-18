@@ -11,9 +11,13 @@ import { venusDayLongerThanYearArticle } from "./venus-day-longer-than-year";
 import { crowsRememberFacesArticle } from "./crows-remember-faces";
 import { brainNeverStopsArticle } from "./brain-never-stops";
 import { woodWideWebArticle } from "./wood-wide-web";
+import { antarcticaLargestDesertArticle } from "./antarctica-largest-desert";
+import { eiffelTowerGrowsArticle } from "./eiffel-tower-grows";
 
 // 全記事のリスト。新しい記事を追加したらここに追記する（新しい順）
 export const allArticles: Article[] = [
+  eiffelTowerGrowsArticle,
+  antarcticaLargestDesertArticle,
   woodWideWebArticle,
   brainNeverStopsArticle,
   crowsRememberFacesArticle,
