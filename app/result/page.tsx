@@ -165,7 +165,7 @@ function ResultContent() {
           🏆 {t.scores}
         </button>
         <button
-          onClick={() => router.push("/")}
+          onClick={() => router.push("/typing-game")}
           className="px-8 py-3 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 font-bold rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.02] active:scale-[0.98]"
         >
           {t.toTop}
@@ -178,7 +178,7 @@ function ResultContent() {
           onClick={() => router.push("/played")}
           className="text-sm text-gray-500 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-400 font-medium transition-colors underline underline-offset-4"
         >
-          📋 出題された問題一覧（{playedQuestions.length}問）を見る
+          📋 {t.playedTitle(playedQuestions.length)}
         </button>
       )}
     </div>
