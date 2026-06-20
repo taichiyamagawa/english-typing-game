@@ -194,6 +194,19 @@
 - 英語と日本語を切り替えながら読める（日本語訳トグル）
 - 記事内の単語をクリックすると意味がポップアップ表示される（WordTooltip）
 - 記事全文を Web Speech API で読み上げ可能
+- **将来的に動画化を予定**しているため、読み上げに映えるナレーション調のトーンで書く
+
+### 記事の文体・トーン
+- **語りかけるスタイル**を基本とする。読者に直接話しかけるような書き方を意識する
+- 冒頭だけでなく、本文全体を通じてナレーション的なテンポを保つ
+- 具体的な手法：
+  - 読者への問いかけ（"Have you ever wondered...", "Picture this:"）
+  - 驚きを誘う短い文の使用（"It nearly vanished entirely."）
+  - 比喩・スケール感の表現（"roughly the size of three double-decker buses"）
+  - 「あなた」に語りかける二人称（"you"）を自然に使う
+- 百科事典・教科書調にならないよう注意する
+- 悪い例：`"Blue whales were once found across every ocean."`
+- 良い例：`"Picture this: 350,000 blue whales, spread across every ocean on Earth."`
 
 ### データ構造
 - 記事データ：`content/articles/` 配下に各記事1ファイル（slug名.ts）
@@ -237,6 +250,12 @@
 | article_008 | oxford-older-than-aztec | Oxford University Is Older Than the Aztec Empire | history |
 | article_009 | venus-day-longer-than-year | A Day on Venus Is Longer Than a Year | science |
 | article_010 | crows-remember-faces | Crows Never Forget a Face | nature |
+| article_011 | brain-never-stops | Your Brain Never Stops — Even When You Sleep | science |
+| article_012 | wood-wide-web | The Wood Wide Web: How Trees Share Resources Underground | nature |
+| article_013 | antarctica-largest-desert | Antarctica Is the World's Largest Desert | nature |
+| article_014 | eiffel-tower-grows | The Eiffel Tower Grows Taller Every Summer | science |
+| article_015 | chess-more-than-atoms | There Are More Chess Games Than Atoms in the Universe | science |
+| article_016 | blue-whale | The Blue Whale Is the Largest Animal That Has Ever Lived | biology |
 
 ### WordTooltip
 - コンポーネント：`components/WordTooltip.tsx`
