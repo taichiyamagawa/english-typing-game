@@ -811,6 +811,79 @@ export const vocabulary: Record<string, string> = {
   "chronic":         "慢性的な",
   "essential":       "不可欠な・必須の",
 
+  // --- article_015: chess-more-than-atoms ---
+  // 熟語・句
+  "barely scratch the surface": "ほとんど表面をかすりもしない",
+  "open problem":        "未解決問題",
+  "game tree":           "ゲームツリー（局面の探索木）",
+  "brute force":         "力技・総当たり",
+  "pattern recognition": "パターン認識",
+  "per second":          "1秒あたり",
+  "lined up":            "並んで",
+  "in earnest":          "本格的に・本腰を入れて",
+  "makes sense of":      "〜を理解する・意味を見出す",
+  "put that into perspective": "比較して考えると",
+  // 動詞
+  "exceeds":             "超える・上回る",
+  "evaluate":            "評価する",
+  "navigate":            "進む・対処する",
+  "replicate":           "複製する・再現する",
+  "grasp":               "把握する・理解する",
+  // 名詞
+  "mathematician":       "数学者",
+  "sequences":           "連続・順列（複数）",
+  "magnitude":           "規模・大きさ",
+  "chessboard":          "チェスの盤",
+  "factor":              "倍数・係数",
+  // 形容詞・副詞
+  "staggering":          "驚くほどの・衝撃的な",
+  "exhaustively":        "網羅的に・徹底的に",
+  "consistently":        "一貫して・常に",
+  "incomprehensibly":    "理解を超えるほど",
+  "vastly":              "はるかに・大幅に",
+  "intuitively":         "直感的に",
+  "fundamentally":       "根本的に・本質的に",
+  "deliberate":          "意図的な・計画的な",
+  "superhuman":          "人間を超えた・超人的な",
+  "promising":           "有望な・見込みのある",
+
+  // --- article_016: blue-whale ---
+  // 熟語・句
+  "end to end":          "端から端まで",
+  "double-decker buses": "二階建てバス（複数）",
+  "blood vessels":       "血管",
+  "baleen plates":       "ひげ板（クジラのろ過構造）",
+  "feeding season":      "摂食期",
+  "fat reserves":        "脂肪の蓄え",
+  "commercial whaling":  "商業捕鯨",
+  "ship strikes":        "船との衝突",
+  "noise pollution":     "騒音汚染",
+  "climate change":      "気候変動",
+  "classified as":       "〜に分類される",
+  "in contact with":     "〜と連絡をとって",
+  "strains the imagination": "想像力の限界を超える",
+  "rivals that of":      "〜に匹敵する",
+  // 動詞
+  "engulfing":           "飲み込む・包み込む",
+  "collapsed":           "崩壊した",
+  "sustain":             "維持する・支える",
+  "crawl through":       "はって通る",
+  // 名詞
+  "krill":               "オキアミ",
+  "crustaceans":         "甲殻類（複数）",
+  "migrations":          "渡り・回遊（複数）",
+  "vocalisations":       "発声・鳴き声（複数）",
+  "decibels":            "デシベル",
+  "fraction":            "ごく一部・端数",
+  "tonnes":              "トン（複数）",
+  "jaw":                 "あご",
+  // 形容詞・副詞
+  "endangered":          "絶滅危惧の",
+  "exclusively":         "専ら・もっぱら",
+  "partially":           "部分的に",
+  "dense":               "密集した・濃い",
+  "low-frequency":       "低周波の",
+
   // --- article_013: antarctica-largest-desert ---
   // 熟語・句
   "qualifies as":    "〜として該当する・当てはまる",
