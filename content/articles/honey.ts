@@ -8,8 +8,8 @@ export const honeyArticle: Article = {
   description: "Honey found in ancient Egyptian tombs thousands of years old was still perfectly edible. Discover the remarkable chemistry behind honey's eternal shelf life.",
   descriptionJa: "数千年前の古代エジプトの墓で発見されたハチミツが、今でも食べられる状態だった。ハチミツが腐らない驚くべき化学的秘密を探ろう。",
   date: "2026-06-12",
-  category: "science",
-  categoryJa: "科学",
+  category: "food",
+  categoryJa: "食べ物",
   emoji: "🍯",
   sections: [
     {
