@@ -15,9 +15,13 @@ import { antarcticaLargestDesertArticle } from "./antarctica-largest-desert";
 import { eiffelTowerGrowsArticle } from "./eiffel-tower-grows";
 import { chessMoreThanAtomsArticle } from "./chess-more-than-atoms";
 import { blueWhaleArticle } from "./blue-whale";
+import { shortestWar38MinutesArticle } from "./shortest-war-38-minutes";
+import { seaOttersHoldHandsArticle } from "./sea-otters-hold-hands";
 
 // 全記事のリスト。新しい記事を追加したらここに追記する（新しい順）
 export const allArticles: Article[] = [
+  seaOttersHoldHandsArticle,
+  shortestWar38MinutesArticle,
   blueWhaleArticle,
   chessMoreThanAtomsArticle,
   eiffelTowerGrowsArticle,

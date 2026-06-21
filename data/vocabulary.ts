@@ -996,4 +996,81 @@ export const vocabulary: Record<string, string> = {
   "isolated":        "孤立した",
   "defensive":       "防御的な",
   "significant":     "重要な・大きな",
+
+  // ============================================================
+  // 最短の戦争記事（article_017）
+  // ============================================================
+
+  // --- 熟語・フレーズ ---
+  "open fire":               "発砲する",
+  "step down":               "退位する・辞任する",
+  "a show of force":         "武力示威",
+  "in exile":                "亡命中に",
+  "take shelter":            "避難する",
+  "line of fire":            "射線",
+  "in recorded history":     "記録された歴史の中で",
+
+  // --- 単語（名詞）---
+  "sultan":          "スルタン（君主）",
+  "sultanate":       "スルタン国",
+  "protectorate":    "保護国",
+  "ultimatum":       "最後通牒",
+  "warship":         "軍艦",
+  "artillery":       "砲兵・火砲",
+  "casualties":      "死傷者（複数）",
+  "consulate":       "領事館",
+  "colonialism":     "植民地主義",
+  "harbour":         "港（英国式）",
+  "demonstration":   "示威行為・デモ",
+  "candidate":       "候補者",
+
+  // --- 単語（動詞）---
+  "flee":            "逃げる",
+  "fled":            "逃げた（flee の過去形）",
+  "seize":           "占拠する・掴む",
+  "seized":          "占拠した",
+  "declared":        "宣言した",
+
+  // --- 単語（形容詞・副詞）---
+  "overwhelming":    "圧倒的な",
+  "colonial":        "植民地の",
+  "ruling":          "支配する・在位中の",
+
+  // ============================================================
+  // ラッコ記事（article_018）
+  // ============================================================
+
+  // --- 熟語・フレーズ ---
+  "hold hands":          "手をつなぐ",
+  "near extinction":     "絶滅寸前",
+  "play a critical role":"重要な役割を果たす",
+  "per square inch":     "1平方インチあたり",
+  "come ashore":         "陸に上がる",
+  "let go":              "手を離す・諦める",
+
+  // --- 単語（名詞）---
+  "raft":            "いかだ・（ラッコの）群れ",
+  "kelp":            "ケルプ（巨大海藻）",
+  "sea urchin":      "ウニ",
+  "blubber":         "鯨脂・皮下脂肪",
+  "pup":             "子動物（ラッコ・アザラシ等）",
+  "swell":           "うねり・波",
+  "strand":          "糸・房・一本",
+  "strands":         "糸・房（複数）",
+  "ecosystem":       "生態系",
+  "conservation":    "保護・保全",
+
+  // --- 単語（動詞）---
+  "groom":           "毛繕いする",
+  "grooming":        "毛繕い",
+  "anchor":          "固定する・錨",
+  "drift":           "漂う",
+  "drifting":        "漂っている",
+  "unravel":         "崩れる・ほどける",
+
+  // --- 単語（形容詞）---
+  "waterproof":      "防水の",
+  "matted":          "もつれた・べたついた",
+  "frigid":          "極寒の・凍てつく",
+  "threatened":      "絶滅危惧の・脅かされた",
 };
