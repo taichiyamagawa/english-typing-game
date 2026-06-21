@@ -123,14 +123,15 @@ export const translations = {
     noSearchResults:   (q: string) => `「${q}」に一致する記事はありません。`,
 
     // カテゴリ（記事一覧フィルター）
-    cat_all:      "すべて",
-    cat_science:  "科学",
-    cat_biology:  "生物",
-    cat_history:  "歴史",
-    cat_space:    "宇宙",
-    cat_language: "言語",
-    cat_nature:   "自然",
-    cat_food:     "食べ物",
+    cat_all:        "すべて",
+    cat_science:    "科学",
+    cat_biology:    "生物",
+    cat_history:    "歴史",
+    cat_space:      "宇宙",
+    cat_language:   "言語",
+    cat_nature:     "自然",
+    cat_food:       "食べ物",
+    cat_game_sport: "ゲーム・スポーツ",
 
     // 記事詳細
     readAloud:    "読み上げ",
@@ -260,14 +261,15 @@ export const translations = {
     noSearchResults:   (q: string) => `No articles found for "${q}".`,
 
     // カテゴリ（記事一覧フィルター）
-    cat_all:      "All",
-    cat_science:  "Science",
-    cat_biology:  "Biology",
-    cat_history:  "History",
-    cat_space:    "Space",
-    cat_language: "Language",
-    cat_nature:   "Nature",
-    cat_food:     "Food",
+    cat_all:        "All",
+    cat_science:    "Science",
+    cat_biology:    "Biology",
+    cat_history:    "History",
+    cat_space:      "Space",
+    cat_language:   "Language",
+    cat_nature:     "Nature",
+    cat_food:       "Food",
+    cat_game_sport: "Games & Sports",
 
     // 記事詳細
     readAloud:    "Read aloud",

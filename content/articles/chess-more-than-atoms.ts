@@ -8,8 +8,8 @@ export const chessMoreThanAtomsArticle: Article = {
   description: "The number of possible chess games is so astronomically large that it dwarfs the number of atoms in the observable universe. What does this tell us about complexity, computers, and the human mind?",
   descriptionJa: "チェスで起こりうる局面の数は、観測可能な宇宙の原子数をはるかに超える規模だ。これは複雑さ、コンピューター、そして人間の知性について何を教えてくれるのか？",
   date: "2026-06-20",
-  category: "science",
-  categoryJa: "科学",
+  category: "game_sport",
+  categoryJa: "ゲーム・スポーツ",
   emoji: "♟️",
   sections: [
     {

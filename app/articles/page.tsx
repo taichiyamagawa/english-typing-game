@@ -24,8 +24,9 @@ export default function ArticlesPage() {
     { value: "history",  label: t.cat_history },
     { value: "space",    label: t.cat_space },
     { value: "language", label: t.cat_language },
-    { value: "nature",   label: t.cat_nature },
-    { value: "food",     label: t.cat_food },
+    { value: "nature",     label: t.cat_nature },
+    { value: "food",       label: t.cat_food },
+    { value: "game_sport", label: t.cat_game_sport },
   ];
 
   // カテゴリと検索ワードで記事を絞り込む
