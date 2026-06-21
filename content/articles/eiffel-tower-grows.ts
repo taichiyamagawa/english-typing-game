@@ -8,8 +8,8 @@ export const eiffelTowerGrowsArticle: Article = {
   description: "The Eiffel Tower is not always the same height. On a hot summer day it can be up to 15 centimetres taller than on a cold winter day. The tower is not being renovated — it is simply obeying the laws of physics.",
   descriptionJa: "エッフェル塔はいつも同じ高さではない。暑い夏の日には、寒い冬の日より最大15センチも高くなることがある。改修工事をしているわけではなく、ただ物理の法則に従っているだけだ。",
   date: "2026-06-18",
-  category: "science",
-  categoryJa: "科学",
+  category: "architecture",
+  categoryJa: "建築",
   emoji: "🗼",
   sections: [
     {

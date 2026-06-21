@@ -131,7 +131,8 @@ export const translations = {
     cat_language:   "言語",
     cat_nature:     "自然",
     cat_food:       "食べ物",
-    cat_game_sport: "ゲーム・スポーツ",
+    cat_game_sport:   "ゲーム・スポーツ",
+    cat_architecture: "建築",
 
     // 記事詳細
     readAloud:    "読み上げ",
@@ -269,7 +270,8 @@ export const translations = {
     cat_language:   "Language",
     cat_nature:     "Nature",
     cat_food:       "Food",
-    cat_game_sport: "Games & Sports",
+    cat_game_sport:   "Games & Sports",
+    cat_architecture: "Architecture",
 
     // 記事詳細
     readAloud:    "Read aloud",
