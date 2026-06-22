@@ -256,11 +256,20 @@
 | article_014 | eiffel-tower-grows | The Eiffel Tower Grows Taller Every Summer | science |
 | article_015 | chess-more-than-atoms | There Are More Chess Games Than Atoms in the Universe | science |
 | article_016 | blue-whale | The Blue Whale Is the Largest Animal That Has Ever Lived | biology |
+| article_017 | shortest-war-38-minutes | The Shortest War in History Lasted 38 Minutes | history |
+| article_018 | sea-otters-hold-hands | Sea Otters Hold Hands While They Sleep | nature |
+| article_019 | polar-bears-black-skin | Polar Bears Are Black Under All That White | biology |
+| article_020 | velcro | The Burr That Became Velcro | science |
 
 ### WordTooltip
 - コンポーネント：`components/WordTooltip.tsx`
 - `data/vocabulary.ts` の単語と照合し、該当単語をクリック可能にする
 - クリックで日本語の意味をポップアップ表示（外側クリックで閉じる）
+
+### 語彙カバー率のルール
+- 記事を新規作成するときは、`data/vocabulary.ts` に記事内の単語・熟語を追加し、**カバー率90%以上**を目標にする
+- 記事を書き終えたら、本文中の重要な単語・熟語（内容語・専門語・慣用句）を洗い出し、未登録のものを vocabulary.ts に追記する
+- すでに登録済みの単語は重複追加しない（追加前に既存キーを確認する）
 
 ## 画面構成
 - ポータルページ（/）：BitFunトップ。「ゲームで学ぶ」と「雑学記事」の2セクション構成
