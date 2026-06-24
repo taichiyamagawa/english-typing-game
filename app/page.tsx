@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Space_Grotesk, Lora } from "next/font/google";
 import { allArticles } from "@/content/articles/index";
@@ -13,6 +14,8 @@ const lora = Lora({ subsets: ["latin"], weight: ["600"] });
 export default function PortalPage() {
   const router = useRouter();
   const { t, lang } = useLanguage();
+  // モーダルの開閉状態
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   // 最新記事を取得し、メイン1枚とサブ2枚に分ける
   const latestArticles = allArticles.slice(0, 3);
@@ -31,6 +34,13 @@ export default function PortalPage() {
           <p className="text-base text-gray-400 dark:text-gray-500 tracking-wide">
             {t.tagline}
           </p>
+          {/* このサイトについてボタン */}
+          <button
+            onClick={() => setIsAboutOpen(true)}
+            className="mt-3 text-sm text-orange-400 hover:text-orange-500 underline underline-offset-2 transition-colors"
+          >
+            {t.aboutLabel}
+          </button>
         </div>
 
         {/* ゲームヒーローカード */}
@@ -134,6 +144,44 @@ export default function PortalPage() {
         </section>
 
       </div>
+
+      {/* このサイトについてモーダル */}
+      {isAboutOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50"
+          onClick={() => setIsAboutOpen(false)}
+        >
+          <div
+            className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl w-full max-w-lg max-h-[80vh] overflow-y-auto p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* モーダルヘッダー */}
+            <div className="flex items-center justify-between mb-5">
+              <h2 className="text-base font-bold text-gray-800 dark:text-gray-100">
+                {t.aboutTitle}
+              </h2>
+              <button
+                onMouseDown={(e) => e.preventDefault()}
+                onClick={() => setIsAboutOpen(false)}
+                className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors text-lg leading-none"
+              >
+                ✕
+              </button>
+            </div>
+            {/* 本文：各段落を改行付きで表示 */}
+            <div className="space-y-4">
+              {t.aboutParagraphs.map((para, i) => (
+                <p
+                  key={i}
+                  className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line"
+                >
+                  {para}
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

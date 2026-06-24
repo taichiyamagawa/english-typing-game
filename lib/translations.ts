@@ -13,6 +13,14 @@ export const translations = {
     gameDescription:  "雑学・英文・英単語でタイピング練習",
     latestArticles:   "雑学記事",
     viewAllArticles:  "記事一覧を見る →",
+    aboutLabel:       "このサイトについて",
+    aboutTitle:       "このサイトについて",
+    aboutParagraphs:  [
+      "英語ができると、世界が少し広くなります。\n海外の人と友達になれる、仕事の選択肢が増える、目に飛び込む英語も耳に入る英語も自然と理解できる——それだけで、人生の可能性はぐっと広がります。",
+      "BitFun は「英語に当たり前に触れる環境」を作りたくて生まれました。タイピングしながら声に出して読むことで、口・目・耳・指を同時に使い、さらに描写をイメージすることで英語を全身で吸収できます。\n発音がわからない単語は、読み上げ機能ですぐ確認できます。",
+      "雑学記事では、世界のおもしろい豆知識を\"英語で\"学びます。「英語を勉強する」から「英語で学ぶ」に変わる——その体験が、BitFun のもう一つの柱です。",
+      "大切なのは、毎日ちょっとだけでもいいから\"継続\"すること。\n「ちょっと楽しかった」「ちょっと学んだ」——その小さな積み重ねが、いちばん遠くまで連れて行ってくれます。",
+    ],
 
     // タイピングゲーム選択ページ
     questions:        "問題一覧",
@@ -152,6 +160,14 @@ export const translations = {
     gameDescription:  "Practice typing with trivia, phrases & vocabulary",
     latestArticles:   "Latest Articles",
     viewAllArticles:  "View all articles →",
+    aboutLabel:       "About this site",
+    aboutTitle:       "About BitFun",
+    aboutParagraphs:  [
+      "Knowing English opens doors — to friendships, to career opportunities, to a world where the English around you finally makes sense.",
+      "BitFun is built around one idea: make English a natural part of your daily life. Read out loud as you type, and you're engaging your mouth, eyes, ears, and hands all at once — while picturing what you're describing, the words sink in even deeper. Not sure how something sounds? The read-aloud feature has you covered.",
+      "Our trivia articles take it one step further. Instead of studying English, you're learning about the world through English — surprising facts, curious stories, one article at a time.",
+      "The secret? Keep going — even just a little, every day.\n\"That was kind of fun.\" \"I actually learned something.\" — that's exactly the feeling we're going for.",
+    ],
 
     // タイピングゲーム選択ページ
     questions:        "Questions",
