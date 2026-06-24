@@ -19,9 +19,13 @@ import { shortestWar38MinutesArticle } from "./shortest-war-38-minutes";
 import { seaOttersHoldHandsArticle } from "./sea-otters-hold-hands";
 import { polarBearsBlackSkinArticle } from "./polar-bears-black-skin";
 import { velcroArticle } from "./velcro";
+import { flamingosArticle } from "./flamingos";
+import { immortalJellyfishArticle } from "./immortal-jellyfish";
 
 // 全記事のリスト。新しい記事を追加したらここに追記する（新しい順）
 export const allArticles: Article[] = [
+  immortalJellyfishArticle,
+  flamingosArticle,
   velcroArticle,
   polarBearsBlackSkinArticle,
   seaOttersHoldHandsArticle,

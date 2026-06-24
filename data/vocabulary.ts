@@ -1075,6 +1075,84 @@ export const vocabulary: Record<string, string> = {
   "threatened":      "絶滅危惧の・脅かされた",
 
   // ============================================================
+  // フラミンゴ記事（article_021）
+  // ============================================================
+
+  // --- 熟語・フレーズ ---
+  "you are what you eat":       "食べるものがあなたをつくる",
+  "not there at birth":         "生まれた時にはなかった",
+  "feeding grounds":            "採餌場・エサ場",
+  "instantly recognisable":     "一目でわかる",
+  "filter out":                 "ろ過する・取り除く",
+  "stay together":              "一緒にいる・離れない",
+  "in exactly one position":    "まったく一つの体勢で",
+
+  // --- 単語（名詞）---
+  "flamingo":        "フラミンゴ",
+  "flamingos":       "フラミンゴ（複数）",
+  "carotenoid":      "カロテノイド（天然色素の一種）",
+  "carotenoids":     "カロテノイド（複数）",
+  "brine shrimp":    "ブラインシュリンプ（塩水エビ）",
+  "algae":           "藻類・コケ類",
+  "flamboyance":     "フランボヤンス（フラミンゴの群れの呼称）",
+  "colony":          "コロニー・集落",
+  "colonies":        "コロニー・集落（複数）",
+  "enclosure":       "囲い・動物の展示エリア",
+  "down":            "産毛・ダウン（羽毛）",
+  "breeding season": "繁殖期",
+
+  // --- 単語（動詞）---
+  "deposited":       "蓄積された・沈着した",
+  "wade":            "水の中を歩く",
+  "wading":          "水の中を歩いている",
+  "hatch":           "孵化する",
+  "hatches":         "孵化する（三人称単数）",
+
+  // --- 単語（形容詞・副詞）---
+  "vividly":         "鮮やかに",
+  "inverted":        "逆さまの・反転した",
+  "synchronised":    "同期した・そろった",
+  "coordinated":     "統制のとれた・連携した",
+
+  // ============================================================
+  // 不死のクラゲ記事（article_022）
+  // ============================================================
+
+  // --- 熟語・フレーズ ---
+  "under the right conditions":   "適切な条件下では",
+  "escape hatch":                 "脱出口・逃げ道",
+  "with an asterisk":             "注釈付きで・条件付きで",
+  "hitching rides in":            "〜に乗り込んで運ばれること",
+  "start over":                   "最初からやり直す",
+  "not yet well understood":      "まだ十分に解明されていない",
+  "from the inside out":          "内側から外側へ・根本的に",
+
+  // --- 単語（名詞）---
+  "jellyfish":         "クラゲ",
+  "polyp":             "ポリプ（クラゲの幼生段階）",
+  "transdifferentiation": "分化転換（細胞が別の種類に変化すること）",
+  "immortality":       "不死・不滅",
+  "ageing":            "老化・加齢",
+  "regeneration":      "再生",
+  "ballast water":     "バラスト水（船の安定用に積む水）",
+  "cargo ship":        "貨物船",
+  "stowaway":          "密航者・無賃乗船者",
+
+  // --- 単語（動詞）---
+  "reabsorb":          "再吸収する",
+  "revert":            "元の状態に戻る",
+  "restarting":        "再スタートすること",
+  "transform":         "変化する・変換する",
+  "drifts":            "漂う・漂流する",
+
+  // --- 単語（形容詞・副詞）---
+  "immortal":          "不死の・不滅の",
+  "translucent":       "半透明の",
+  "fragile":           "繊細な・壊れやすい",
+  "invasive":          "侵入性の・外来の",
+  "vanishingly":       "極めて・消えてしまうほど",
+
+  // ============================================================
   // ホッキョクグマ記事（article_019）
   // ============================================================
 
