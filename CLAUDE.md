@@ -260,6 +260,10 @@
 | article_018 | sea-otters-hold-hands | Sea Otters Hold Hands While They Sleep | nature |
 | article_019 | polar-bears-black-skin | Polar Bears Are Black Under All That White | biology |
 | article_020 | velcro | The Burr That Became Velcro | science |
+| article_021 | flamingos | Flamingos Are Not Born Pink | biology |
+| article_022 | immortal-jellyfish | The Jellyfish That Can Cheat Death | biology |
+| article_023 | koala-fingerprints | The Animal With Fingerprints Almost Identical to Yours | biology |
+| article_024 | great-pyramid-tallest | The Great Pyramid Was the World's Tallest Structure for 3,800 Years | history |
 
 ### WordTooltip
 - コンポーネント：`components/WordTooltip.tsx`
