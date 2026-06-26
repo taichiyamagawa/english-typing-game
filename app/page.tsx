@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Space_Grotesk, Lora } from "next/font/google";
-import Image from "next/image";
 import { allArticles } from "@/content/articles/index";
 import { useLanguage } from "@/components/LanguageContext";
 
@@ -145,22 +144,6 @@ export default function PortalPage() {
         </section>
 
       </div>
-
-      {/* ポンたぬ マスコット（右下に固定表示・クリックでモーダルを開く） */}
-      <button
-        onClick={() => setIsAboutOpen(true)}
-        onMouseDown={(e) => e.preventDefault()}
-        className="fixed bottom-6 right-6 z-40 group"
-        aria-label="このサイトについて"
-      >
-        <Image
-          src="/images/pontanu.png"
-          alt="ポンたぬ"
-          width={100}
-          height={100}
-          className="drop-shadow-lg group-hover:scale-110 transition-transform duration-200"
-        />
-      </button>
 
       {/* このサイトについてモーダル */}
       {isAboutOpen && (
