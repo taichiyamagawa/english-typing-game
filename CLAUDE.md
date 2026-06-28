@@ -264,6 +264,8 @@
 | article_022 | immortal-jellyfish | The Jellyfish That Can Cheat Death | biology |
 | article_023 | koala-fingerprints | The Animal With Fingerprints Almost Identical to Yours | biology |
 | article_024 | great-pyramid-tallest | The Great Pyramid Was the World's Tallest Structure for 3,800 Years | history |
+| article_025 | dolphins-sleep-one-eye-open | Dolphins Sleep With One Eye Open — And Half Their Brain | nature |
+| article_026 | lightning-hotter-than-sun | Lightning Is Five Times Hotter Than the Surface of the Sun | science |
 
 ### WordTooltip
 - コンポーネント：`components/WordTooltip.tsx`
