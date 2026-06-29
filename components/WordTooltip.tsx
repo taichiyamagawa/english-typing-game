@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { vocabulary } from "@/data/vocabulary";
 import { useLanguage } from "@/components/LanguageContext";
+import { speak } from "@/lib/speech";
 
 // テキストを通常のテキストと単語帳の単語に分割する
 type Segment =
@@ -68,7 +69,18 @@ function VocabWord({ word, meaning }: { word: string; meaning: string }) {
       </button>
       {open && (
         <span className="absolute left-0 top-full mt-1 z-50 bg-white dark:bg-gray-800 border border-orange-200 dark:border-orange-700 rounded-xl shadow-lg px-3 py-2 min-w-max max-w-[200px]">
-          <span className="block text-xs font-bold text-orange-500 mb-0.5">{word}</span>
+          {/* 単語と読み上げボタンを横並びに表示 */}
+          <span className="flex items-center gap-1.5 mb-0.5">
+            <span className="text-xs font-bold text-orange-500">{word}</span>
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={(e) => { e.stopPropagation(); speak(word); }}
+              className="text-gray-400 hover:text-orange-500 transition-colors leading-none"
+              aria-label={`${word}を読み上げる`}
+            >
+              🔊
+            </button>
+          </span>
           <span className="block text-xs text-gray-700 dark:text-gray-200">{meaning}</span>
         </span>
       )}
