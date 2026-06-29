@@ -2,13 +2,12 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Lora, Noto_Serif_JP } from "next/font/google";
+import { Lora } from "next/font/google";
 import { allArticles } from "@/content/articles/index";
 import { useLanguage } from "@/components/LanguageContext";
 
 // 記事詳細ページと同じフォントを使用する
 const lora = Lora({ subsets: ["latin"], weight: ["400", "600", "700"] });
-const notoSerifJP = Noto_Serif_JP({ weight: ["400", "600"], preload: false });
 
 export default function ArticlesPage() {
   const router = useRouter();
@@ -43,7 +42,7 @@ export default function ArticlesPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50 dark:from-gray-950 dark:to-gray-900 px-4 py-10 sm:px-8 sm:py-12 pb-24">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-7xl mx-auto">
 
         {/* ヘッダー */}
         <div className="flex items-center justify-between mb-10">
@@ -97,33 +96,49 @@ export default function ArticlesPage() {
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-2 gap-4">
-            {filtered.map((article) => (
-              <button
-                key={article.slug}
-                onClick={() => router.push(`/articles/${article.slug}`)}
-                className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm text-left hover:shadow-md transition-all group overflow-hidden flex flex-col"
-              >
-                {/* テキストエリア（上） */}
-                <div className="p-4 flex flex-col flex-1">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {filtered.map((article) => {
+              // 本文の最初のparagraphを取得する
+              const firstParagraph = article.sections.find((s) => s.type === "paragraph");
+              return (
+                <button
+                  key={article.slug}
+                  onClick={() => router.push(`/articles/${article.slug}`)}
+                  className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm text-left hover:shadow-md hover:-translate-y-0.5 transition-all overflow-hidden flex flex-col p-4"
+                >
+                  {/* カテゴリラベル */}
                   <span className="text-xs font-semibold tracking-wide uppercase text-orange-500 mb-2">
                     {lang === "ja" ? article.categoryJa : article.category}
                   </span>
-                  <p className={`${lora.className} font-semibold text-gray-800 dark:text-gray-100 leading-snug mb-1 text-sm`}>
+
+                  {/* 英語タイトル */}
+                  <p className={`${lora.className} font-semibold text-gray-800 dark:text-gray-100 leading-snug text-sm line-clamp-2 mb-1`}>
                     {article.title}
                   </p>
+
+                  {/* 日本語タイトル */}
                   {lang === "ja" && (
-                    <p className={`${notoSerifJP.className} text-xs text-gray-500 dark:text-gray-400 mb-2`}>
+                    <p className="text-xs text-gray-500 dark:text-gray-400 leading-snug line-clamp-2 mb-2">
                       {article.titleJa}
                     </p>
                   )}
-                  <p className={`${lang === "ja" ? notoSerifJP.className : ""} text-xs text-gray-400 dark:text-gray-500 line-clamp-2 leading-relaxed mt-auto`}>
-                    {lang === "ja" ? article.descriptionJa : article.description}
-                  </p>
-                </div>
 
-              </button>
-            ))}
+                  {/* 本文冒頭（英語） */}
+                  {firstParagraph && (
+                    <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2 mt-auto">
+                      {firstParagraph.en}
+                    </p>
+                  )}
+
+                  {/* 本文冒頭（日本語訳） */}
+                  {lang === "ja" && firstParagraph && (
+                    <p className="text-xs text-gray-400 dark:text-gray-500 leading-relaxed line-clamp-2 mt-1">
+                      {firstParagraph.ja}
+                    </p>
+                  )}
+                </button>
+              );
+            })}
           </div>
         )}
       </div>
