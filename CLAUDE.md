@@ -266,6 +266,8 @@
 | article_024 | great-pyramid-tallest | The Great Pyramid Was the World's Tallest Structure for 3,800 Years | history |
 | article_025 | dolphins-sleep-one-eye-open | Dolphins Sleep With One Eye Open — And Half Their Brain | nature |
 | article_026 | lightning-hotter-than-sun | Lightning Is Five Times Hotter Than the Surface of the Sun | science |
+| article_027 | butterflies-taste-with-feet | Butterflies Taste With Their Feet | biology |
+| article_028 | rats-laugh-when-tickled | Rats Laugh When Tickled — You Just Can't Hear It | biology |
 
 ### WordTooltip
 - コンポーネント：`components/WordTooltip.tsx`

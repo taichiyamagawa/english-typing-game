@@ -25,9 +25,13 @@ import { greatPyramidTallestArticle } from "./great-pyramid-tallest";
 import { koalaFingerprintsArticle } from "./koala-fingerprints";
 import { dolphinsSleepOneEyeOpenArticle } from "./dolphins-sleep-one-eye-open";
 import { lightningHotterThanSunArticle } from "./lightning-hotter-than-sun";
+import { butterfliesTasteWithFeetArticle } from "./butterflies-taste-with-feet";
+import { ratsLaughWhenTickledArticle } from "./rats-laugh-when-tickled";
 
 // 全記事のリスト。新しい記事を追加したらここに追記する（新しい順）
 export const allArticles: Article[] = [
+  ratsLaughWhenTickledArticle,
+  butterfliesTasteWithFeetArticle,
   lightningHotterThanSunArticle,
   dolphinsSleepOneEyeOpenArticle,
   koalaFingerprintsArticle,
