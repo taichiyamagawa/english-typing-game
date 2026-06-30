@@ -1,5 +1,5 @@
 // サウンド設定のlocalStorageキー
-const STORAGE_KEY = "bitfun_sound";
+const STORAGE_KEY = "bitgaku_sound";
 
 // サウンドが有効かどうかを取得する（デフォルト：有効）
 export const getSoundEnabled = (): boolean => {

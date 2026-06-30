@@ -1,7 +1,7 @@
 # プロジェクト概要
 英語学習者向けの、雑学ネタ・英文・英単語を題材にしたタイピング練習Webアプリ
 - サイトタイトル：English Typing Game
-- キャッチコピー：「ちょっと楽しく、ちょっと賢く。」
+- キャッチコピー：「ちょっと楽しく、ちょっと学ぶ。」
 
 ## 使っている技術
 - Next.js（App Router）
@@ -11,9 +11,10 @@
 - スコア保存: localStorage（将来的にDBへ移行予定）
 
 ## ブランド
-- サイト名：BitFun（ブログ・Webアプリを統合した総合サイトとして展開予定）
+- サイト名：BitGaku（ブログ・Webアプリを統合した総合サイトとして展開予定）
+- ドメイン：bitgaku.com（旧BitFun名義はbitfun.jpだったが、商標上のリスクを避けるため変更）
 - テーマカラー：オレンジ（orange-500 ベース）
-- コンセプト：「Bit（ちょっと）× Fun（楽しい）」＝ちょっと楽しい
+- コンセプト：「Bit（ちょっと）× Gaku（学ぶ）」＝ちょっと学ぶ
 
 ## ターゲットユーザー
 - 英語学習者（正確さ・意味の理解を重視）
@@ -152,7 +153,7 @@
 - PC向け（スマホのキーボード入力には対応しない）
 - シンプルだが適度にデザイン性のある見た目
 - ゲーム画面のステータス：問題番号・ミス数・正打数（累計正解文字数）
-- 全ページ左上にBitFunロゴを固定表示（クリックでトップページへ遷移）
+- 全ページ左上にBitGakuロゴを固定表示（クリックでトップページへ遷移）
 
 ### 3. 英文読み上げ機能
 - ブラウザ標準の Web Speech API（SpeechSynthesis）を使用（外部サービス不要・無料）
@@ -164,7 +165,7 @@
 
 ### 4. 言語切替機能（JP / EN モード）
 - 全ページ右上に `🇬🇧 English | 🇯🇵 日本語` ボタンを固定表示
-- デフォルトは日本語モード。設定は localStorage に保存（`bitfun_language`）
+- デフォルトは日本語モード。設定は localStorage に保存（`bitgaku_language`）
 - **実装ファイル：**
   - `lib/languagePreference.ts` — 言語設定のget/set
   - `lib/translations.ts` — 全UIテキストの日本語・英語定義
@@ -179,9 +180,9 @@
 
 ### 3. スコア記録・自己ベスト
 - **タイムモードのみ**記録を保存（フリーモードは保存しない）
-- localStorage に最新10件を保存（`bitfun_typing_records`）
-- 自己ベストは時間別（30秒・1分・2分）に分けて保存（`bitfun_best_by_duration`）
-  - 旧データ（`bitfun_overall_best`）は初回表示時に2分枠へ自動マイグレーション
+- localStorage に最新10件を保存（`bitgaku_typing_records`）
+- 自己ベストは時間別（30秒・1分・2分）に分けて保存（`bitgaku_best_by_duration`）
+  - 旧データ（`bitgaku_overall_best`）は初回表示時に2分枠へ自動マイグレーション
 - リザルト画面：カテゴリ別自己ベストカードは廃止。スコア記録画面（/history）で確認する
 - スコア記録画面（/history）：時間別自己ベスト3枠＋直近10件のリスト
   - 自己ベストカード：時間ラベル・スコア・カテゴリ・総打鍵数・ミス数・正確率・日時
@@ -190,7 +191,7 @@
 ## 雑学記事（Articles）
 
 ### 概要
-- BitFunポータルの「読んで学ぶ」コンテンツとして、雑学を英語で解説する記事を公開
+- BitGakuポータルの「読んで学ぶ」コンテンツとして、雑学を英語で解説する記事を公開
 - 英語と日本語を切り替えながら読める（日本語訳トグル）
 - 記事内の単語をクリックすると意味がポップアップ表示される（WordTooltip）
 - 記事全文を Web Speech API で読み上げ可能
@@ -268,6 +269,8 @@
 | article_026 | lightning-hotter-than-sun | Lightning Is Five Times Hotter Than the Surface of the Sun | science |
 | article_027 | butterflies-taste-with-feet | Butterflies Taste With Their Feet | biology |
 | article_028 | rats-laugh-when-tickled | Rats Laugh When Tickled — You Just Can't Hear It | biology |
+| article_029 | saturn-floats-in-water | Saturn Is So Light It Would Float in Water | space（bgPattern: "space"） |
+| article_030 | wombat-cube-poop | Wombats Poop in Perfectly Shaped Cubes | biology |
 
 ### WordTooltip
 - コンポーネント：`components/WordTooltip.tsx`
@@ -281,7 +284,7 @@
 - 追加後は `npx tsc --noEmit` でエラーがないことを確認する
 
 ## 画面構成
-- ポータルページ（/）：BitFunトップ。「ゲームで学ぶ」と「雑学記事」の2セクション構成
+- ポータルページ（/）：BitGakuトップ。「ゲームで学ぶ」と「雑学記事」の2セクション構成
 - タイピングゲーム選択画面（/typing-game）：モード選択・カテゴリ選択・スタートボタン
 - 英文カテゴリ選択画面（/phrase-select）：英文選択時に遷移。20サブカテゴリを5×4グリッドで表示
 - 単語テーマ選択画面（/word-select）：単語選択時に遷移。16アイテムを4×4グリッドで表示
@@ -299,7 +302,7 @@
 - スコア記録・時間別自己ベスト：✅ 完成
 - 英文読み上げ・効果音・ブックマーク：✅ 完成
 - 雑学記事（10本）・WordTooltip・vocabulary（約610語）：✅ 完成
-- BitFunポータルページ（/）：✅ 完成
+- BitGakuポータルページ（/）：✅ 完成
 - 言語切替機能（JP/ENモード）：✅ 完成（カテゴリ名・時間ラベルの英語化含む）
 
 ## 技術的な実装方針

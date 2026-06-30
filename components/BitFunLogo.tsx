@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 
-// 全ページ左上に表示するBitFunロゴ。クリックでトップページへ遷移する
+// 全ページ左上に表示するBitGakuロゴ。クリックでトップページへ遷移する
 export default function BitFunLogo() {
   return (
     <Link
@@ -13,7 +13,7 @@ export default function BitFunLogo() {
       </div>
       <span className="text-xl font-bold tracking-tight">
         <span className="text-gray-800 dark:text-gray-100">Bit</span>
-        <span className="text-orange-500">Fun</span>
+        <span className="text-orange-500">Gaku</span>
       </span>
     </Link>
   );

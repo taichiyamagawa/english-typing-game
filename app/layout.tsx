@@ -7,20 +7,20 @@ import BitFunLogo from "@/components/BitFunLogo";
 import { LanguageProvider } from "@/components/LanguageContext";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bitfun.jp"),
+  metadataBase: new URL("https://bitgaku.com"),
   title: "雑学英語タイピング | English Typing Game",
-  description: "ちょっと楽しく、ちょっと賢く。雑学・英文・英単語でタイピング練習",
+  description: "ちょっと楽しく、ちょっと学ぶ。雑学・英文・英単語でタイピング練習",
   openGraph: {
     title: "雑学英語タイピング | English Typing Game",
-    description: "ちょっと楽しく、ちょっと賢く。",
+    description: "ちょっと楽しく、ちょっと学ぶ。",
     type: "website",
-    siteName: "BitFun",
+    siteName: "BitGaku",
     locale: "ja_JP",
   },
   twitter: {
     card: "summary_large_image",
     title: "雑学英語タイピング | English Typing Game",
-    description: "ちょっと楽しく、ちょっと賢く。",
+    description: "ちょっと楽しく、ちょっと学ぶ。",
   },
 };
 

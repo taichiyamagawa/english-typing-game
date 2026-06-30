@@ -1,5 +1,5 @@
 // ブックマークのlocalStorageキー
-const STORAGE_KEY = "bitfun_bookmarks";
+const STORAGE_KEY = "bitgaku_bookmarks";
 
 // ブックマーク済みIDのセットを取得する
 export const getBookmarks = (): Set<string> => {

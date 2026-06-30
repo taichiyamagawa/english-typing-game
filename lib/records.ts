@@ -14,7 +14,7 @@ export type GameRecord = {
 
 
 // localStorageのキー名
-const STORAGE_KEY = "bitfun_typing_records";
+const STORAGE_KEY = "bitgaku_typing_records";
 
 // 保存する最大件数（古い記録は自動的に削除）
 const MAX_RECORDS = 10;
@@ -53,9 +53,9 @@ export type OverallBest = {
 };
 
 // 全体自己ベストの localStorage キー名（後方互換のため残す）
-const OVERALL_BEST_KEY = "bitfun_overall_best";
+const OVERALL_BEST_KEY = "bitgaku_overall_best";
 // 時間別自己ベストの localStorage キー名
-const BEST_BY_DURATION_KEY = "bitfun_best_by_duration";
+const BEST_BY_DURATION_KEY = "bitgaku_best_by_duration";
 
 // 全体自己ベストを取得する（後方互換：history画面でのマイグレーション用）
 export const getOverallBest = (): OverallBest | null => {

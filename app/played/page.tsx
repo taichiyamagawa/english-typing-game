@@ -16,7 +16,7 @@ export default function PlayedPage() {
   // localStorageから出題リストを読み込む（id・categoryも含む完全なデータ）
   const [questions] = useState<Question[]>(() => {
     try {
-      const raw = localStorage.getItem("bitfun_played");
+      const raw = localStorage.getItem("bitgaku_played");
       return raw ? JSON.parse(raw) : [];
     } catch {
       return [];

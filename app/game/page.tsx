@@ -65,7 +65,7 @@ function GameContent() {
     // 出題問題一覧からの練習の場合はその問題だけを使う
     if (source === "played") {
       try {
-        const raw = localStorage.getItem("bitfun_played");
+        const raw = localStorage.getItem("bitgaku_played");
         return raw ? JSON.parse(raw) : [];
       } catch {
         return [];
@@ -184,7 +184,7 @@ function GameContent() {
     if (!isGameOver) return;
     const finalTyped = totalTyped + currentIndex;
     // 出題リストをlocalStorageに保存してからリザルト遷移する
-    localStorage.setItem("bitfun_played", JSON.stringify(playedQuestions));
+    localStorage.setItem("bitgaku_played", JSON.stringify(playedQuestions));
     const params = new URLSearchParams({
       result:   "gameover",
       mode,
@@ -312,7 +312,7 @@ function GameContent() {
     if (mode === "free" && isLastQuestion) {
       // フリーモード：全問クリアでリザルト画面へ遷移
       setIsCleared(true);
-      localStorage.setItem("bitfun_played", JSON.stringify(newPlayed));
+      localStorage.setItem("bitgaku_played", JSON.stringify(newPlayed));
       const params = new URLSearchParams({
         result:   "cleared",
         mode,
@@ -335,7 +335,7 @@ function GameContent() {
   // フリーモードの「やめる」ボタン処理：途中でリザルト画面へ遷移する
   const handleQuit = () => {
     const finalTyped = totalTyped + currentIndex;
-    localStorage.setItem("bitfun_played", JSON.stringify(playedQuestions));
+    localStorage.setItem("bitgaku_played", JSON.stringify(playedQuestions));
     const params = new URLSearchParams({
       result:   "quit",
       mode,

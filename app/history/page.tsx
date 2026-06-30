@@ -26,7 +26,7 @@ export default function HistoryPage() {
     const all = getRecords();
     const timeOnly = all.filter((r) => r.mode === "time");
     if (timeOnly.length !== all.length) {
-      localStorage.setItem("bitfun_typing_records", JSON.stringify(timeOnly));
+      localStorage.setItem("bitgaku_typing_records", JSON.stringify(timeOnly));
     }
     return timeOnly;
   });

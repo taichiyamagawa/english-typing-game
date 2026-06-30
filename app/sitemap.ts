@@ -5,7 +5,7 @@ import { allArticles } from "@/content/articles/index";
 export default function sitemap(): MetadataRoute.Sitemap {
   // 記事ページを動的に生成する
   const articleUrls: MetadataRoute.Sitemap = allArticles.map((article) => ({
-    url: `https://bitfun.jp/articles/${article.slug}`,
+    url: `https://bitgaku.com/articles/${article.slug}`,
     lastModified: new Date(article.date),
     changeFrequency: "monthly",
     priority: 0.8,
@@ -13,43 +13,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: "https://bitfun.jp",
+      url: "https://bitgaku.com",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
-      url: "https://bitfun.jp/typing-game",
+      url: "https://bitgaku.com/typing-game",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: "https://bitfun.jp/articles",
+      url: "https://bitgaku.com/articles",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: "https://bitfun.jp/questions",
+      url: "https://bitgaku.com/questions",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://bitfun.jp/phrase-select",
+      url: "https://bitgaku.com/phrase-select",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: "https://bitfun.jp/word-select",
+      url: "https://bitgaku.com/word-select",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: "https://bitfun.jp/history",
+      url: "https://bitgaku.com/history",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.5,

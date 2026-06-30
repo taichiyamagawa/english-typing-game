@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/game", "/result", "/played"],
     },
-    sitemap: "https://bitfun.jp/sitemap.xml",
+    sitemap: "https://bitgaku.com/sitemap.xml",
   };
 }
