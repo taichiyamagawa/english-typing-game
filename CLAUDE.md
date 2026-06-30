@@ -269,7 +269,7 @@
 | article_026 | lightning-hotter-than-sun | Lightning Is Five Times Hotter Than the Surface of the Sun | science |
 | article_027 | butterflies-taste-with-feet | Butterflies Taste With Their Feet | biology |
 | article_028 | rats-laugh-when-tickled | Rats Laugh When Tickled — You Just Can't Hear It | biology |
-| article_029 | saturn-floats-in-water | Saturn Is So Light It Would Float in Water | space（bgPattern: "space"） |
+| article_029 | saturn-floats-in-water | Saturn Is So Light It Would Float in Water | space |
 | article_030 | wombat-cube-poop | Wombats Poop in Perfectly Shaped Cubes | biology |
 
 ### WordTooltip

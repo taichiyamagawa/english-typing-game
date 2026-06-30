@@ -13,7 +13,6 @@ export const saturnFloatsInWaterArticle: Article = {
   category: "space",
   categoryJa: "宇宙",
   emoji: "🪐",
-  bgPattern: "space",
   sections: [
     {
       type: "paragraph",
