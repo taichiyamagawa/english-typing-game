@@ -142,11 +142,11 @@ export default function ArticleDetailPage() {
             <span className={`text-xs ml-auto ${isSpace ? "text-gray-500" : "text-gray-400"}`}>{article.date}</span>
           </div>
 
-          {/* タイトル（Loraセリフ体） */}
+          {/* タイトル（Loraセリフ体）：WordTooltipで単語クリックに対応 */}
           <h1 className={`${lora.className} text-2xl sm:text-3xl font-bold leading-snug mb-2 ${
             isSpace ? "text-gray-100" : "text-gray-800 dark:text-gray-100"
           }`}>
-            {article.title}
+            <WordTooltip text={article.title} />
           </h1>
           {showJa && (
             <p className={`${notoSerifJP.className} text-base mb-8 ${isSpace ? "text-gray-400" : "text-gray-500 dark:text-gray-400"}`}>
