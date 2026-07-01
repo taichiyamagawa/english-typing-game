@@ -271,6 +271,8 @@
 | article_028 | rats-laugh-when-tickled | Rats Laugh When Tickled — You Just Can't Hear It | biology |
 | article_029 | saturn-floats-in-water | Saturn Is So Light It Would Float in Water | space |
 | article_030 | wombat-cube-poop | Wombats Poop in Perfectly Shaped Cubes | biology |
+| article_031 | snail-sleeps-three-years | A Snail Can Sleep for Three Years | nature |
+| article_032 | honeybees-recognize-faces | Honeybees Can Recognise Human Faces | biology |
 
 ### WordTooltip
 - コンポーネント：`components/WordTooltip.tsx`
