@@ -50,7 +50,7 @@ export const honeybeesRecognizeFacesArticle: Article = {
       ja: "長い間、科学者たちは顔認識には大きくて複雑な脳が必要だと考えていた——霊長類やごく一部の高度な知性を持つ動物だけが持つような脳だ。ミツバチはその前提をまったく覆す。脳は極めて小さいにもかかわらず、エンジニアでさえ人工システムで再現するのが難しいことを成し遂げている。この発見は、脳の大きさよりも、どのように組織されているかがはるかに重要であることを示唆している。正しい方法でつながった少数のニューロンは、私たちがかつて想像したよりもはるかに多くのことができるかもしれない。",
     },
     {
-      type: "quote",
+      type: "paragraph",
       en: "A honeybee visits hundreds of flowers in a single day and returns to the same hive each time. It navigates, communicates, remembers maps, and — as it turns out — can tell your face from a stranger's. All of this with a brain you could lose under a fingernail.",
       ja: "ミツバチは1日に何百もの花を訪れ、そのたびに同じ巣に戻ってくる。ナビゲーションし、コミュニケーションをとり、地図を記憶し——そして、ご存じのように、あなたの顔と他人の顔を区別することができる。これらすべてを、爪の下に隠れてしまうほどの小さな脳でやってのけているのだ。",
     },

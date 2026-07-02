@@ -50,7 +50,7 @@ export const snailSleepsThreeYearsArticle: Article = {
       ja: "カタツムリを夏眠から引き出すものは、驚くほどシンプルだ。水分である。雨でも、湿気でも、庭師のホースでも十分だ。水を感知してから数分以内にエピフラムを溶かし、体を伸ばし、何事もなかったかのように生活を再開する。長い回復期間も、徐々に体を温める必要もない。ただ、止まっていたところから続きを始めるだけだ。カタツムリにとって、何年もの待機は失われた時間ではない——それこそが、生きることなのだ。",
     },
     {
-      type: "quote",
+      type: "paragraph",
       en: "Estivation is the warm-weather equivalent of hibernation — but while bears wake up in spring, a snail wakes up whenever the rain decides to arrive. It has no schedule. It simply waits.",
       ja: "夏眠は、冬眠の夏版とも言える。しかしクマが春に目覚めるのと違い、カタツムリが目覚めるのは雨が来たときだ。スケジュールはない。ただ待つだけだ。",
     },

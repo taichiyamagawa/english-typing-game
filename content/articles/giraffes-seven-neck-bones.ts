@@ -50,7 +50,7 @@ export const giraffesSevenNeckBonesArticle: Article = {
       ja: "7個ルールを破る哺乳類もわずかに存在する——そしてそれらは、あまりにも珍しいからこそ注目される。「海の牛」とも呼ばれる大型の水生哺乳類・マナティは頸椎が6個しかない。ナマケモノの一部の種は9本や10本持つものもいる。興味深いことに、余分な首の骨を持つナマケモノは頭をほぼ270度回転させることができる——木に逆さまにぶら下がって生活する動物にとっては便利な能力だ。しかしこれらは数百万年にわたる緩やかな変化を経てようやく生まれた例外であり、哺乳類の世界では依然として極めて稀だ。",
     },
     {
-      type: "quote",
+      type: "paragraph",
       en: "The next time you tilt your head back and look up at the sky, you are using the same basic structure — the same number of bones, inherited from the same ancient ancestor — that a giraffe uses to reach the very top of an acacia tree.",
       ja: "次に頭を後ろに倒して空を見上げるとき、あなたはキリンがアカシアの木の最高部に届くために使っているものと、まったく同じ基本構造を——同じ数の骨を、同じ古代の祖先から受け継いで——使っているのだ。",
     },

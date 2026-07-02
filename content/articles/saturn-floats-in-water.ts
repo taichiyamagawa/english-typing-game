@@ -50,7 +50,7 @@ export const saturnFloatsInWaterArticle: Article = {
       ja: "ここが特に驚くべき点だ。太陽系の8つの惑星すべての中で、水より密度が低いのは土星だけなのだ。木星も同じガス惑星で、土星よりはるかに質量が大きいが、密度は水に沈むほど高い。地球を含むすべての岩石惑星も同様で、地球の密度は水の7倍以上もある。土星のお風呂トリックは、ただ珍しいだけでなく、太陽系でただ一つの現象なのだ。",
     },
     {
-      type: "quote",
+      type: "paragraph",
       en: "Of course, no bathtub in the universe is big enough — and the water itself would need to somehow ignore the crushing gravity, heat, and pressure involved. The float test is a thought experiment, not something you could ever actually try.",
       ja: "もちろん、宇宙のどこにもそれほど大きなお風呂は存在しないし、水自体も土星が持つすさまじい重力や熱、圧力をどうにか無視できなければならない。この「浮かぶ」実験はあくまで思考実験であって、実際に試せるものではない。",
     },

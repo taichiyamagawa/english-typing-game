@@ -50,7 +50,7 @@ export const kangarooNewbornGrapeSizeArticle: Article = {
       ja: "カンガルーは有袋類だ——人間や犬のような、より馴染みのある有胎盤哺乳類とは異なる繁殖戦略を進化させた哺乳類のグループだ。有胎盤哺乳類は胎盤を通して栄養を与えながら、長期間子宮内で子を育てる。有袋類はやり方が違う——非常に早い時期に出産し、発育のほとんどを子宮の外、袋の中で行う。どちらの戦略が優れているわけでもない——困難な世界で子を育てるという同じ課題に対する、単に異なる解決策だ。カンガルーの解決策は、たまたまぶどう1粒から始まるというだけだ。",
     },
     {
-      type: "quote",
+      type: "paragraph",
       en: "That first three-minute climb — blind, helpless, and smaller than your thumb — is one of the most quietly extraordinary things any animal does. No training. No preparation. Just instinct, and twenty centimetres of fur between one life and the next.",
       ja: "あの最初の3分間のよじ登り——目が見えず、無力で、あなたの親指より小さい状態での——は、あらゆる動物がやってのける中で、最もひっそりと非凡なことの一つだ。訓練なし。準備なし。ただ本能と、一つの命から次の命へと続く20センチの毛並みだけがある。",
     },

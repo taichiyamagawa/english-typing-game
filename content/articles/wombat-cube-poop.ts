@@ -50,7 +50,7 @@ export const wombatCubePoopArticle: Article = {
       ja: "これは単に自然界の奇妙な余興というわけではなく、実際の役割を持っている。ウォンバットは縄張り意識が強く、岩や倒木、高い場所の上にフンを置くことで自分の縄張りを示す——しかも他の動物が近づきにくいような場所を選ぶことが多い。丸いビー玉のようなフンであれば、置いてもすぐに転がり落ちてしまうだろう。しかし立方体なら、置いた場所にそのまま留まる。この珍しい形は、いわば「ここは自分の縄張りだ」と示すための、安定した小さな標識のような役割を果たしているのだ。",
     },
     {
-      type: "quote",
+      type: "paragraph",
       en: "The 2018 study won its researchers an Ig Nobel Prize — the satirical award given each year to scientific work that, in the words of its organisers, first makes people laugh, and then makes them think.",
       ja: "2018年のこの研究は、研究者たちにイグノーベル賞をもたらした。主催者の言葉を借りれば「人々を笑わせ、そして考えさせる」研究に毎年贈られる、ユーモアを込めた賞である。",
     },
