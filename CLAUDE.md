@@ -239,42 +239,8 @@
 | quote | 引用（左ボーダー付き） |
 
 ### 現在の記事一覧
-| ID | slug | タイトル | カテゴリ |
-|---|---|---|---|
-| article_001 | tittle | The Tiny Dot You Never Noticed Has a Name | language |
-| article_002 | olympus-mons | The Largest Volcano in the Solar System Is on Mars | space（bgPattern: "space"） |
-| article_003 | honey | Honey Never Expires | science |
-| article_004 | octopus-hearts | Octopuses Have Three Hearts — And Blue Blood | biology |
-| article_005 | cleopatra-pyramid | Cleopatra Lived Closer in Time to the Moon Landing Than to the Pyramids | history |
-| article_006 | banana-berry | Bananas Are Berries. Strawberries Are Not. | food |
-| article_007 | sharks-older-than-trees | Sharks Are Older Than Trees | biology |
-| article_008 | oxford-older-than-aztec | Oxford University Is Older Than the Aztec Empire | history |
-| article_009 | venus-day-longer-than-year | A Day on Venus Is Longer Than a Year | science |
-| article_010 | crows-remember-faces | Crows Never Forget a Face | nature |
-| article_011 | brain-never-stops | Your Brain Never Stops — Even When You Sleep | science |
-| article_012 | wood-wide-web | The Wood Wide Web: How Trees Share Resources Underground | nature |
-| article_013 | antarctica-largest-desert | Antarctica Is the World's Largest Desert | nature |
-| article_014 | eiffel-tower-grows | The Eiffel Tower Grows Taller Every Summer | science |
-| article_015 | chess-more-than-atoms | There Are More Chess Games Than Atoms in the Universe | science |
-| article_016 | blue-whale | The Blue Whale Is the Largest Animal That Has Ever Lived | biology |
-| article_017 | shortest-war-38-minutes | The Shortest War in History Lasted 38 Minutes | history |
-| article_018 | sea-otters-hold-hands | Sea Otters Hold Hands While They Sleep | nature |
-| article_019 | polar-bears-black-skin | Polar Bears Are Black Under All That White | biology |
-| article_020 | velcro | The Burr That Became Velcro | science |
-| article_021 | flamingos | Flamingos Are Not Born Pink | biology |
-| article_022 | immortal-jellyfish | The Jellyfish That Can Cheat Death | biology |
-| article_023 | koala-fingerprints | The Animal With Fingerprints Almost Identical to Yours | biology |
-| article_024 | great-pyramid-tallest | The Great Pyramid Was the World's Tallest Structure for 3,800 Years | history |
-| article_025 | dolphins-sleep-one-eye-open | Dolphins Sleep With One Eye Open — And Half Their Brain | nature |
-| article_026 | lightning-hotter-than-sun | Lightning Is Five Times Hotter Than the Surface of the Sun | science |
-| article_027 | butterflies-taste-with-feet | Butterflies Taste With Their Feet | biology |
-| article_028 | rats-laugh-when-tickled | Rats Laugh When Tickled — You Just Can't Hear It | biology |
-| article_029 | saturn-floats-in-water | Saturn Is So Light It Would Float in Water | space |
-| article_030 | wombat-cube-poop | Wombats Poop in Perfectly Shaped Cubes | biology |
-| article_031 | snail-sleeps-three-years | A Snail Can Sleep for Three Years | nature |
-| article_032 | honeybees-recognize-faces | Honeybees Can Recognise Human Faces | biology |
-| article_033 | giraffes-seven-neck-bones | Giraffes Have the Same Number of Neck Bones as Humans | biology |
-| article_034 | kangaroo-newborn-grape-size | A Newborn Kangaroo Is Roughly the Size of a Grape | biology |
+- 記事ファイル：`content/articles/` 配下（slug名.ts）
+- 全記事のリスト：`content/articles/index.ts` を参照
 
 ### WordTooltip
 - コンポーネント：`components/WordTooltip.tsx`
