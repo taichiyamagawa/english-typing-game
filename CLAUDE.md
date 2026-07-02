@@ -273,6 +273,8 @@
 | article_030 | wombat-cube-poop | Wombats Poop in Perfectly Shaped Cubes | biology |
 | article_031 | snail-sleeps-three-years | A Snail Can Sleep for Three Years | nature |
 | article_032 | honeybees-recognize-faces | Honeybees Can Recognise Human Faces | biology |
+| article_033 | giraffes-seven-neck-bones | Giraffes Have the Same Number of Neck Bones as Humans | biology |
+| article_034 | kangaroo-newborn-grape-size | A Newborn Kangaroo Is Roughly the Size of a Grape | biology |
 
 ### WordTooltip
 - コンポーネント：`components/WordTooltip.tsx`

@@ -31,9 +31,13 @@ import { saturnFloatsInWaterArticle } from "./saturn-floats-in-water";
 import { wombatCubePoopArticle } from "./wombat-cube-poop";
 import { snailSleepsThreeYearsArticle } from "./snail-sleeps-three-years";
 import { honeybeesRecognizeFacesArticle } from "./honeybees-recognize-faces";
+import { giraffesSevenNeckBonesArticle } from "./giraffes-seven-neck-bones";
+import { kangarooNewbornGrapeSizeArticle } from "./kangaroo-newborn-grape-size";
 
 // 全記事のリスト。新しい記事を追加したらここに追記する（新しい順）
 export const allArticles: Article[] = [
+  kangarooNewbornGrapeSizeArticle,
+  giraffesSevenNeckBonesArticle,
   honeybeesRecognizeFacesArticle,
   snailSleepsThreeYearsArticle,
   wombatCubePoopArticle,
