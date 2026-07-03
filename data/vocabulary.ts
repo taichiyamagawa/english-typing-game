@@ -4051,5 +4051,96 @@ export const vocabulary: Record<string, string> = {
   "support":          "支える",
   "clearly":          "はっきりと",
   "accurately":       "正確に",
+
+  // ============================================================
+  // 熟語・フレーズ補完（article_029〜036）
+  // ============================================================
+
+  // --- 土星記事（029）---
+  "thought experiment":         "思考実験",
+  "gas giant":                  "ガス惑星",
+  "has nothing to do with":     "〜とは関係がない",
+  "no matter how":              "どれほど〜でも",
+  "rise to the surface":        "表面に浮かび上がる",
+  "solid ball of rock":         "岩石でできた固い球体",
+  "overwhelming majority":      "圧倒的多数・大部分",
+
+  // --- ウォンバット記事（030）---
+  "the animal kingdom":         "動物界",
+  "party trick":                "余興・お遊び",
+  "in the words of":            "〜の言葉を借りれば",
+  "it turns out that":          "〜ということが分かった",
+  "in effect":                  "事実上・いわば",
+  "mark their territory":       "縄張りを示す",
+  "the entire way through":     "最初から最後まで",
+
+  // --- カタツムリ記事（031）---
+  "in all likelihood":          "おそらく",
+  "sealed shut":                "完全に密閉された",
+  "come loose":                 "外れる・ゆるむ",
+  "came loose":                 "外れた",
+  "within minutes of":          "〜してから数分以内に",
+  "as though":                  "まるで〜のように",
+  "give up on":                 "〜を諦める",
+  "from where it left off":     "止まったところから",
+  "not quite":                  "〜とも言えない・完全には〜でない",
+  "slows to almost nothing":    "ほぼゼロにまで落ちる",
+
+  // --- ミツバチ記事（032）---
+  "no idea":                    "まったく知らない",
+  "one by one":                 "一つずつ",
+  "as it turns out":            "実は〜とわかる",
+  "in the same way":            "同じように",
+  "face recognition":           "顔認識",
+  "telling one apart from another": "識別する",
+  "a drop of":                  "一滴の",
+  "it is not unique":           "珍しくない・唯一ではない",
+
+  // --- キリン記事（033）---
+  "at full height":             "最大限に伸ばして",
+  "off the ground":             "地上〜の高さに",
+  "a set of":                   "一連の・一組の",
+  "act as":                     "〜として機能する",
+  "linked to":                  "〜と関連している",
+  "instead of":                 "〜の代わりに",
+  "gradual change":             "緩やかな変化",
+  "early life":                 "幼少期",
+  "prove the rule":             "ルールを証明する",
+
+  // --- カンガルー記事（034）---
+  "from head to tail":          "頭から尻尾まで",
+  "within seconds of":          "〜してから数秒以内に",
+  "all the way up to":          "〜まで（ずっと）",
+  "give birth":                 "出産する",
+  "at this stage":              "この段階では",
+  "does not let go":            "離さない",
+
+  // --- 牛記事（035）---
+  "comes to mind":              "思い浮かぶ",
+  "explain away":               "言い訳で片付ける",
+  "heart rate":                 "心拍数",
+  "heart rates":                "心拍数（複数）",
+  "stress levels":              "ストレスレベル",
+  "cognitive task":             "認知課題",
+  "day after day":              "日々繰り返し",
+  "alongside one another":      "互いのそばに",
+  "long-term relationships":    "長期的な関係",
+  "for a long time":            "長い間",
+  "animal welfare":             "動物福祉",
+  "practical implications":     "実際的な意味合い",
+  "social bonds":               "社会的絆",
+  "social hierarchies":         "社会的序列",
+  "a certain level of":         "ある程度の",
+
+  // --- ダチョウ記事（036）---
+  "up close":                   "間近で",
+  "on either side of":          "〜の両側に",
+  "make perfect sense":         "完全に理にかなっている",
+  "field of view":              "視野",
+  "birds of prey":              "猛禽類",
+  "raw intelligence":           "純粋な知性",
+  "sensory organs":             "感覚器官",
+  "survival strategy":          "生存戦略",
+  "evolutionary priorities":    "進化的な優先事項",
 };
 
