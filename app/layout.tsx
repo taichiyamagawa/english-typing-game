@@ -8,10 +8,10 @@ import { LanguageProvider } from "@/components/LanguageContext";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bitgaku.com"),
-  title: "雑学英語タイピング | English Typing Game",
-  description: "ちょっと楽しく、ちょっと学ぶ。雑学・英文・英単語でタイピング練習",
+  title: "English Typing Game: 雑学英語タイピング＋雑学記事",
+  description: "ちょっと楽しく、ちょっと学ぶ。雑学・英文・英単語でタイピング練習＋英語で読む雑学記事",
   openGraph: {
-    title: "雑学英語タイピング | English Typing Game",
+    title: "English Typing Game: 雑学英語タイピング＋雑学記事",
     description: "ちょっと楽しく、ちょっと学ぶ。",
     type: "website",
     siteName: "BitGaku",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "雑学英語タイピング | English Typing Game",
+    title: "English Typing Game: 雑学英語タイピング＋雑学記事",
     description: "ちょっと楽しく、ちょっと学ぶ。",
   },
 };
