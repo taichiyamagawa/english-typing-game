@@ -391,10 +391,9 @@ function GameContent() {
       playSound("miss");
       setIsFlashing(true);
       setTimeout(() => setIsFlashing(false), 150);
-      // ミス時はコンボと段階を両方リセット
+      // ミス時は-8ペナルティ（0未満にはしない）・段階はそのまま維持
       if (mode === "time") {
-        setComboCount(0);
-        setGaugeStage(0);
+        setComboCount((c) => Math.max(0, c - 8));
       }
     }
   };
