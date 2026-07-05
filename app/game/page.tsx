@@ -321,6 +321,7 @@ function GameContent() {
         mistakes: String(mistakes),
         typed:    String(newTotalTyped),
         total:    String(newTotalTyped + mistakes),
+        duration: String(duration),
         ...(source ? { source } : {}),
       });
       router.push(`/result?${params.toString()}`);
@@ -344,6 +345,7 @@ function GameContent() {
       mistakes: String(mistakes),
       typed:    String(finalTyped),
       total:    String(finalTyped + mistakes),
+      duration: String(duration),
       ...(source ? { source } : {}),
     });
     router.push(`/result?${params.toString()}`);
