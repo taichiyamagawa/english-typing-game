@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import SoundToggle from "@/components/SoundToggle";
 import { GameRecord, OverallBest, getRecords, getOverallBest, getBestForDuration, updateBestForDuration, categoryLabel, categoryLabelEn } from "@/lib/records";
@@ -21,27 +21,30 @@ export default function HistoryPage() {
   const { t, lang } = useLanguage();
   const durLabel: Record<number, string> = { 30: t.dur30, 60: t.dur60, 120: t.dur120 };
   const catLabel = lang === "en" ? categoryLabelEn : categoryLabel;
-  // 初期値としてlocalStorageから読み込み、フリーモードの古い記録を除去して保存し直す
-  const [records] = useState<GameRecord[]>(() => {
+  // 初期値は空配列・nullで固定し、マウント後にlocalStorageから読み込む（hydration エラー対策）
+  const [records, setRecords] = useState<GameRecord[]>([]);
+  const [bests, setBests] = useState<Record<number, OverallBest | null>>({ 30: null, 60: null, 120: null });
+
+  useEffect(() => {
+    // フリーモードの古い記録を除去して保存し直す
     const all = getRecords();
     const timeOnly = all.filter((r) => r.mode === "time");
     if (timeOnly.length !== all.length) {
       localStorage.setItem("bitgaku_typing_records", JSON.stringify(timeOnly));
     }
-    return timeOnly;
-  });
-  // 時間別自己ベストを取得する（旧データは2分モードとしてマイグレーション）
-  const [bests] = useState<Record<number, OverallBest | null>>(() => {
+    setRecords(timeOnly);
+
+    // 旧データ（全体ベスト）を2分モードとしてマイグレーション
     const old = getOverallBest();
     if (old && !getBestForDuration(120)) {
       updateBestForDuration(120, old);
     }
-    return {
+    setBests({
       30:  getBestForDuration(30),
       60:  getBestForDuration(60),
       120: getBestForDuration(120),
-    };
-  });
+    });
+  }, []);
 
   // 新しい順に最大10件表示
   const history = [...records].slice(0, 10);
