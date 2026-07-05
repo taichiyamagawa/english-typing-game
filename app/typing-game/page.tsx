@@ -169,9 +169,9 @@ export default function TypingGamePage() {
                   key={cat.value}
                   onClick={() => {
                     if (cat.value === "word") {
-                      router.push(`/word-select?mode=${selectedMode}`);
+                      router.push(`/word-select?mode=${selectedMode}&duration=${selectedDuration}`);
                     } else if (cat.value === "phrase") {
-                      router.push(`/phrase-select?mode=${selectedMode}`);
+                      router.push(`/phrase-select?mode=${selectedMode}&duration=${selectedDuration}`);
                     } else {
                       setSelectedMain(cat.value);
                     }

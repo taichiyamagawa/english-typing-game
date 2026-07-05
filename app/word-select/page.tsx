@@ -11,6 +11,7 @@ function WordSelectContent() {
   const { t } = useLanguage();
 
   const mode = searchParams.get("mode") ?? "time";
+  const duration = searchParams.get("duration") ?? "60";
   const modeLabel = mode === "time" ? `⏱ ${t.mode_time_label}` : `📖 ${t.mode_free_label}`;
 
   // 言語に応じた単語サブカテゴリ選択肢を生成する
@@ -37,7 +38,8 @@ function WordSelectContent() {
   const [selectedSub, setSelectedSub] = useState("word_all");
 
   const handleStart = () => {
-    router.push(`/game?mode=${mode}&category=${selectedSub}`);
+    const durationParam = mode === "time" ? `&duration=${duration}` : "";
+    router.push(`/game?mode=${mode}&category=${selectedSub}${durationParam}`);
   };
 
   return (
