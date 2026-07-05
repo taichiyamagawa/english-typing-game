@@ -28,7 +28,7 @@ function ResultContent() {
   const time     = Number(searchParams.get("time") ?? 0);
   const mistakes = Number(searchParams.get("mistakes") ?? 0);
   const typed    = Number(searchParams.get("typed") ?? 0);
-  const duration = Number(searchParams.get("duration") ?? 120);
+  const duration = Number(searchParams.get("duration") ?? 60);
 
   // 正確率：全キー入力（正解＋ミス）のうち正解した割合（入力がない場合はnullで「ー」表示）
   const totalKeystrokes = typed + mistakes;

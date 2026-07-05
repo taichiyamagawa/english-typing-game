@@ -58,7 +58,7 @@ function GameContent() {
   const startId  = searchParams.get("startId");
   const source   = searchParams.get("source");
   // タイムモードの制限時間（秒）。未指定時は120（後方互換）
-  const duration = Number(searchParams.get("duration") ?? 120);
+  const duration = Number(searchParams.get("duration") ?? 60);
 
   // 問題リストを初期化する
   const [questions] = useState<Question[]>(() => {
