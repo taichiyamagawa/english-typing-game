@@ -200,12 +200,18 @@ function GameContent() {
   }, [isGameOver]);
 
   // Web Audio APIで効果音を生成・再生する（サウンドオフ時はスキップ）
-  const playSound = (type: "correct" | "miss" | "clear" | "bonus") => {
+  const playSound = async (type: "correct" | "miss" | "clear" | "bonus") => {
     if (!getSoundEnabled()) return;
     if (!audioCtxRef.current) {
-      audioCtxRef.current = new AudioContext();
+      // SafariはwebkitAudioContextを使うため、両方に対応する
+      const AudioContextClass = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+      audioCtxRef.current = new AudioContextClass();
     }
     const ctx = audioCtxRef.current;
+    // ブラウザのautoplay制限でsuspendedになっている場合は再開を待つ
+    if (ctx.state === "suspended") {
+      await ctx.resume();
+    }
 
     if (type === "correct") {
       // 正解音：カチカチとした鋭いクリック音
