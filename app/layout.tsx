@@ -34,6 +34,14 @@ export default function RootLayout({
       <body className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
         {/* ページ読み込み時にダークモードのちらつきを防ぐ。beforeInteractiveで最初に実行される */}
         <Script id="theme-init" strategy="beforeInteractive">{`(function(){var t=localStorage.getItem('theme')||'light';document.documentElement.classList.toggle('dark',t==='dark');})();`}</Script>
+        {/* Google アナリティクス（GA4）でアクセス解析を行う。ページ表示を妨げないようafterInteractiveで読み込む */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-J3ZPLCLRPT" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-J3ZPLCLRPT');
+        `}</Script>
         <BitFunLogo />
         <LanguageProvider>
           <LanguageToggle />
